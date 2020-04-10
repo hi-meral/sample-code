@@ -1,0 +1,99 @@
+Hi
+
+Shikher [9:56 PM]
+hi
+
+miral [9:56 PM]
+I read your last comment for sync
+
+Shikher [9:56 PM]
+ok
+
+miral [9:57 PM]
+sorry for misunderstood ,
+so now I have to check what changes are made in that table? (edited)
+for eg, if in event table 3 rows are updated in last 10 min
+i have to find what they 3 rows are
+and need to fetch associated data
+is that correcdt ?
+
+Shikher [9:59 PM]
+yes
+associated customer ids
+of parents
+so event host is always parent
+so sync that
+if there are event customers related to that event
+then get all event customer ids
+if event customer id is of parent
+then sync that parent's id
+if event customer id is of child
+then get his/her parent's id and sync parent's id
+
+miral [10:01 PM]
+in customer data we have parent and child both
+so why we sync only parent customers ?
+
+Shikher [10:02 PM]
+we send emails only to parents
+if you remember in cactus-services
+we get child data
+
+miral [10:02 PM]
+i see
+yes
+
+Shikher [10:02 PM]
+from parent's record
+
+miral [10:02 PM]
+right
+
+Shikher [10:03 PM]
+so we send children, event, inquiry data of parent
+but everything goes as json for a parent
+so if you sync parent id
+everything related to parent will be synced
+
+miral [10:04 PM]
+okay
+got it
+so that function sync all realated to a parent id
+right ?
+removeCustomerById()
+this
+
+Shikher [10:06 PM]
+syncCustomerById() can be used to sync
+removeCustomerById() disables the customer record
+so we need to call this only if customer record is disabled/inactive
+you can check query for removeCustomer in cactus.php
+I think I am only checking for enabled = 0
+
+miral [10:08 PM]
+if any customer turns to disabled, how can I know from only update_date ?
+
+Shikher [10:09 PM]
+just get enabled = 0 in last x minutes
+
+miral [10:10 PM]
+okay
+so this is only in customer and event_customers table
+I have to check
+
+Shikher [10:10 PM]
+no just customers
+
+miral [10:11 PM]
+ok
+
+Shikher [10:11 PM]
+if parent is disabled then call remove function
+if child is disabled then call sync function for his/her parent
+
+miral [10:12 PM]
+ok got it
+ok so now I am almost clear.
+will start work on this on Monday
+and let you know if any query
+thanks

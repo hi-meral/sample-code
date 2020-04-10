@@ -1,0 +1,5 @@
+One more thing I want to specify here that can we have put a full setup in SVN. ?  The reason behind it I checked out 3 plugins (Email Notifications, GHIN Integration and Online Join & Renew) which was given by Sheetal. However Sheetal's and my copy are different. Some of the pages are showing up in my local machine. So we are struggling for that. 
+
+If you can provide the whole project in SVN, it would be more comfortable to work with. And less chances to conflict.
+
+Please share your thought

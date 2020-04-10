@@ -1,0 +1,198 @@
+Hi
+
+Are you there?
+
+miral [9:19 AM]
+Yes
+Just a min
+
+bpirasanth [9:20 AM]
+Ok
+
+miral [9:23 AM]
+Hi
+so do I need to open the project to understand that
+?
+
+bpirasanth [9:24 AM]
+Have you checked the call history page in production? It takes more than 1 min to load the page
+
+miral [9:24 AM]
+yes
+i mean via browser access
+i see
+ok
+
+bpirasanth [9:25 AM]
+Can you make it to load that page less than 1 min? You can use prod restore db to check it on dev environment
+
+miral [9:25 AM]
+I see
+
+bpirasanth [9:25 AM]
+If it takes more than 1 min, it returns "Gateway timeout" in production
+
+miral [9:27 AM]
+but what could be the possibility as it works smoothly in staging  ?
+
+bpirasanth [9:29 AM]
+In production, events table has more nearly 1.5M records
+
+miral [9:29 AM]
+Okay than I have to look after that
+and can you provide me prod restore db creds  ?
+
+bpirasanth [9:31 AM]
+DB: call-center_prod_restore
+call-center / secret
+
+miral [9:31 AM]
+ok
+let me try to connect that now
+
+bpirasanth [9:31 AM]
+Ok
+Did you get the latest from git? Because i made some changes in code yesterday
+
+miral [9:32 AM]
+yes that I did
+but I noticed in call-center project .env file
+there is no call-center db is associated
+only CMS db mentioned there
+
+bpirasanth [9:35 AM]
+Change the DATABASE_URL
+Like this DATABASE_URL=pgsql://call-center_prod_restore:secret@54.148.66.39:5432/call-center
+
+miral [9:37 AM]
+even DATABASE_URL is not defined in my local. I am surprised how my local call-center project works !!
+History page has some data too
+
+bpirasanth [9:38 AM]
+Can i remote into your machine to check?
+
+miral [9:38 AM]
+sure
+one minute
+ok got it
+by mistake I opened old setup which is named only call-center
+
+bpirasanth [9:41 AM]
+Ok
+
+miral [9:41 AM]
+this project is call-center-twillio
+
+bpirasanth [9:41 AM]
+Yeah
+
+miral [9:43 AM]
+PDOException in Connector.php line 55:
+SQLSTATE[08006] [7] could not connect to server: Connection timed out (0x0000274C/10060)
+Is the server running on host "54.148.66.39" and accepting
+TCP/IP connections on port 5432
+
+bpirasanth [9:44 AM]
+Change IP to following IP 10.0.1.144
+
+miral [9:44 AM]
+but is nt is staging IP ?
+still not working
+password authentication failed for user "call-center_prod_restore
+
+bpirasanth [9:49 AM]
+Yes, it is staging server IP
+Send me TV details do i can check the issue
+
+miral [9:50 AM]
+ok
+446 397 117 /  8a3t3u
+
+bpirasanth [9:59 AM]
+I took nearly 1 min to load
+
+miral [9:59 AM]
+Yes
+Noticed that
+
+bpirasanth [10:00 AM]
+Can you check whether you can optimize the query and make it fast
+Use my credential to test
+bpirasanth / P@ssw0rd$
+
+miral [10:00 AM]
+okay
+u also mentioned
+otherwise you need to write a cron job to populate the receiver name in the calls table then you can use that column to get receiver name
+you mean only populate the receiver name and make entries to calls table ?
+i mean update the calls table
+?
+
+bpirasanth [10:02 AM]
+Yeah. If you're not able to make it less than a min
+
+miral [10:02 AM]
+ya okay I will try for that
+
+bpirasanth [10:02 AM]
+Ok
+
+miral [10:03 AM]
+can you tell me where I can develop a cron ?
+
+bpirasanth [10:03 AM]
+FYI. I increased the timeout from 60 sec to 120 sec to fix the timeout issue on production
+
+miral [10:04 AM]
+ok
+
+bpirasanth [10:04 AM]
+You need to create command and add schedule on Kernel.php
+
+miral [10:06 AM]
+i see
+i have to check the documentation for that
+
+bpirasanth [10:06 AM]
+Ok
+
+miral [10:06 AM]
+where the command remains
+in which file
+?
+
+bpirasanth [10:07 AM]
+Under call-center-twilio\app\Console\Commands
+
+miral [10:07 AM]
+ok
+i was checking some other Kernel.php
+
+bpirasanth [10:08 AM]
+php artisan make:console {somename}Command
+Use the above command to create
+
+miral [10:08 AM]
+okay got it
+I will check and fix
+thanks
+
+bpirasanth [10:08 AM]
+No problem. Good night
+
+miral [10:09 AM]
+good day
+and I will fix this by Monday
+tomorrow I m on leave
+
+bpirasanth [10:09 AM]
+Thanks!
+
+miral [10:09 AM]
+see u
+
+bpirasanth [10:09 AM]
+Ok, that's fine
+
+miral [10:09 AM]
+ok thanks

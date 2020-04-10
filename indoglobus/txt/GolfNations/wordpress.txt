@@ -1,0 +1,123 @@
+https://codex.wordpress.org/Create_A_Network
+step-2 and step - 3 essential rest are information
+
+
+// add a script 
+wp_enqueue_script('swal_js', plugins_url('assets/js/checkout.js', dirname(__FILE__)));
+
+
+// for current pluggin directory in front
+<img src="<?php echo plugin_dir_url( dirname( __FILE__ )); ?>/assets/images/processing.gif" alt="loading" />
+
+
+// get image by title from media library
+
+$attachment = get_page_by_title('logo', OBJECT, 'attachment'); 
+//print_r($attachment->guid);
+
+// how to add page
+
+create a page in pages folder
+add in includes/init.php
+gn_is_ready()
+gn_init()
+Admin > online join & renew > pages > click here to let us generate them for you.
+Add a page in wordress and put conetent like  [gn_testpage]
+
+
+// put a radio buttun
+//return cc_wp_radio(array('name' => 'gcm_allow_limited_membership', 'selected' => get_option('gcm_allow_limited_membership')));
+
+// check the function - cc_wp_radio
+
+
+//   HOW META QUERY WORKS
+
+ $args = array(
+                        'post_type' => 'gn_fee'
+                );
+
+                if(isset($_REQUEST["membership_type_id"]) && $_REQUEST["membership_type_id"]>0)
+                {
+                     $args["post__not_in"] =  array($_REQUEST["membership_type_id"]);
+                }
+
+
+                $meta_query = array();
+
+                $meta_query[] =	array(
+                                'key'     => 'gn_limited_membership',
+                                'value'   => "1",
+				'compare' => "="
+                    );
+
+		$meta_query[] =	array(
+                                'key'     => 'gn_unlimited_membership',
+                                'COMPARE'   => "NOT EXIST",
+                    );
+
+                if(isset($_REQUEST["club_id"]) && $_REQUEST["club_id"]>0)
+                {
+
+                    $meta_query[] =	array(
+                                'key'     => 'gn_fee_membership_id',
+                                'value'   => $_REQUEST["club_id"],
+                    );
+                }
+
+                if(isset($_REQUEST["service_id"]) && $_REQUEST["service_id"]>0)
+                {
+
+                    $meta_query[] =	array(
+                                'key'     => 'gn_fee_service_id',
+                                'value'   => $_REQUEST["service_id"],
+                    );
+                }
+
+                $args['meta_query'] = $meta_query;
+
+		$query = new WP_Query( $args );
+                
+                echo $query->request;
+
+
+
+
+
+http://learnwebtutorials.com/code-to-open-media-gallery-dialog-in-wordpress
+
+
+
+reorder the admin menu - put this in main pluggin file
+function reorder_admin_menu( $__return_true ) {
+    return array(
+         'index.php', // Dashboard
+         'edit.php?post_type=page', // Pages
+         'edit.php', // Posts
+         'upload.php', // Media
+         'themes.php', // Appearance
+         'separator1', // --Space--
+         'edit-comments.php', // Comments
+         'users.php', // Users
+         'separator2', // --Space--
+         'plugins.php', // Plugins
+         'tools.php', // Tools
+         'options-general.php', // Settings
+   );
+}
+add_filter( 'custom_menu_order', 'reorder_admin_menu' );
+add_filter( 'menu_order', 'reorder_admin_menu' );
+
+
+
+RENAME THE MENU ITEMS
+
+// Rename Posts to News in Menu
+function wptutsplus_change_post_menu_label() {
+    global $menu;
+    global $submenu;
+    $menu[5][0] = 'News';
+    $submenu['edit.php'][5][0] = 'News Items';
+    $submenu['edit.php'][10][0] = 'Add News Item';
+}
+add_action( 'admin_menu', 'wptutsplus_change_post_menu_label' );

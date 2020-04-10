@@ -1,0 +1,137 @@
+airtel 4G 
+0211B221F16
+
+G guest
+maptotrack
+
+g guest 5
+qubesense
+
+desktop admin password
+indosushil
+
+slack - indoglobius
+miral@indoglobus.com
+miral1234
+
+appenate
+us02@indoglobus.com
+644780407
+
+SNV
+miral / randomP@00
+
+
+https://www.gotomeet.me/Liquamedia
+
+
+credit card number
+
+4111111111111111
+
+
+
+indoglobus skype
+8551876999
+indoglobus@123
+
+Address
+
+California 
+Los Angelese
+90001
+
+
+http://www.liquamedia.com/portal2/wp-admin/
+miral/Meral#---
+http://www.liquamedia.com/portal2/test/wp-admin/
+miral/Meral#322
+
+miki google key
+AIzaSyCa9rVjcG3cMtZAOkksXzk0CG5tJ3MaHVw
+
+
+
+http://www.liquamedia.com/clubcaddie/scga/wp-admin/
+UN: meral
+PW: FF82R0cND$ZyW8DS70upxW&G
+
+http://www.golfnations.com/testsrga/wp-admin/
+UN: miral
+PW: a8h@z%DkVQSle&gXjrMW@3pj
+
+
+http://www.liquamedia.com/portal2/scga/wp-admin/profile.php
+- club admin on dev
+himeral
+GGyn30l21L
+- administrator
+miral
+Meral#322
+
+https://liquamedia.basecamphq.com
+miral@golfnations.com
+Meral#321
+
+Web service:
+
+userName: ws98	
+Password: ws98	
+GHINNumber: 1061122	
+Association ; 98 (fix for all)
+Club: 53  (admin, club setting, Club ID column)
+Service: 1  (men [id:1] <= 1) (check for service drop down while adding new membership type)
+
+
+TP LINK
+http://192.168.0.1/ (admin/indo1234)
+office : (mantri4/554637)
+home : (vg8546/428570)
+
+LOCAL GHIN NUMBER
+
+1084480  - Bruch
+
+1061122 - Kevin O' club
+
+1082668  -  S C G A Test Club.
+
+1082496  -  Stephanie's Test Club
+
+1087166	- -  Stephanie's Test Club (Inactive)
+
+1223006
+
+LOCAL - 1061122
+SCGA - 1082668
+teST SRGA - 988494
+
+For live
+https://www.golfnations.com/testsrga/
+
+1089374	- https://www.golfnations.com/testsrga/
+
+http://www.liquamedia.com/portal2/widget/
+
+GitHub
+meral-golfnations
+Meral#321
+
+freshbook
+miral
+miral123
+
+chris@scramzr.com
+chrisjosephphillips@msn.com
+
+
+API's
+http://localhost/gn-api/billing-api/UnbilledActivity?clubServiceId=2&includeDetail=true
+
+
+local/live api
+http://localhost/gn-api
+http://gn-api-dev.liquamedia.com
+
+$clubService["MemberClub"]["ClubName"]." - ".$clubService["ClubServiceName"];
+$clubService["MemberClub"]["HpClubNum"]." - ".$clubService["HpServiceNum"]

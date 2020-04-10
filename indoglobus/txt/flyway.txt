@@ -1,0 +1,80 @@
+
+flyway -user=postgres -password=P@ssw0rd$ -placeholders.user=postgres -url=jdbc:postgresql://localhost:5432/vmsms2_dev info
+
+flyway -user=postgres -password=P@ssw0rd$ -placeholders.user=postgres -url=jdbc:postgresql://localhost:5432/vmsms2_dev repair
+
+flyway -user=postgres -password=P@ssw0rd$ -placeholders.user=postgres -url=jdbc:postgresql://localhost:5432/vmsms2_dev migrate
+
+
+// staging
+flyway -user=vmsms_staging -password=secret -placeholders.user=user=vmsms_staging -url=jdbc:postgresql://10.0.1.144:5432/vmsms2_staging baseline -baselineVersion=0 -baselineDescription="Base Version"
+
+flyway -user=vmsms_staging -password=secret -placeholders.user=user=vmsms_staging -url=jdbc:postgresql://10.0.1.144:5432/vmsms2_staging info
+
+flyway -user=vmsms_staging -password=secret -placeholders.user=user=vmsms_staging -url=jdbc:postgresql://10.0.1.144:5432/vmsms2_staging repair
+
+flyway -user=vmsms_staging -password=secret -placeholders.user=user=vmsms_staging -url=jdbc:postgresql://10.0.1.144:5432/vmsms2_staging migrate
+
+
+// piucms - local
+flyway -user=postgres  -password=P@ssw0rd$ -url=jdbc:postgresql://localhost:5432/piucms_dev info
+
+flyway -user=postgres -password=P@ssw0rd$ -placeholders.user=user=postgres -url=jdbc:postgresql://localhost:5432/piucms_dev repair
+
+flyway -user=postgres -password=P@ssw0rd$ -placeholders.user=user=postgres -url=jdbc:postgresql://localhost:5432/piucms_dev migrate
+
+
+// piucms - staging
+flyway -user=piucms-staging -password=secret -placeholders.user=user=piucms-staging -url=jdbc:postgresql://10.0.1.144:5432/piucms-staging info
+
+flyway -user=piucms-staging -password=secret -placeholders.user=user=piucms-staging -url=jdbc:postgresql://10.0.1.144:5432/piucms-staging repair
+
+flyway -user=piucms-staging -password=secret -placeholders.user=user=piucms-staging -url=jdbc:postgresql://10.0.1.144:5432/piucms-staging migrate
+
+
+// bucms - local
+flyway -user=postgres  -password=P@ssw0rd$ -url=jdbc:postgresql://localhost:5432/bucms_dev info
+
+flyway -user=postgres -password=P@ssw0rd$ -placeholders.user=user=postgres -url=jdbc:postgresql://localhost:5432/bucms_dev repair
+
+flyway -user=postgres -password=P@ssw0rd$ -placeholders.user=user=postgres -url=jdbc:postgresql://localhost:5432/bucms_dev migrate
+
+// bucms - staging
+
+flyway -user=bucms-staging -password=secret -placeholders.user=user=bucms-staging -url=jdbc:postgresql://10.0.1.144:5432/bucms-staging baseline -baselineVersion=0 -baselineDescription="Base Version"
+
+flyway -user=bucms-staging -password=secret -placeholders.user=user=bucms-staging -url=jdbc:postgresql://10.0.1.144:5432/bucms-staging info
+
+flyway -user=bucms-staging -password=secret -placeholders.user=user=bucms-staging -url=jdbc:postgresql://10.0.1.144:5432/bucms-staging repair
+
+flyway -user=bucms-staging -password=secret -placeholders.user=user=bucms-staging -url=jdbc:postgresql://10.0.1.144:5432/bucms-staging migrate
+
+
+
+flyway -user=vmsms_staging -password=secret -placeholders.user=user=vmsms_staging -validateOnMigrate=false -url=jdbc:postgresql://10.0.1.144:5432/vmsms2_staging migrate
+
+-validateOnMigrate=false
+-outOfOrder=true
+
+SELECT currval('meta_id_seq');
+
+SELECT nextval('meta_id_seq'::regclass)
+
+SELECT setval('store_ivr_id_seq', 176);
+
+//user update
+select passwd from staff where staff_id = 'mmaradia'
+update staff set passwd = '$2y$10$20YDlwXhh5rga3OgD3i1aOCEnWbtpiMWMJDHMLWSE9Y.8LfpdxzKW' where staff_id = 'mmaradia'
+// Feb@2020 - $2y$10$20YDlwXhh5rga3OgD3i1aOCEnWbtpiMWMJDHMLWSE9Y.8LfpdxzKW
+
+update staff set passwd = (select passwd from staff where staff_id='mmaradia') where staff_id='powner2';
+
+
+SELECT set_config('buvm.curr_user', 'smishra',true);
+update eblasts set blast_status = 2 where blast_id = 13944
+
+select group_id from report_group_map where report_id IN (select report_id from reports where report_name like 'Zor: KPI%')
+
+echo $query->toSql(); echo "<br>"; print_r($query->getBindings());
+
+https://flywaydb.org/documentation/commandline/migrate

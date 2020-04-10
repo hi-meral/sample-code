@@ -1,0 +1,11 @@
+https://developers.google.com/analytics/devguides/reporting/core/v2/gdataReferenceDataFeed
+
+
+https://developers.google.com/tag-manager/enhanced-ecommerce **
+
+
+https://developers.google.com/analytics/devguides/reporting/core/v3/coreDevguide
+
+ https://support.google.com/analytics/answer/2709828#example-product
+
+https://developers.google.com/analytics/devguides/collection/gajs/gaTrackingCustomVariables

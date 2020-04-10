@@ -1,0 +1,6 @@
+if ($each_transaction["PaidOnline"] === true && transactionTypeCd  != club_prepay ) {
+total =  all club credits figure or u can put credit from online transaction amount (-645)
+
+appendix b 
+transactionTypeCd == club_prepay
+club credit is always zero - so total is zero

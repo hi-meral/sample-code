@@ -1,0 +1,23 @@
+following both table value should be the same
+
+gn_association > hp_association_num  (for eg 73)
+
+AND
+
+wp_options >  option_value  (where option_name = gcm_ghin_association)  
+
+
+######################
+- if you are updating the specific row
+participatingClub.row
+gn_update_participating_club_rowgolf-club-manager/assets/js/scripts.js 193 and 194 and line 200
+
+if you are updating the specific row
+
+https://datatables.net/reference/api/row().data()
+
+golf-club-manager/lib/ojrClub.php line 129
+
+and line 68 - 91
+
+Online Join Renew --> Participating Clubs

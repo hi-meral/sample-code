@@ -1,0 +1,15 @@
+try mutators
+
+try mass assignment
+
+collease()
+
+
+- what are the Disbribution System and ODA exactly in the term of software. What are the difference between them?
+- what is SMPFC ans SIF
+- Do we use all symphony syntax for this complete operations ? 
+- What databases Disbribution System uses right now, MySQL OR MSSQL
+- Do we build the Disbribution System's local database ?
+- What it exactly after "post installation" commands
+
+

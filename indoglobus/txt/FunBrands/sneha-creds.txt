@@ -1,0 +1,32 @@
+
+Hi,
+
+AWS CREDENTIALS
+aws login url: https://fun-brands.signin.aws.amazon.com/console
+aws username: smahale
+aws password: kYl76fjP*poY
+aws access key: AKIAIQB35AMNVRF4XMTQ
+aws secret key: lxzwXNI5ky2ayPwy4ntOTvpf1fkb3+0/0K8uCXig
+
+When you log in:
+1. Go to EC2
+2. Go to Instances
+3. Find your development machine (development - dev machine - sneha)
+4. Right click and choose instance state, then start.
+5. Wait until aws assigns an ip address, you will use remote desktop to connect to this ip address.
+
+When you are done at the end of each day, please power down your virtual machine by running the following in an administrator command prompt within your virtual machine:
+shutdown /s
+
+It would also be a good idea to create an image of your amazon instance every week or two, in case something bad happens.  You can do this by logging in to the aws console, go to the ec2 section, right click on your instance, and choose image, create image.  It'll ask you for a name and description (yyyymmdd-smahale is fine for both).  This will reboot your instance unless you check the 'no reboot' box.  It's probably best to let it get rebooted, so end of day on Friday is probably a good time to do it - just quit all applications on your instance first.  
+
+VIRTUAL MACHINE CREDENTIALS
+user: fbinternal\smahale
+pass: Z9nkMXMLs
+
+PLEASE DO NOT INSTALL WINDOWS UPDATES ON YOUR VIRTUAL MACHINE - WE HAVE HAD MACHINES BECOME INACCESSIBLE DUE TO WINDOWS UPDATES
+
+SOURCE CONTROL
+server: https://tfs.internal.fun-brands.com/tfs/
+user: smahale
+pass: Z9nkMXMLs

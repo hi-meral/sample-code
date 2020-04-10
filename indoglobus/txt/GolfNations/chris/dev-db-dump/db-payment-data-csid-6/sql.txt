@@ -1,0 +1,1 @@
+INSERT INTO `gn_merchant_status` VALUES ('approved','Approved');

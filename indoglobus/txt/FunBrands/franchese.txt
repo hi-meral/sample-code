@@ -1,0 +1,105 @@
+CREATE TABLE public.available_franchise_territories
+(
+    territory_id INT PRIMARY KEY,
+    territory_name VARCHAR(100) NOT NULL
+);
+
+<h2>Available Franchise Territories</h2>
+    <ul>
+        <li><span>Colorado Springs, CO</span></li>
+        <li><span>Albuquerque, NM</span></li>
+        <li><span>Atlanta, GA</span></li>
+        <li><span>El Paso, TX</span></li>
+        <li><span>Louisville, KY</span></li>
+        <li><span>Little Rock, AR</span></li>
+        <li><span>Goodyear, AZ</span></li>
+        <li><span>Mesa, AZ</span></li>
+        <li><span>Phoenix, AZ</span></li>
+        <li><span>Bakersfield, CA</span></li>
+        <li><span>Corona-Riverside, CA</span></li>
+        <li><span>Fresno, CA</span></li>
+        <li><span>Los Angeles City/County, CA</span></li>
+        <li><span>Redlands - Loma Linda, CA</span></li>
+        <li><span>Sacramento, CA</span></li>
+        <li><span>San Diego, CA</span></li>
+        <li><span>Valencia, CA</span></li>
+        <li><span>Aurora, CO</span></li>
+        <li><span>Centennial-Littleton, CO</span></li>
+        <li><span>Colorado Springs, CO</span></li>
+        <li><span>North Denver, CO</span></li>
+        <li><span>Parker, CO</span></li>
+        <li><span>Westminster-Arvada, CO</span></li>
+        <li><span>Fort Lauderdale, FL</span></li>
+        <li><span>Hollywood, FL</span></li>
+        <li><span>Lake Worth, FL</span></li>
+        <li><span>Miami, FL</span></li>
+        <li><span>Orlando, FL</span></li>
+        <li><span>Campbellton, GA</span></li>
+        <li><span>Lawrenceville, GA</span></li>
+        <li><span>Lithonia, GA</span></li>
+        <li><span>North Druid Hills, GA</span></li>
+        <li><span>Roswell, GA</span></li>
+        <li><span>Boise, ID</span></li>
+        <li><span>Aurora, IL</span></li>
+        <li><span>Libertyville, IL</span></li>
+        <li><span>Lincolnwood, IL</span></li>
+        <li><span>Midway, IL</span></li>
+        <li><span>St. Charles, IL</span></li>
+        <li><span>Avon, IN</span></li>
+        <li><span>Wichita, KS</span></li>
+        <li><span>Louisville, KY</span></li>
+        <li><span>Baton Rouge, LA</span></li>
+        <li><span>Boston, MA</span></li>
+        <li><span>Annapolis, MD</span></li>
+        <li><span>Clarksburg, MD</span></li>
+        <li><span>Lutherville, MD</span></li>
+        <li><span>Grand Rapids, MI</span></li>
+        <li><span>Minneapolis, MN</span></li>
+        <li><span>Kansas City, MO</span></li>
+        <li><span>West Orange, NJ</span></li>
+        <li><span>Albuquerque, NM</span></li>
+        <li><span>North Las Vegas, NV</span></li>
+        <li><span>Albany/Schenectady/Troy, NY</span></li>
+        <li><span>Bohemia-Long Island, NY</span></li>
+        <li><span>Bronx, NY</span></li>
+        <li><span>Buffalo, NY</span></li>
+        <li><span>New Windsor, NY</span></li>
+        <li><span>New York - Upper West Side, NY</span></li>
+        <li><span>Rochester, NY</span></li>
+        <li><span>Cincinnati, OH</span></li>
+        <li><span>Cleveland, OH</span></li>
+        <li><span>Colombus , OH</span></li>
+        <li><span>Milford, OH</span></li>
+        <li><span>Oklahoma City, OK</span></li>
+        <li><span>Portland, OR</span></li>
+        <li><span>Philadelphia, PA</span></li>
+        <li><span>Pittsburgh, PA</span></li>
+        <li><span>Charleston, SC</span></li>
+        <li><span>Columbia, SC</span></li>
+        <li><span>Fort Mill, SC</span></li>
+        <li><span>Memphis, TN</span></li>
+        <li><span>El Paso, TX</span></li>
+        <li><span>Grapevine, TX</span></li>
+        <li><span>Mesquite, TX</span></li>
+        <li><span>Webster, TX</span></li>
+        <li><span>Ogden, UT</span></li>
+        <li><span>Provo, UT</span></li>
+        <li><span>Salt Lake City, UT</span></li>
+        <li><span>Alexandria, VA</span></li>
+        <li><span>McLean, VA</span></li>
+        <li><span>Norfolk, VA</span></li>
+        <li><span>Richmond, VA</span></li>
+        <li><span>Woodbridge, VA</span></li>
+        <li><span>Arlington-Burlington, WA</span></li>
+        <li><span>Auburn, WA</span></li>
+        <li><span>Vancouver, WA</span></li>
+    </ul>
+
+
+<h2>Franchises For Resaleeee</h2>
+<ul>
+ 	<li><a href="/franchise/available-territories/avon-oh/">Pump It Up Of Avon, OH</a></li>
+ 	<li><a href="/franchise/available-territories/ham-lake-mn/">Pump It Up Of Ham Lake, MN</a></li>
+ 	<li><a href="/franchise/available-territories/piscataway-nj/">Pump It Up Of Piscataway, NJ</a></li>
+ 	<li><a href="/franchise/available-territories/taylor-mi/">Pump It Up Of Taylor, MI</a></li>
+</ul>

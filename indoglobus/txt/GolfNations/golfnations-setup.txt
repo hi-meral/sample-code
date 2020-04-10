@@ -1,0 +1,77 @@
+
+
+INstall wordpress
+################
+
+Multisite before Activate plugin
+
+https://codex.wordpress.org/Create_A_Network
+step-2 and step - 3 essential rest are information
+##############################################
+
+Open up wp-config.php and add this line above where it says /* That's all, stop editing! Happy blogging. */. If it doesn't say that anywhere, then add the line somewhere above the first line that begins with require or include:
+/* Multisite */
+define( 'WP_ALLOW_MULTISITE', true );
+
+
+ Administration > Tools > Network Setup
+
+##############################################
+
+update config again
+UPdate your .htaccess file
+
+
+######################## SVN checkout ################
+
+theme
+http://liquamedia.com/repos/themes/trunk
+
+pluggins 
+
+gcm-email-templates
+http://liquamedia.com/repos/plugins/gcm-email-templates/trunk
+
+gcm-ghin-integration
+http://liquamedia.com/repos/plugins/gcm-ghin-integration/trunk
+
+golf-club-manager
+http://liquamedia.com/repos/plugins/golf-club-manager/trunk
+
+golf-nations
+http://liquamedia.com/repos/plugins/golf-nations/trunk
+
+golf-nations-club-billing
+http://liquamedia.com/repos/plugins/golf-nations-club-billing/trunk
+
+golf-nations-stripe
+http://liquamedia.com/repos/plugins/golf-nations-stripe
+
+ign-score-sharing
+http://liquamedia.com/repos/plugins/ign-score-sharing
+
+
+################################################
+network enable scga themes from network admin
+
+active that theme from site admin
+
+active all plugins from site admin
+
+#################################################
+
+
+go to Dashboard > online join & renew > Pages > enable pages by clickinig top link
+
+
+#################################################
+
+GN Settings > GHIN 
+
+username : ws98
+password : ws98
+association ID 	 : 98
+
+#################################################
+
+

@@ -1,0 +1,271 @@
+group will be a new functionality
+so add new table
+*new
+store_groups
+
+miral [10:29 PM]
+i see
+
+Shikher [10:29 PM]
+and table to link store and store groups
+ilke store_group_map or something
+
+miral [10:30 PM]
+so dont I need to create simple store info page ?
+at very first
+?
+or anything is exist ?
+
+Shikher [10:31 PM]
+yes you need to create store info page similar to customer details page
+with all the sections that she has mentioned in the doc
+
+miral [10:32 PM]
+but store info will have only one store right
+customer has a list
+
+Shikher [10:33 PM]
+yes but store has lot of info
+
+miral [10:33 PM]
+see page no 3
+
+Shikher [10:33 PM]
+like room names
+feature config
+start time
+etc
+
+miral [10:33 PM]
+okay
+
+Shikher [10:33 PM]
+all will go in different collapsible sections
+you can create multiple collapsible sections
+
+miral [10:33 PM]
+i see, on same page collapsible
+right ?
+
+Shikher [10:34 PM]
+ya go through all the store info that she needs on that page
+and then decide how many collapsible panel you need
+
+miral [10:34 PM]
+ya on page no 2
+
+Shikher [10:35 PM]
+store_groups can only be created by admin
+actually that's should not be part of this task
+don't worry about that
+implement rest of it
+I will tell it to Michael
+
+miral [10:35 PM]
+ok
+
+Shikher [10:36 PM]
+so implement everything except store group
+
+miral [10:36 PM]
+i see,
+so it is clearing confusion
+
+Shikher [10:36 PM]
+after we create store group functionality, you will have to show store's group in summary section
+
+miral [10:36 PM]
+now ok
+
+Shikher [10:36 PM]
+and also
+you will have to implement ability to update store's group from store details page
+so probably you need to do part of it in store details page
+
+miral [10:37 PM]
+ok, so that section will be different from the given list
+
+Shikher [10:38 PM]
+ok
+wait
+I think you can do it like this -
+show store's group in summary section
+if store is not part of any group then you can print N/A
+make "store's group" or 'N/A' clickable
+on click you can open modal to show all available group with radio
+with current group selected
+since store can only be part of one group
+
+miral [10:41 PM]
+getting...
+
+Shikher [10:41 PM]
+also give add more group  button on modal
+so make it clickable only for admins
+so only admins can create/assign groups
+
+miral [10:42 PM]
+so that group will be added in dropdown
+
+Shikher [10:42 PM]
+dropdown?
+radio list
+
+miral [10:42 PM]
+radio
+yes
+
+Shikher [10:43 PM]
+so you do need to create store_groups table
+but not store group maps
+sine store will belong to only one group
+just add fk in stores table
+after store info page
+
+miral [10:43 PM]
+i see
+
+Shikher [10:44 PM]
+we can create separate icon for "Store Groups" for admins
+so admins can view all groups
+also if they want to add/edit
+
+miral [10:44 PM]
+Icon on home page right ?
+for admin
+
+Shikher [10:45 PM]
+so basically admins can create/update groups either from store info page or "Store groups" page
+but can assign only from store info page
+don't worry about that page for now
+just create store info page
+
+miral [10:45 PM]
+okay got it
+
+Shikher [10:46 PM]
+fk in stores will be null obviously since it's not required
+
+miral [10:47 PM]
+and this whole story on store info page will take place in another collapsible box like Payment Type, Feature config etc ?
+
+Shikher [10:47 PM]
+store group assignment?
+
+miral [10:47 PM]
+yes
+title will be store group
+
+Shikher [10:48 PM]
+no just show store group name (N/A if not available) in summary section
+and make that clickable for admins so that they can edit it
+non admins will just see group if available
+nothing if it's null in stores table
+makes sense?
+or may be just give small button on top right of summary section
+to edit store group only for admins
+whichever way you like
+
+miral [10:50 PM]
+see this picture
+
+Shikher [10:50 PM]
+probably button would look good
+
+slackbot [10:50 PM]
+Your file was uploaded — it’s safe and sound in Slack. Unfortunately your workspace doesn’t have any storage space left. To get more space, you can upgrade to a paid account or delete some of your older files.
+
+miral [10:50 PM]
+Untitled.png 
+
+will it be like this ?
+first is title , like all other title and when click it open the collapsible content
+
+Shikher [10:51 PM]
+I don't think we need separate section for group
+since it will be just one word for store group and should be in summary so that it's always visible
+and if it's null in stores table
+we don't need to show that at all
+
+miral [10:52 PM]
+okay got it
+
+Shikher [10:52 PM]
+so small button on top of summary to edit group for admins should be sufficient
+
+miral [10:52 PM]
+so why we should not put in first box where name , address are displayed
+I will add one more line if store group exist
+
+Shikher [10:53 PM]
+and then that button can open modal with group radios and ability to add more groups
+yes that's the summary box
+
+miral [10:53 PM]
+okay
+button will be alwasy there
+for admin (edited)
+
+Shikher [10:54 PM]
+yes
+
+miral [10:54 PM]
+even if it is NA, admin can assign something
+
+Shikher [10:54 PM]
+and actually
+we may not even need button
+when they hit edit store info button
+see the green button on summary section
+
+miral [10:55 PM]
+yes
+
+Shikher [10:55 PM]
+you can give option to assign/change group there
+check customer details summary edit button
+
+miral [10:56 PM]
+ok ok
+got that
+on that modal box i can give that provision
+to edit group
+to admin only'
+
+Shikher [10:56 PM]
+ya go through it and we can share screen on Monday
+if you need
+yes
+
+miral [10:56 PM]
+ok
+but now I will do rest of the thing
+I will do the group work at last
+
+Shikher [10:57 PM]
+yes
+
+miral [10:57 PM]
+Now this line -
+(Please add a feature Config flag that is only applicable in POpS at the store level to turn checklists on and off.  Setting this flag to ON the Opening and Closing manager checklists are not displayed/required
+what this needs exactly
+
+Shikher [11:09 PM]
+let me check
+
+miral [11:09 PM]
+ok
+
+Shikher [11:10 PM]
+that should be separate task
+comment that on trello
+you can mention my name
+it's not store info thing
+
+miral [11:10 PM]
+okay
+I will do that on Monday when I will start
+thank you
+
+Shikher [11:11 PM]
+np

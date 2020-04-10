@@ -1,0 +1,188 @@
+VIRTUAL MACHINE CREDENTIALS
+user: fbinternal\mmaradia
+pass: aXcu^|fu*c(-
+
+email:
+mmaradia@atlasbrands.com
+Meral#321
+
+wordpress wp-admin on dev
+admin
+P@ssw0rd$
+
+AWS CREDENTIALS
+https://fun-brands.signin.aws.amazon.com/console
+Account:fun-brands
+username: mmaradia
+password: aXcu^|fu*c(-
+
+VIRTUAL MACHINE CREDENTIALS
+user: fbinternal\mmaradia
+pass: aXcu^|fu*c(-
+
+Trello
+mmaradia@atlasbrands.com
+Meral#321
+
+http://staging.piufms.mx/
+http://staging.piufms.com/
+http://call-center-dev.piufms.com/
+mmaradia
+may@2018
+##facebook@369
+#google@123
+###meral@987
+###m@meral@1
+
+http://piucms-dev.pumpitupparty.com/
+
+dev
+fb@2017
+---meral@321
+---admin@12345
+
+https://staging.pumpitupparty.com/
+funbrands
+funbrands
+
+https://staging.pumpitupparty.com/wp-admin/
+dev.pumpitupparty.com/wp-admin/
+admin
+S3Tg$U0n2D%utq3Kjn
+
+https://piucms-staging.pumpitupparty.com/index.php
+mmaradia
+-- FB2017!!
+miral@123#
+
+https://trello.com/login
+mmaradia@atlasbrands.com
+Meral#321
+
+DB for staging wordpress
+localhost
+db: pumpitupparty_wp_staging
+user:pumpitupparty
+!!!P@ssw0rd$$$
+
+http://dev.piufms.com/
+dev
+admin@12345
+
+https://staging.piufms.com/
+mmaradia
+--miral@123#
+m@meral@1
+
+dchandake@atlasbrands.com
+deepali@123
+Open jump booking
+
+### staging database connection ####
+dbserver
+piucms-staging
+secret
+piucms-staging
+
+### staging database connection ####
+dbserver
+bucms-staging
+secret
+bucms-staging
+
+SOURCE CONTROL (Git)
+server: https://tfs.internal.fun-brands.com/tfs/
+user: mmaradia
+pass: aXcu^|fu*c(-
+
+Project URL : https://tfs.internal.fun-brands.com/tfs/DefaultCollection/_git/piucms-db
+
+production db
+name: vmsms2_prod_restore
+user: vmsms_staging
+pass: secret
+
+-live- piufms.com / POPS / LIVE
+bpirasanth
+P@ssw0rd$
+
+fcorpstaff
+January2020!!
+
+mmarida
+Feb@2020
+
+
+Twilio credentials:
+https://www.twilio.com/login
+u: it@fun-brands.com
+p: FunBr@ndz2015$!
+
+Norwalk Store Phone Number
++12038579666
+Shikher
+Desk 602-749-2341
+Cell 2517530377
+
+International Call Number (Indo Globus)
++1 813-853-0680
++1 813-398-6692
+
+slack
+mmaradia@atlasbrands.com
+Meral#321
+
+Bugsnag
+mmaradia@atlasbrands.com
+Meral#321
+
+TEST CREDIT CARD
+5164884292647276
+04/24
+694
+
+4847 1857 6491 3180 
+08/2025
+759
+
+TimeCamp
+mmaradia@atlasbrands.com
+Meral#321
+
+Staging POps
+pgmanager
+FunBrands1!
+
+https://reports-staging.popscentral.com/reports + Reporting Service Login (Login Popup on deploy report from VS)
+u: administrator
+p: zB9EB7ScVM6p
+
+RDP - staging iis
+54.69.43.111
+administrator
+suZTcoCj;c.
+
+SSRS machine
+54.68.88.246
+Administrator
+Ikew9%LXM@O%43Fcl7c%rV%5J-qbr8WC
+
+Open Jump Booking
+mmaradia@atlasbrands.com
+Meral#321
+
+#DB_CONNECTION=vmsms
+#DB_HOST=34.221.243.33
+#DB_PORT=5432
+#DB_DATABASE=vmsms2_prod
+#DB_USERNAME=vmsms_prod
+#DB_PASSWORD=Pr0ducT!0n$
+
+NIki cc
+test card
+4012000098765439
+
+12/2020
+999
+
+Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters

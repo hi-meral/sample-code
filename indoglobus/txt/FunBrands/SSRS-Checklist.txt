@@ -1,0 +1,10 @@
+1.  All dollar amounts should us a comma separator and a $ symbol (Ex. $14,000.00)
+2.  All reports should display the date & time for the current user
+3.  All report exports should include the date & time for the current user
+4.  All reports that are intended to be printed should look the same out of both systems.  If you are not able to print, please print to PDF and compare them instead.
+5.  All fields, values & functionality in the existing VMSMS report should be included in the new report.  
+6.  All revenue values should only be out 2 decimal places (Ex. $14.01 not $14.0125632)
+7.  Date & Time should always be formatted as: MM/DD/YYY  HH:MM am/pm (12 hour clock)
+8.  Even 0 values should be included in the export
+9.  $ and comma separator should be included in all exports
+10.  Total columns when ever possible.

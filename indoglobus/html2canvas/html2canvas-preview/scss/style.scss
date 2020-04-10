@@ -1,0 +1,45 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body{
+  font-family:'helvetica',arial,sans-serif;
+  color:#666;
+}
+.wrap{
+  padding:20px;
+}
+div.box{
+  text-align:center;
+  margin:10px auto;
+  border:1px solid #ccc;
+  padding:15px;
+  position: relative;
+  width:400px;
+  /* height:480px; */
+  float:left;
+  &.paste{float:right;border:none;padding:0}
+  img{
+    max-width:300px;
+    display:block;
+    margin:0 auto
+  }
+  .text{
+    cursor:pointer;
+    position: absolute;
+    top:44.5%;
+    width: 300px;
+    left: 50%;
+    margin-left: -150px;
+    color:#fff;
+    text-align:center;
+    display:block;
+    //font-weight:bold;
+    font-size:17px;
+  }
+}
+canvas{
+  display:block;  
+}

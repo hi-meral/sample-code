@@ -1,0 +1,85 @@
+https://www.bounceu.com/
+https://www.pumpitupparty.com/
+
+Divi Page Editor
+- Text
+- Accordion
+- Tabs
+- Slider
+- Toggles
+- Video Slider
+- Pricing Table
+- Blog
+- Login Form
+- Contact Form
+- Page Section
+- Map
+- Social buttons
+
+################
+
+What is meant by hooks in WordPress?
+Hooks are provided by WordPress to allow your plugin to 'hook into' the rest of WordPress; that is, to call functions in your plugin at specific times, and thereby set your plugin in motion. There are two kinds of hooks: Actions (Codex Action Reference) Filters (Codex Filter Reference)
+
+####################
+
+add_action( $hook, $function_to_add, $priority, $accepted_args );
+
+do_action( 'save_post', $post_ID, $post, $update );
+
+add_action( 'save_post', 'wpdocs_my_save_post', 10, 3 );
+
+function wpdocs_my_save_post( $post_ID, $post, $update ) {
+   // do stuff here
+}
+
+###################
+
+// Filter call.
+$value = apply_filters( 'hook', $value, $arg2, $arg3 );
+
+// Accepting zero/one arguments.
+function example_callback() {
+    ...
+    return 'some value';
+}
+add_filter( 'hook', 'example_callback' ); // Where $priority is default 10, $accepted_args is default 1.
+
+// Accepting two arguments (three possible).
+function example_callback( $value, $arg2 ) {
+    ...
+    return $maybe_modified_value;
+}
+add_filter( 'hook', 'example_callback', 10, 2 ); // Where $priority is 10, $accepted_args is 2.
+
+###################
+
+
+add_action('admin_menu', 'my_menu');
+
+function my_menu() {
+    add_menu_page('My Page Title', 'My Menu Title', 'manage_options', 'my-page-slug', 'my_function');
+}
+
+function my_function() {
+    echo 'Hello world!';
+}
+
+// capabilities - https://codex.wordpress.org/Roles_and_Capabilities#manage_options
+
+###################
+
+
+wp_enqueue_style
+wp_register_style
+
+wp_enqueue_script
+wp_register_script
+
+
+####################
+
+postgreSQL 
+-> JSON to store data to make result faster
+-> row level locking
+

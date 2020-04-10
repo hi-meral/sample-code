@@ -1,0 +1,30 @@
+
+
+
+remove footer
+
+D:\wamp64\www\wordpress\wp-content\themes\onepress\inc\template-tags.php
+comment this line : add_action( 'onepress_footer_site_info', 'onepress_footer_site_info' );
+
+using theme editor
+http://qodesense.com/wp-admin/theme-editor.php
+
+###########
+
+permanently remove footer
+
+D:\wamp64\www\wordpress\wp-includes\functions.php
+add at bottom
+function onepress_footer_site_info() {
+    
+}
+add_action( 'init', 'onepress_footer_site_info', 20 );
+
+###########
+
+
+
+remove sidebar
+Appearance > customize > theme options > Global > change layout
+
+http://qodesense.com/wp-admin/customize.php?return=%2Fwp-admin%2Fwidgets.php

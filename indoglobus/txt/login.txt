@@ -1,0 +1,51 @@
+WIFI
+
+airtel 4G 
+0211B221F16
+
+G Guest Network 2/5
+qubesense
+
+N Guest Network 2/5
+qubesense#
+
+INDOGLOBUS
+indoqube
+
+Jio router password - tap5j5yi5m
+
+G guest
+maptotrack
+
+----
+
+desktop admin password
+indosushil
+
+slack - indoglobus
+miral@indoglobus.com
+miral1234
+
+appenate
+us01@indoglobus.com
+123456
+
+#us02@indoglobus.com
+#644780407
+
+credit card number
+4111111111111111
+
+indoglobus skype
+8551876999
+indoglobus@123
+
+zohomail
+miral@qubesense.com
+miral1234
+
+International Call Number
++1 813-398-6692
+
+Leave Sheet
+https://docs.zoho.com/sheet/open/9aumse6ec374ea58f43d58ef160e7ac5fb626

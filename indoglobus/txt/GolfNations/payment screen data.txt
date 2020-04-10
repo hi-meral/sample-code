@@ -1,0 +1,7 @@
+HpCustomerNum - ghinno
+
+ClubBill > BillNumber
+
+
+
+ClubBill >  EndBillDate

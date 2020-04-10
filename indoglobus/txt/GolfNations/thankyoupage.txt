@@ -1,0 +1,11 @@
+1 .new member - NO ghin - confirmation(1) / if need approval - Pending page(3)
+
+2. joining with GHIN - differnt club - confirmation (1) / if need approval - Pending page(3)
+
+3. joining with GHIN - same club - different membership - confirmation renew (2)
+
+4. joining with GHIN - same club - same membership - confirmation renew (reactivate) (2)
+
+		4.1   if deactivated then called reactivation
+
+		4.2	if already continue - called renew continuing

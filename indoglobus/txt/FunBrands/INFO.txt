@@ -1,0 +1,661 @@
+confirmation-birthdays2.html = PUMP IT UP CONFIRMATION LETTER
+confirmation-birthdays1.html = PUMP IT UP BOOKING LETTER
+confirmation-attempt.html = PUMP IT UP CONFIRMATION ATTEMPT LETTER
+
+create_bounce_pass - function
+bounce_pass_customer table pass_length column
+
+
+Assing pass
+
+admin > resources > add pass 
+
+OTC/Retail Sale  >  pick a pass > submit > Assing > find customer > pick a child > Assign Pass > Payment (by cash)
+
+Go to event
+
+Guest tab > Add resouces > find customer > pick a child > Update Event > go to event > back to guest tab > click on customer name > {go inside} > Receipt > Avail Pass > 
+
+to_char(a.eres_start, 'mm/dd/yyyy HH12:MI:SS AM') eres_start
+to_char(etv.start_date AT TIME ZONE s.timezone, 'MM/DD/YYYY HH12:MI:SS AM') as start_date,
+
+1) Create Migration  :  php artisan make:migration "migration_name"C:\source\Fun Brands\POps\app\Models\SsrsReport.php
+C:\source\Fun Brands\POps\app\Models\SsrsReportReportParameter.php
+
+C:\source\Fun Brands\POps\database\seeds\SsrsReportSeeder.php
+C:\source\Fun Brands\POps\database\seeds\SsrsReportReportParameterSeeder.php
+C:\source\Fun Brands\POps\database\seeds\ReportCategoryMapSeeder.php
+
+08353a08a48e828bbfb57b72849bf2923e46b729
+2) Check status : php artisan migrate:status
+3) Run migration :php artisan migrate
+Seeder commd : php.exe artisan db:seed --database=kioskdb
+
+
+
+http://dev.piufms.com/api/cactus/sync-customers.php?value=15369346&type=by-id&action=sync&key=990b00b8-cee0-11e7-abc4-cec278b6b50a
+
+
+@miralmaradia1 Yes, you can run gulp via putty. cd to the application directory and run "sudo gulp"
+
+putty - load staging (52.26.37.70 / 22) ,
+SSH > Auth > Browse centos.ppk file , Open  login id : centos
+cd /xvdb/www - (path for all project)
+cd /etc - path for php.ini
+ce /etc/php.d - path for dll files for eg browscap.ini
+check database in putty
+mysql -u root -p" (Enter)
+SHOW DATABASES;
+use [dbname];
+select * from xyz;
+
+DB putty : 54.148.66.39 / 22
+
+POPS putty - ubuntu@34.222.230.147 (Port 22)   IP OF - instance - "staging - www - pops - b "
+Check your IP in security group > staging - office access 
+
+FLOW 
+How to send email
+select store
+close and open drawer
+go to date and book a party,
+add host
+add deposite in Cash
+Confirmation Letter button
+(popup open)
+click send email to customer
+
+change event on calendar
+event_
+
+CentOS
+/etc/php.ini
+/etc/php.d/***.ini
+
+check settings 
+
+php -i | grep 'browscap'
+
+
+- set cron job / cronjob
+
+
+sudo -i -u cron_vmsms (direct after login to staging www putty) direct
+
+crontab -e
+
+0 0 * * * php -f \xvdb\www\cron\corp_report.php
+
+0 8 1 * * php -f \xvdb\www\cron\monthly_normalized_revenue_n_parties.php (every month 1st 8 am)
+
+:x!
+
+Enter
+
+####  HOW TO SET UP NEW PROJECT (project setup) #####
+
+VCS -> Clone in phpstorm  , Add Git path 
+https://tfs.internal.fun-brands.com/tfs/DefaultCollection/_git/<new project name>
+
+step 1
+# Add the following block in C/wamp64/bin/apache/apache2.4.17/conf/extra/httpd-vhosts.conf
+
+
+<VirtualHost *>
+
+    DocumentRoot "c:/source/fun brands/call-center-twilio/public"
+
+   ServerName call-center-twilio-dev.piufms.com
+
+   ServerAlias call-center-twilio-dev.piufms.com
+
+   ErrorLog c:\source\logs\call-center-twilio.error.log
+
+   CustomLog c:\source\logs\call-center-twilio.error.log combined
+
+
+   <Directory "c:/source/fun brands/call-center-twilio/public/">
+
+       Order allow,deny
+
+       Allow from all
+
+       AllowOverride All
+
+       Require all granted
+
+   </Directory>
+
+</VirtualHost>
+
+step 2 :
+
+Then add line to C:\Windows\System32\drivers\etc\hosts
+
+127.0.0.1	call-center-twilio-dev.piufms.com
+
+(restart machine would be ok)
+
+add .env file 
+
+APP_NAME=POps
+APP_ENV=local
+APP_KEY=base64:Yuy8RTjgWJM5bnWmz5Q5toDp8zYGFwDZdvRxUjcTAoY=
+APP_DEBUG=true
+APP_LOG_LEVEL=debug
+APP_URL=http://pops-dev.piufms.com
+TEST_STORE=100266
+
+npm install
+composer update  (if memory issue then  - "php -d memory_limit=-1 C:\ProgramData\ComposerSetup\bin\composer.phar install" )
+npm run dev
+
+
+#####
+
+International Call Number (Indo Globus)
++1 813-853-0680
+#+1 813-398-6692
+
+
+######
+
+Twilio
+
+https://www.twilio.com/console/phone-numbers/incoming?property=did_contains&propertyValue=&configType=configuration_hurl_url_contains&configValue=https%3A%2F%2Fcall-center-twilio-staging.piufms.com ( twilio console )
+this will tell you which number goes to staging twilio
++1 203-857-9666 pointing to staging ( set if for any store if not set for anyone - twilio phone)
+
+
+call document
+https://www.twilio.com/docs/taskrouter/quickstart/php
+
+It doesn't work in local environment.
+
+GENERAL UNDERSTANDING OF THE FLOW
+
+lets say you call to a number +1 203-857-9666 which is set as twilio phone for PIU Tiscon (for eg). and if not set set it for any specific store from database > store table > twilio column)
+First it will play the welcome music (open the IVR settings for same store. First option welcome).
+Then if you press 0 it will redirect what is decided in campaign 
+Now open the campaign for PIU Tiscon. If nothing is set something for 0, you can set something.
+there would be 3 options
+Phone - direct go to phone number - (set this 813-853-0680, this will ring in the office number )
+Play - it will just play the music (but make sure that in IVR Setting , choose something for "Play IVR for 1" for that store )
+Task Queue 1 - this will go to CSR Agent (you can login as agent and be online. but make sure in worker tab, you are eligible for Task Queue 1)
+Ring Group - this will go to a specific ring group for the store ( and in this ring group you will get same all above 3 options that you can set by time)
+
+https://call-center-twilio.piufms.com/admin/store-ivr/setting?store_id=23
+play "Wait IVR for 1"" before it connects to the CSR Agent
+play "Play IVR for 1"" when campaign is set to Play
+
+Campaign : 
+for phone we can set a direct phone number
+for Ring group we can choose any ring group from ring group page
+Play will play "Play IVR for 1"
+Task Queue is the one route the calls to agent but Make sure you are allowed to take "Task Queue Type - 1" calls in worker screen
+
+User this code to debug twilio code . You can put it at very beginning for callRouteController.php in incoming call function
+$response = new \Services_Twilio_Twiml;
+$response->say('Hello This is development team testing', ['loop' => 3, 'voice' => 'man']);
+return $response;
+
+
+
+run composer for new vendor
+sudo php /bin/composer.phar require aws/aws-sdk-php "^3.0.0"
+
+(sudo is to make the file writable)
+
+
+Remote machine connection/ amazon machine connection
+Custom TCP Rule
+Port : 3389
+
+
+How to connecet to staging POS
+
+Login with Team Viewer 11
+it_accounts@fun-brands.com
+Password:  FB2018!!
+
+MasterPOS, Remote connection
+
+
+########
+
+Event kiosk
+
+vmsms > Classes > Event.php > kiosk_events() : update hours to 12/24 hours
+
+########
+sudo php artisan twig:clean
+sudo php artisan cache:clear
+
+# to combine public site css
+npm run prod
+
+ -- NOW --
+#1: change this file - C:\fb\www\pumpitup-public-2016\wp-content\themes\pump-it-up\css\style.css
+#2 nmp run dev on your local
+#3 checkin \pumpitup-public-2016\wp-content\themes\pump-it-up\css\style.css  and \pumpitup-public-2016\wp-content\themes\pump-it-up\style.css
+#4 you dont need to run anything on staging.
+#5 Clear cache as wp-admin
+
+For
+bu_store_cache_get  --> check following
+C:\source\Fun Brands\bounceu-public-2016\wp-content\themes\Divi-child\functions.php
+function bu_store_nav_items(   approx line no 725
+bu_store_cache_set
+fetched the $data and set for different pages.
+
+#####################
+kiosk (run in local)
+
+-replace controller
+302[], true)  ---> 302[], false)
+-replace twig
+secure_url(   ---> url(
+
+########### Estimated Audience count #####
+
+C:\source\Fun Brands\cactus-services\contacts\Recipients.php
+line no 1088 approx  (above this line - $this->insertLog(json_encode($this->params), $this->organizationId, $locationId, $query, $qType, $rowNum, count($recipients), $refNum);)
+
+put the following code and observe
+
+                $myFile = "EstAudQuery.sql";
+                $fh = fopen($myFile, 'w');
+                fwrite($fh, $query);
+                fclose($fh);
+
+A query file will be generated here
+C:\source\Fun Brands\cactus\public\EstAudQuery.txt
+
+vmsms
+C:\source\Fun Brands\vmsms\classes\Eblast.php
+function estAudience()
+echo at last
+
+from here customers sync | Cactus Recipients 
+C:\source\Fun Brands\POps\app\Library\Cactus.php > getCustomerObject()
+###########################################
+
+How to add data new party add on pages 
+
+vmsms > VMAdmin > REsources > Add Resources > check all ERES Resource Section and add
+
+
+###########################
+
+TFS code base
+
+https://tfs.internal.fun-brands.com/tfs/DefaultCollection/vmsms/_dashboards
+
+
+############
+
+Eloquent query 
+
+DATE GET & SET
+
+new Expression('to_char(effective_date, \'mm-dd-yyyy hh12:mi:ss am\') AS effective_date');
+Carbon::createFromFormat('m-d-Y', $request->input('effective_date'))->toDateString();
+Carbon::parse($row->event_date)->format('d-m-Y'),
+if(Carbon::parse($voucher->expire_date)->timestamp < Carbon::now()->timestamp)
+compare with carbon
+
+### to make the timestamp default add in following
+Providers/EventServiceProvider.php
+or add $timestamp = false; in model
+
+
+PHPStorm
+
+VCS > Git > Remotes  (check for cloned repository)
+
+
+how to get store config value
+Store::query()->find($storeId)->settings("charge_toddlers_in_birthday_parties");
+
+
+##########
+
+set loader
+<i class="fas fa-spinner"></i>
+$('#search-events').parent().after('<div class="image col-2" id="loader"><img src="/img/hor_loading.gif" class="loading-sm"></div>');
+
+get ajax javascript object
+
+$.ajax({
+                type: 'POST',
+                dataType: "json",
+                url: '/store-ops/campsession/get-events',
+                data: 'start_date=' + $('#start_date').val() + '&end_date=' + $('#end_date').val() + '&camp_id=' + $('#camp_id').val(),
+                beforeSend: function beforeSend() {
+                    $('#search-events').parent().after('<div class="image col-2" id="loader"><img src="/img/hor_loading.gif" class="loading-sm"></div>');
+                },
+                success: function (eventOptions) {
+                    $('#selected-events #event_ids').empty();
+                    eventOptions.forEach(function (opt) {
+                        $('#selected-events #event_ids').append($('<option></option>').val(opt.val).html(opt.text).attr("selected", opt.selected));
+                    });
+                    $('#loader').remove();
+                }
+            });
+			
+			PHP return - json_encoce($array) - for eg [{'val':'123','name':'xyz'},{'val':'123','name':'xyz'}]
+			
+TABLE DIV STRUCTURE
+<div class="row">
+    <div class="col-sm-2">Type</div>
+    <div class="col-sm-2">Royalty Rate</div>
+    <div class="col-sm-2">Adjust</div>
+    <div class="col-sm-3">Effective Date</div>
+    <div class="col-sm-2">Ad Fund Rate/Min</div>
+    <div class="col-sm-1"></div>
+</div>
+
+<div class="table-responsive">
+<table class="table table-fixed">
+</table>
+</div>
+
+check box
+
+<div class="pretty p-icon p-smooth">
+	<input class="form-check-input" type="checkbox" name="invoice_keys[]" value="{{ $invoice->key }}"/>
+	<div class="state">
+		<i class="icon material-icons">done</i>
+		<label></label>
+	</div>
+</div>
+---
+
+Check drawer before load page, (in controller file) :::
+
+$todayDrawerStatus = SessionManager::getSessionTodayDrawerStatus();
+
+if ($todayDrawerStatus !== 'opened') {
+	return redirect()->route('drawer.drawer')->with('post-load-popup', ['popup-timer-3000', 'Drawer Not Opened', 'You must open today\'s drawer before doing retail sale.', 'info']);
+}
+
+---
+session msg session message
+$request->session()->flash('alert-success', 'Tips are paid');
+
+****OR******
+return redirect()->route('report.franchisorSSS',['reportDate' => $reportDate])->with('alert-danger', 'Error');
+
+@include('common._flash-message')
+****OR******
+<div class="flash-message-vendor">
+	@foreach (['danger', 'warning','success', 'info'] as $msg)
+		@if(Session::has('alert-' . $msg))
+			<p class="alert alert-{{ $msg }}">
+				{{ Session::get('alert-' . $msg) }}
+				<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			</p>
+		@endif
+	@endforeach
+</div> <!-- end .flash-message -->
+---
+
+
+return response()->json($letter);
+
+
+SSRS REPORT - HOW TO VIEW ON STAGING
+
+##############################################
+
+first right click and deploy the report_categories
+
+it will show on
+https://reports-staging.popscentral.com/reports/ -> 
+Browse 
+Home  fb-private  paginated-reports  POpS_SSRS_Reports
+
+SSRS - REPORT DATA - CTR+ALT+D - VIEW (AT END) -> REPORT DATA 
+
+SELECT *
+FROM reports
+WHERE report_name LIKE '%Current Events%'
+
+// params
+//perm_id - > perm_id of report_name table
+//title -> title of report_name table
+//path -> path of report_name table
+//position -> position on the screen 
+
+INSERT INTO ssrs_reports(perm_id, title, path, position) VALUES(1, 'Current Events', '/fb-private/paginated-reports/POpS_SSRS_Reports/Current_Events', 7);
+
+SELECT *
+FROM ssrs_reports
+
+SELECT *
+FROM ssrs_report_parameters
+
+// params = 
+report_id -> id of ssrs_reports table
+report_parameter_id -> id of ssrs_report_parameters table
+positioin -> calculate the position of params
+INSERT INTO ssrs_report_report_parameters(report_id, report_parameter_id, position) VALUES(17, 2, 1);
+
+SELECT *
+FROM report_categories
+// category_id -> id of report_categories table
+// report_id -> id of ssrs_reports table
+INSERT INTO report_category_map(category_id, report_id) VALUES(2, 17);
+
+Now 
+execute this
+https://reports-staging.popscentral.com/
+
+pick the category and your report is there
+
+ODBC Data Source
+Dsn=DNS_VMSMS_STAGING_32_ANSI
+
+
+=System.TimeZoneInfo.ConvertTimeBySystemTimeZoneId(Format(DATEADD(DateInterval.Minute, 270,Now()), "MM/dd/yyyy hh:mm tt"), TimeZoneInfo.Utc.id, "Mountain Standard Time")
+
+=Lookup(Fields!room_id.Value, Fields!room_id.Value,  Fields!event_id.Value, "CurrentEvents")
+
+################################################
+SSRS 
+
+Function SumLookup(varArray as array) as Double
+Dim RetVal as Double
+RetVal = 0
+For Each item As Double In varArray 
+	RetVal = RetVal + item
+Next
+Return RetVal
+End Function
+
+Simple report furmo - Moved Events
+
+ protected $primaryKey = null;
+    public $incrementing = false;
+	
+	
+######################################
+
+Date range picker
+
+$(document).ready(function () {
+
+
+            var elem = $('#report_date');
+            elem.daterangepicker({
+                singleDatePicker: true,
+                showDropdowns: true,
+                autoUpdateInput: true,
+                minYear: 1901,
+                locale: {
+                    format: 'MM/DD/YYYY'
+                },
+            }, function (start, end, label) {
+                //console.log(start.toISOString(), end.toISOString(), label);
+            });
+
+            elem.on('apply.daterangepicker', function (ev, picker) {
+                $(this).val(picker.startDate.format('MM/DD/YYYY'));
+            });
+
+            elem.on('cancel.daterangepicker', function (ev, picker) {
+                $(this).val('');
+            });
+        });
+		
+###################
+
+\Auth::user()->address->email
+
+
+Active / Inactive Tool sample
+
+Home > Store Operations > Adjustment Types
+
+Add/Edit form sample on landing page and not the ajax
+(store setup -> manage resourse > edit resouse )
+https://pops-staging.piufms.com/storesetup/resources/edit?resource_id=37222  (store setup -> manage resourse > edit resouse )
+
+a non ajax form post
+http://pops-dev.piufms.com/corp-admin/copy-roles
+
+#####
+for new js add
+
+find for -> adjustment-types.js
+
+in both files
+C:\source\Fun Brands\POps\resources\views\layouts\partials\script-by-route.blade.php
+webpack.mix.js
+
+### ideal blade file
+@extends('layouts.app')
+
+@push('local_styles')
+
+    <style>
+
+    </style>
+
+@endpush
+
+@section('content')
+    <div id="xxx-page" class="xxx-page">
+        <div class="card collapse">
+            <div class="card-header" role="tab">
+                <div class="clearfix"></div>
+                <div class="float-left">
+                    <h5 class="mb-0">
+                        <a data-toggle="collapse" href="#xxx-collapse" aria-expanded="false"
+                           aria-controls="xxx-collapse">
+                            Page Title
+                        </a>
+                    </h5>
+                </div>
+                <div class="float-right">
+                    <button type="button" class="btn btn-primary btn-sm addFormBtn" title="Add Item">
+                        <i class="fa fa-plus" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div id="xxx-collapse" class="collapse show" role="tabpanel"
+                 aria-labelledby="xxx">
+                <div class="card-body fix-max-height">
+                    <div class="partial-view" id="loadActiveAdj">
+                        <div class="row">
+                            <div class="col-md-9">
+                                left
+                            </div>
+                            <div class="col-md-3">
+                                right
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @include('corp-admin.xxx.partials.modals')
+@endsection
+
+@push('local_scripts')
+
+    <script>
+
+    </script>
+
+@endpush
+
+update function -> check update_function_format_phone
+
+
+#####################
+
+add loader on ajax
+$(this).after('<div class="text-center img" id="loader"><img src="/img/hor_loading_2.gif" class="loading-xs" style="margin:10px 10px 0px 0" ></div>&nbsp;');
+
+
+#####################
+
+data parsley
+
+if($('#adjustmentForm').parsley().isValid()) { // code } else {
+$('#adjustmentForm').parsley().validate();
+}
+
+####################
+
+ONly Required Message
+https://trello.com/c/wg05jyfM/1173-pops-errorexception-in-post-store-ops-room-blackout-new-bulk-zd-37952
+
+#######
+
+send cron with attachment
+command 
+C:\source\Fun Brands\POps\app\Console\Commands\ReportRequestCommand.php
+
+
+
+
+https://drive.google.com/drive/folders/1tZws3_MdhUVDz_f-iC8aYON925VRITBJ
+Shikher:leopard: 2:28 PM
+https://drive.google.com/drive/u/0/folders/0B1I6SfEopPmLYUYwQzFZdlJyQms
+
+
+Twillio call log
+https://www.twilio.com/console/voice/calls/logs/
+
+regedit
+Computer\HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System\CredSSP\Parameters
+New > Key
+Name : AllowEncryptionOracle
+Type : REG_DWORD
+0x0000002 (2)
+
+
+jsonb - json in postgres
+check - C:\source\Fun Brands\POps\app\Repositories\CustomerRepository.php
+$address["email_history"] = json_encode(array_merge($addressObj->email_history,array($addressObj->email)));
+
+check - C:\source\Fun Brands\POps\app\Models\Address.php
+protected $casts = [
+        'email_history' => 'array'
+    ];
+
+
+
+if  App/Model is missing than it is soft linked with Pops
+
+->orWhereRaw('jsonb_exists(email_history,?)', [$email]);
+
+for table : for first column large issue -> remove class="col-N" 
+
+
+stop intact of closed store
+check GIT history - P/I: STORE CLOSURE- MT JULIET: Discontinue Deposit Reconciliation and Intacct Upload (ZD #50717)
