@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+		<meta charset="utf-8" />
+		<title>Sagesurfer- Social Networking, Real Life Communities</title>
+
+		<meta name="description" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<!--basic styles-->
+
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<link href="css/bootstrap-responsive.min.css" rel="stylesheet" />
+		<link href="css/font-awesome.min.css" rel="stylesheet"  />
+
+		<!--[if IE 7]>
+		  <link rel="stylesheet" href="css/font-awesome-ie7.min.css" />
+		<![endif]-->
+
+		<!--page specific plugin styles-->
+        <link rel="stylesheet" href="css/jquery-ui-1.10.3.custom.min.css" />
+		<link rel="stylesheet" href="css/jquery.gritter.css" />
+		<link rel="stylesheet" href="css/select2.css" />
+		<link rel="stylesheet" href="css/bootstrap-editable.css" />
+
+		<!--fonts-->
+
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" />
+
+		<!--ace styles-->
+
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/responsive.css" />
+		<link rel="stylesheet" href="css/skins.css" />
+
+		<!--[if lte IE 8]>
+		  <link rel="stylesheet" href="css/ace-ie.min.css" />
+		<![endif]-->
+
+		<!--inline styles related to this page-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script>
+					 $(document).ready(function(){
+						$('#share_button').click(function(e){
+						e.preventDefault();
+						FB.ui({
+									method: 'feed',
+									name: 'This is the content from dev.sagesurfer.',
+									link: ' http://www.weblogik.in',
+									picture: 'http://dev.sagesurfer.com/userphotos/avatar/man.jpg',
+									caption: 'This is the content is for testing perpous by sagesurfer.',
+									description: 'this will be the posted data by the users.',
+									message: ''
+							});
+						});
+						}); 
+		</script>
+	</head>
+
+	<body>
+	
+		<div id="fb-root"></div>
+<script>
+
+
+  window.fbAsyncInit = function() {
+    // init the FB JS SDK
+    FB.init({
+      appId      : '664800950209716',                        // App ID from the app dashboard
+      status     : true,                                 // Check Facebook Login status
+      xfbml      : true                                  // Look for social plugins on the page
+    });
+
+    // Additional initialization code such as adding Event Listeners goes here
+  };
+
+  // Load the SDK asynchronously
+  (function(){
+     // If we've already installed the SDK, we're done
+     if (document.getElementById('facebook-jssdk')) {return;}
+
+     // Get the first script element, which we'll use to find the parent node
+     var firstScriptElement = document.getElementsByTagName('script')[0];
+
+     // Create a new script element and set its id
+     var facebookJS = document.createElement('script'); 
+     facebookJS.id = 'facebook-jssdk';
+
+     // Set the new script's source to the source of the Facebook JS SDK
+     facebookJS.src = '//connect.facebook.net/en_US/all.js';
+
+     // Insert the Facebook JS SDK into the DOM
+     firstScriptElement.parentNode.insertBefore(facebookJS, firstScriptElement);
+   }());
+</script>
+<img src = "share_button.png" id = "share_button">
+<!--<span class="lbl">&nbsp; <i class="icon-facebook" id = "share_button"></i> Share On Facebook</span>-->
+       <!-- <div class="fb-share-button" data-href="http://developers.facebook.com/docs/plugins/" data-type="icon"></div> --> 
+	</body>
+</html>

@@ -1,0 +1,128 @@
+
+
+Database Access
+---------------------------------------------
+http://docs.joomla.org/Accessing_the_database_using_JDatabase/2.5
+
+
+
+
+COMONANT creator
+---------------------------------------------
+http://www.notwebdesign.com/joomla-component-creator/
+miral@elantechnologies.com
+miral
+miral#123
+
+
+Module creator
+---------------------------------------------
+http://juliopari.com/tools/joomla-module-creator-25/
+
+
+Manually remove componant 
+---------------------------------------------
+DELETE FROM `jos_extensions` WHERE `name` = 'com_phocapdf';
+DELETE FROM `jos_assets` WHERE `name` = 'com_phocapdf';
+DELETE FROM `jos_menu` WHERE `type` = 'component' AND `title` LIKE '%com_phocapdf%';
+DELETE FROM `jos_session` WHERE  `data` LIKE '%com_phocapdf%';
+
+
+
+Get query string
+---------------------------------------------
+$address = JRequest::getVar('address');
+
+
+
+Get menu item detail from menu id
+---------------------------------------------
+$application = JFactory::getApplication();
+$item = $application->getMenu()->getItem($itemid);
+
+
+Load Module in default.php
+---------------------------------------------
+
+
+<?php
+
+	$document	= &JFactory::getDocument();
+	$renderer	= $document->loadRenderer('module');
+	$options	= array('style' => 'raw');
+	$module	 	= JModuleHelper::getModule('mod_birthday');
+	$json_params= json_decode($module->params);
+	$json_params->image_width = 380;
+	$mod_params = get_object_vars($json_params);
+	echo $renderer->render($module, $options);
+?>
+
+
+Get site name
+---------------------------------------------
+$config =& JFactory::getConfig();
+$config->get("sitename");
+
+Get select field from direct database
+---------------------------------------------
+  <field name="vote_category" type="sql"
+		   
+		   label="COM_VOTE_FORM_LBL_ADDVOTE_VOTE_CATEGORY"
+		   description="COM_VOTE_FORM_DESC_ADDVOTE_VOTE_CATEGORY" 
+		   query="SELECT id, title FROM #__vote_category WHERE state=1"
+		   key_field="id"
+		   value_field="title"
+		    required="true" 
+			filter="raw"
+			multiple="false"
+		/>
+
+---------------------------------------------
+
+Call at top for ajax file in root - joomla3/ajax.php
+
+  //init Joomla Framework
+    define( '_JEXEC', 1 );
+    define( 'DS', DIRECTORY_SEPARATOR );
+    define( 'JPATH_BASE', realpath(dirname(__FILE__).DS ));
+
+
+    require_once ( JPATH_BASE .DS.'includes'.DS.'defines.php' );
+    require_once ( JPATH_BASE .DS.'includes'.DS.'framework.php' );
+    #$mainframe = JFactory::getApplication('site');
+    #$session     = &JFactory::getSession();
+
+
+Call module in external file
+---------------------------------------------
+
+ define( '_JEXEC', 1 );
+    define( 'DS', DIRECTORY_SEPARATOR );
+    define( 'JPATH_BASE', realpath(dirname(__FILE__).DS ));
+
+
+    require_once ( JPATH_BASE .DS.'includes'.DS.'defines.php' );
+    require_once ( JPATH_BASE .DS.'includes'.DS.'framework.php' );
+
+                $mainframe =& JFactory::getApplication('site');
+                $mainframe->initialise();
+                jimport( 'joomla.application.module.helper' );
+                $module = JModuleHelper::getModule('mod_cmc');
+                $document = &JFactory::getDocument();
+                $renderer = $document->loadRenderer('module');
+                echo $renderer->render($module);
+
+
+
+ELAN
+
+Joomla , install from directory
+---------------------------------------------
+/var/www/web/zhollywood/ver1/tmp/com_cmc-1.3.1
+
+Local to live change
+
+1) D:\wamp\www\foxyfab2\includes\imageresize.php
+2) D:\wamp\www\foxyfab2\includes\defines.php
+3) D:\wamp\www\foxyfab2\includes\imagecache -  777
+

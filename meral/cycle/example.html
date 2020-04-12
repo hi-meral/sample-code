@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+<title>JQuery Cycle Plugin - Example Slideshow</title>
+<style type="text/css">
+.slideshow { height: 232px; width: 232px; margin: auto }
+.slideshow img { padding: 15px; border: 1px solid #ccc; background-color: #eee; }
+</style>
+<!-- include jQuery library -->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+
+<!-- include Cycle plugin -->
+<script type="text/javascript" src="js/jquery.cycle.all.2.74.js"></script>
+
+<!--  initialize the slideshow when the DOM is ready -->
+<script type="text/javascript">
+$(document).ready(function() {
+    
+    var fxd = 'fade';
+    
+    
+    $('.slideshow').cycle({
+		fx: fxd,
+		timeout: 500,
+		delay:  -1000,
+		after: onAfter
+		
+	});
+    
+    function onAfter(curr,next,opts) {
+		
+		
+		var myCars=new Array(); // regular array (add an optional integer
+		myCars[0]="blindZ";       // argument to control array's size)
+		myCars[1]="scrollRight";
+		myCars[2]="toss";
+		myCars[3]="zoom";
+		myCars[4]="shuffle";
+
+		function get_random()
+		{
+		    var ranNum= Math.floor(Math.random()*5);
+		    return ranNum;
+		}
+		
+		var x= get_random();
+		
+		
+		opts.fx = myCars[x];
+	};
+});
+</script>
+</head>
+<body>
+	<div class="slideshow">
+		<img src="image/beach1.jpg" width="200" height="200" />
+		<img src="image/beach2.jpg" width="200" height="200" />
+		<img src="image/beach3.jpg" width="200" height="200" />
+		<img src="image/beach4.jpg" width="200" height="200" />
+		<img src="image/beach5.jpg" width="200" height="200" />
+		<img src="image/beach6.jpg" width="200" height="200" />
+		<img src="image/beach7.jpg" width="200" height="200" />
+		<img src="image/beach8.jpg" width="200" height="200" />
+	</div>
+</body>
+</html>

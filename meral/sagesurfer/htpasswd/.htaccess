@@ -1,0 +1,20 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+AuthType Basic
+AuthName "Password Protected Area"
+AuthUserFile D:\xampp\htdocs\meral\sagesurfer\htpasswd\.htpasswd
+Require valid-user
+
+RewriteRule ^force/?$ http://localhost/meral/htaccess/canada/toronto/ [R]
+
+RewriteRule ^(.*)/(.*)_1_(.*).html?$ http://localhost/meral/htaccess/mx_restaurant_review.php?id=$3
+
+RewriteRule ^canada/toronto/?$ index.php [NC]
+#RewriteRule ^canada/toronto/?$ index.php [NC,R]
+
+#RewriteRule ^mx_restaurant_review.php?id=$1 restaurant-review/([0-9]+)/?$  [R]
+#RewriteRule ^restaurant-review/([0-9]+)/?$ mx_restaurant_review.php?id=$1 [NC]
+
+ErrorDocument 404 404error.php
+ErrorDocument 403 /403error.php

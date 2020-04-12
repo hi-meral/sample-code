@@ -1,0 +1,5 @@
+
+#test { 
+	color : <?php echo $color;?>;
+	font-size : <?php echo $font;?>;
+} 

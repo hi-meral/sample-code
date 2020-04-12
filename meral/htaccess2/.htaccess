@@ -1,0 +1,30 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+#AuthType Basic
+#AuthName "Password Protected Area"
+#AuthUserFile D:\wamp\www\meral\htaccess2\.htpasswd
+#Require valid-user
+
+#RewriteRule ^force/?$ http://localhost/meral/htaccess/canada/toronto/ [R]
+
+
+#RewriteRule ^mx_restaurant_review.php?id=$1 restaurant-review/([0-9]+)/?$  [R]
+#RewriteRule ^restaurant-review/([0-9]+)/?$ mx_restaurant_review.php?id=$1 [NC]
+
+ErrorDocument 404 404error.php
+ErrorDocument 403 /403error.php
+
+<IfModule mod_suphp.c>
+  suPHP_ConfigPath D:\wamp\www\meral\htaccess2
+  <Files php.ini>
+    order allow,deny
+    deny from all
+  </Files>
+</IfModule>
+<IfModule mod_rewrite.c>
+
+RewriteRule ^/?(.*)/waiver/?$ http://invites.pumpitupparty.com/ui/waiverform.aspx?id=$2 [R=301,NC,L]
+#RewriteRule ^canada/toronto/?$ index.php [NC,R]
+
+</IfModule>

@@ -1,0 +1,157 @@
+----------------------------------------
+
+SYSTEM
+
+user : mmaradia
+pswd : yahoo@888
+[old passwords : meral@123 | meral#123 | meral$123 | meral%123 | meral^123 | yahoo@222 | yahoo@333| yahoo@444| yahoo@555 | yahoo@666 | yahoo@777 ]
+
+----------------------------------------
+
+WEBSITE OVERRIDE
+
+username : mmaradia
+password : sky@321
+----------------------------------------
+
+Mail (Thunderbird)
+
+email : miral@elantechnologies.com
+pswd : 
+[old : miral123 | meral#123 ]
+
+-----------------------------------------
+
+PMS login / deskzilla
+[http://elanoffice.dyndns.org:85/PMS_Intranet/timesheets]
+
+miral@elantechnologies.com
+yahoo@333
+
+[old passwords : Yahoo@444 | meral%123 | meral#123 | google@123 | yahoo@333 | S9D7P43Y | miralpms ]
+
+-----------------------------------------
+
+
+My Elan
+[http://svr05/myelan/Home/tabid/57/Default.aspx]
+
+mmardia
+miral#123
+
+-----------------------------------------
+
+SVN
+
+Username: miral
+Password: miral@123
+
+http://192.168.1.49:9880/zhollywood
+
+[mmaradia
+mmaradia]
+
+-----------------------------------------
+
+VNC
+
+password : google@123
+
+-----------------------------------------
+
+skype
+
+miralelan
+miral#123
+
+-----------------------------------------
+
+BaseCamp
+
+miral@elantechnologies.com
+miral#123
+
+----------------------------------------------------
+https://www.zoho.com/
+----------------------------------------------------
+
+miral@elantechnologies.com
+Yahoo@789
+
+[old : Yahoo@777, Miral#123]
+(mail password given by IT - 48h34H117)
+
+-----------------------------------------
+\\192.168.1.50
+\\pdc\ClientApps\Browsers
+eetplpvt/tuser
+Google@123
+
+
+=========================================
+
+
+
+
+----------------------------------------------------
+http://elanoffice.dyndns.org:8081/
+----------------------------------------------------
+
+admin@spyker.com	123456
+ankit@elantechnologies.com	admin
+
+
+
+----------------------------------------------------
+http://dsk71:8080/peexter/brand	
+----------------------------------------------------
+
+brand@elan.com	admin
+ankit@elantechnologies.com	admin
+
+
+----------------------------------------------------
+addthis
+----------------------------------------------------
+
+Username: miral@elantechnologies.com
+Password: miral#123 
+
+
+----------------------------------------------------
+mikogo
+----------------------------------------------------
+
+Username: miral@elantechnologies.com
+Password: miral123 
+
+----------------------------------------------------
+Vinaybhai's Relience Net Connect
+----------------------------------------------------
+User : 9327646544
+Password : 9327646544
+
+
+try.calendar@gmail.com
+elan1234
+
+
+
+
+
+OTHER USERS
+----------------
+
+hchunara - elan@345  [laptop]
+mdoshi	- mausam123 [MyElan]
+
+hdave : zxcv@123 [system]
+
+osiriskleem@gmail.com/ shreem2012
+
+-------------------------
+clearty
+
+U: info@elantechnologies.com
+P: Elan1509
+

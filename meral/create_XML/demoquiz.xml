@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<DATA>
+	<OPTIONS>
+		<TIMEPERQUESTION>0</TIMEPERQUESTION>
+		<scoretwentyfive>you can do better! </scoretwentyfive>
+		<scorefifty>that's alright, not bad.</scorefifty>
+		<scoreseventyfive>pretty good score there!</scoreseventyfive>
+		<scoreninetynine>very well done, amazing score!</scoreninetynine>
+		
+		<scorehundred>it doesnt get any better then this! Perfect Score!!! yooooo</scorehundred>
+		<ENDTEXT> of the questions was answered correct.</ENDTEXT>
+		<SHOWRIGHTANSWER>true</SHOWRIGHTANSWER>
+		<USESOUND>true</USESOUND>
+		<BUTTONCOLOURS>0x0098FF</BUTTONCOLOURS>
+		
+		<BACKGROUNDCOLOUR>0x004E84</BACKGROUNDCOLOUR>
+		<RANDOMQUESTIONORDER>true</RANDOMQUESTIONORDER>
+		<MAXQUESTIONS>1</MAXQUESTIONS>
+		<SENDEMAIL>true</SENDEMAIL>
+		<YOUREMAIL>miral@elantechnologies.com</YOUREMAIL>
+		
+		<EMAILERROR>Please enter a correct email-address</EMAILERROR>
+		<NAMEERROR>Please enter your name</NAMEERROR>
+		<SCORESUBMITTING>submitting your score </SCORESUBMITTING>
+		<SCORESUBMITTED>your score has been submitted</SCORESUBMITTED>
+		<SUBMITERROR>there was a problem submitting your score, please try again later</SUBMITERROR>
+		
+		<SCORETXT>Score</SCORETXT>
+		<TIMETXT>Time</TIMETXT>
+		<NAMETXT>Name</NAMETXT>
+		<EMAILTXT>Email</EMAILTXT>
+		<TRYAGAINBTN>Try Again</TRYAGAINBTN>
+		
+		<BACKBTN>Back</BACKBTN>
+		<SUBMITSCOREBTN>Submit Score</SUBMITSCOREBTN>
+		<LOCATIONPHP>http://localhost/flodev2.com/sasknac/flashden/php/email.php</LOCATIONPHP>
+		<FINALTIME>Your Time Was:</FINALTIME>
+		<MINUTES>m</MINUTES>
+		
+		<SECONDS>s</SECONDS>
+		<LASTNAMETXT>Surname</LASTNAMETXT>
+		<LASTNAMEERROR>Please enter your surname</LASTNAMEERROR>
+		<RIGHTANSWERTIME>3</RIGHTANSWERTIME>
+		<RANDOMANSWERORDER>true</RANDOMANSWERORDER>
+	</OPTIONS>
+	
+	
+</DATA>

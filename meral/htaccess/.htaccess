@@ -1,0 +1,5 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+
+RewriteRule ^/?test/$ /picture.php?id=$1

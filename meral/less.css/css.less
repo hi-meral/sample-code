@@ -1,0 +1,23 @@
+ 
+@color: #FF0000;
+
+
+h2 {
+  color: @color;
+}
+
+
+.new(@wt:3px)
+{
+    color: #0F0;
+    font-size: @wt;
+}
+
+#footer{
+    .new(4px);
+}
+
+#header {
+  .new(55px);
+  
+}

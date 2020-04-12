@@ -1,0 +1,5 @@
+2010-02-02 06:27:56 Debug: Notice (8): Undefined property: Contender::$Tag in [APP\controllers\contenders_controller.php, line 449]
+2010-02-02 06:28:04 Debug: Notice (8): Undefined property: Contender::$Tag in [APP\controllers\contenders_controller.php, line 449]
+2010-02-02 06:28:22 Debug: Notice (8): Undefined property: Contender::$Tag in [APP\controllers\contenders_controller.php, line 449]
+2010-02-02 06:28:40 Debug: Notice (8): Undefined property: Contender::$Tag in [APP\controllers\contenders_controller.php, line 449]
+2010-02-02 06:28:45 Debug: Notice (8): Undefined property: Contender::$Tag in [APP\controllers\contenders_controller.php, line 449]

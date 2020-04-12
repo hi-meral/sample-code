@@ -1,0 +1,18 @@
+
+club activity - see more,
+
+club detail page button
+-----
+Invite (small)
+Invite (big)
+Delete
+
+user profile activitty tab button
+-----
+accept red button
+
+
+
+
+club member delete button
+

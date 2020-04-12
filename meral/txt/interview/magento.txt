@@ -1,0 +1,704 @@
+Magento Problems & Solutions
+ 
+ð Problem in installations:-
+o   If maximum execution time is showing in installation then go back & try again you can now go to next step to Magento
+o   Then after installation if user cannot log in admin panel then
+Go to app/code/core/Mage/Core/Model/Session/Abstract/Varien.php file within your magento directory & remove following code.
+Step:-1
+Find   
+$cookieParams = array('lifetime' => $cookie->getLifetime(),
+                                	'path' 	=> $cookie->getPath(),
+                                	'domain'   => $cookie->getConfigDomain(),
+                                	'secure'   => $cookie->isSecure(),
+                                	'httponly' => $cookie->getHttponly()
+                                	);
+And Replace with this
+$cookieParams = array(
+            'lifetime' => $cookie->getLifetime(),
+            'path' 	=> $cookie->getPath()
+            /*'domain'   => $cookie->getConfigDomain(),
+            'secure'   => $cookie->isSecure(),
+            'httponly' => $cookie->getHttponly()*/
+    	);
+ 
+Step:-2
+Find 
+ if (!$cookieParams['httponly'])
+{       	
+unset($cookieParams['httponly']);
+if (!$cookieParams['secure'])
+{
+unset($cookieParams['secure']);
+if (!$cookieParams['domain'])
+{
+unset($cookieParams['domain']);
+}
+}
+}
+if (isset($cookieParams['domain']))
+{
+$cookieParams['domain'] = $cookie->getDomain();
+}
+ 
+ 
+And Put This code in Comment  /*  */
+ 
+ 
+ð  Template Integration:-
+ 
+Template integration for downloaded template
+ 
+o   Copy folders From  \Magento_project\TelescopeTheme_1.2\TelescopeTheme_1.2\app\design\frontend\default\Telescope_1.2  & put in to D:\xampp\xampp\htdocs\magento\app\design\frontend\default\new_theam
+ 
+o   Copy folders from Magento_project\TelescopeTheme_1.2\TelescopeTheme_1.2\skin\frontend\default\Telescope_1.2 & put into  D:\xampp\xampp\htdocs\magento\skin\frontend\default\ new_theam
+ 
+o   Go to admin panel
+ 
+ 
+è Go System Menu=>then go to Configuration submenu => go to Design menu from Left sidebar =>click on Themes => right name of your design template new_theam  in Templates Field
+ 
+ 
+è Installing Sample Data
+ 
+        	First download Sample data for particular Magento version => extract the file => import Sql file from it into empty database =>copy Media folder to Magento source then start installation of magento
+ 
+ 
+ 
+è After complete installation the products & categories not showing data
+ 
+1)  	Go to your admin panel, select System->Index management, Select all and select “Reindex data” from actions drop down and click on submit. It would take some time to re index it, once its finished. Go to front end and see your products are listed now. If your products are not listed follow the remaining steps,
+2)  Go to admin panel, System->Manage Stores, Select the store name, by default it would be “Main Store“, Click to edit it, on the edit screen, See to it that “Root Category” points to your root catalog, ie., All the categories are been formed under this root catalog.
+If its not pointing then makes sure it points to your real root catalog. Then click on “Save Store”.
+Now if you clear your cache and look your front end, you would see your products listed on the desired categories.
+ 
+http://www.pethemes.com/weblog/products-not-showing-up-in-category-listing-after-fresh-installation-of-magento-1-4/
+ 
+èLanguage file For Dutch:-
+1)	Use this link for extension for dutch
+http://www.magentocommerce.com/extension/specs/364/magento-community-modules--dutch-netherlands-language-pack#specs
+ 
+for German:-
+ 
+http://www.magentocommerce.com/magento-connect/Rico+Neitzel/extension/413/magento-community-modules--german-germany-language-pack/reviews
+ 
+2)	Find extension key from there
+3)	Go to backend & click system=>  Magento Connect =>
+Magento Connect Manager=>login=> use extension key from site & it will install it
+4)	Go to System=>Manage Store=>create store view for your Language
+5)	Go to=> Configuration=>select Language =>General =>Locale Option=>select Local for particular language
+6)	Go to CMS => Pages =>one by one edit all page =>edit its store View
+ 
+ 
+è Banners in Magento
+  	http://www.magentocommerce.com/magento-connect/Free+Magento+Extensions/extension/3382/banners           	
+ 
+ 
+Images
+ 
+http://www.magentocommerce.com/boards/viewthread/23885/P15/
+ 
+è Banner installation in Magento
+ 
+        	->download banner slider zip file from google
+        	-> Merge app & skin folder to your magento but first take backup of that                                          	
+              	Folder
+->  The refresh the cache                                                               	
+->  You can see the Banner Slider Manu in near to CMS
+-> Add items to Banner Slider
+-> Go to => CMS => Pages =>Home Page & add below line
+  	{{block type='bannerslider/bannerslider' template='bannerslider/bannerslider.phtml'}} ->save it
+           -> Refresh front end & back end
+ 
+ 
+ 
+ 
+è Get all attribute in list.phtml page
+app\code\core\Mage\Catalog\Model\Category.php
+public function getProductCollection()
+	{
+                    	
+    	$collection = Mage::getResourceModel('catalog/product_collection')
+            ->setStoreId($this->getStoreId())
+        	->addAttributeToSelect('*')  // add this
+        	->addCategoryFilter($this);
+ 	   return $collection;
+	}
+ 
+        	
+ 
+ 
+
+config Data
+ 
+mage/page/etc/system.xml
+Mage::getStoreConfig('design/footer/copyright');
+Mage::getStoreConfig('trans_email/ident_general/email'); // store email address
+ 
+ 
+Call a static block & .phtml file/CMS page in phtml files
+ 
+Call a static block
+<?php echo  $this->getLayout()->createBlock('cms/block')->setBlockId('event-box')->toHtml(); ?>
+ 
+Call phtml file
+<?php echo $this->getLayout()->createBlock('profile/profile')->setTemplate('profile/news.phtml')->toHtml(); ?>
+ 
+ 
+ IN cms page
+{{block type=”cms/block” block_id=”home-page-promo”}}
+
+Get query string
+$this->getRequest()->getParam('id');
+ 
+Mage::getBaseDir();
+ 
+_toHtml error
+<block type="core/profiler" output="toHtml" />  chage to
+<block type="core/profiler" output="toHtml" name="core/profiler" />
+ 
+Add breadcrumb
+ 
+echo $this->getLayout()->getBlock('breadcrumbs')->toHtml();
+ 
+$breadcrumbs = $this->getLayout()->getBlock('breadcrumbs');
+ 
+$breadcrumbs->addCrumb('home', array('label'=>Mage::helper('cms')->__('Home'), 'title'=>Mage::helper('cms')->__('Home Page'), 'link'=>Mage::getBaseUrl()));
+ 
+$breadcrumbs->addCrumb('country', array('label'=>'Country', 'title'=>'All Countries', 'link'=>'http://example.com/magento/moduleName/country'));
+ 
+$breadcrumbs->addCrumb('manufacturer', array('label'=>'State', 'title'=>'States'));
+ 
+echo $this->getLayout()->getBlock('breadcrumbs')->toHtml();
+ 
+Through xml
+<reference name="breadcrumbs">
+				<action method="addCrumb">
+					<crumbName>home</crumbName>
+					<crumbInfo><label>Home</label><title>Go to Home Page</title><link>../new/</link></crumbInfo>
+				</action>
+                                	  
+                    	   	<action method="addCrumb">
+                                            	<crumbName>Wine Of The Month</crumbName>
+                                            	<crumbInfo><label>Wine Of The Month</label><title>Wine Of The Month</title></crumbInfo>
+                                	   </action>
+                    	   </reference>
+ 
+ 
+Get Poll Block on the page:
+echo $this->getBlockHtml('right.poll');
+ 
+ 
+ 
+Update magento to Latest stable version:
+http://www.mageworx.com/seo-suite-pro-magento-extension.html
+magento-core/Mage_All_Latest-stable
+ 
+magento get value of attributes:
+$_product->getAttributeText('manufacturer');	// for dropdown type
+$_product->getmanufacturer();   // for text field type
+ 
+ 
+magento add css/js
+from root folder
+<action method="addJs"><script> greybox /controls.js</script></action>
+<action method="addItem"><type>css</type><name>greybox/gb_styles.css</name></action>
+ 
+From skin folder
+<action method="addItem"><type>skin_js</type><name>js/ie6.js</name></action>
+<action method="addCss"><stylesheet>css/widgets.css</stylesheet></action>
+ 
+ 
+Run Magento in local without index.php
+############################################
+## you can put here your magento root folder
+## path relative to web root
+ 
+	RewriteBase /mg-projects/keukenkraan/
+ 
+Find the above code in .htaccess (root)  , approx. line no 123 & fix your folder
+
+[if admin is not working then change in this line]
+ 
+Product Methods
+ 
+Array
+(
+    [0] => getResourceCollection
+    [1] => getUrlModel
+    [2] => validate
+    [3] => getName
+    [4] => getPrice
+    [5] => getTypeId
+    [6] => getStatus
+    [7] => getTypeInstance
+    [8] => setTypeInstance
+    [9] => getLinkInstance
+    [10] => getIdBySku
+    [11] => getCategoryId
+    [12] => getCategory
+    [13] => setCategoryIds
+    [14] => getCategoryIds
+    [15] => getCategoryCollection
+    [16] => getWebsiteIds
+    [17] => getStoreIds
+    [18] => getAttributes
+    [19] => canAffectOptions
+    [20] => cleanCache
+    [21] => getPriceModel
+    [22] => getTierPrice
+    [23] => getTierPriceCount
+    [24] => getFormatedTierPrice
+    [25] => getFormatedPrice
+    [26] => getFinalPrice
+    [27] => getCalculatedFinalPrice
+    [28] => getMinimalPrice
+    [29] => getSpecialPrice
+    [30] => getSpecialFromDate
+    [31] => getSpecialToDate
+    [32] => getRelatedProducts
+    [33] => getRelatedProductIds
+    [34] => getRelatedProductCollection
+    [35] => getRelatedLinkCollection
+    [36] => getUpSellProducts
+    [37] => getUpSellProductIds
+    [38] => getUpSellProductCollection
+    [39] => getUpSellLinkCollection
+    [40] => getCrossSellProducts
+    [41] => getCrossSellProductIds
+    [42] => getCrossSellProductCollection
+    [43] => getCrossSellLinkCollection
+    [44] => getGroupedLinkCollection
+ E   [45] => getMediaAttributes
+    [46] => getMediaGalleryImages
+    [47] => addImageToMediaGallery
+    [48] => getMediaConfig
+    [49] => duplicate
+    [50] => isSuperGroup
+    [51] => isSuperConfig
+    [52] => isGrouped
+    [53] => isConfigurable
+    [54] => isSuper
+    [55] => getVisibleInCatalogStatuses
+    [56] => isVisibleInCatalog
+    [57] => getVisibleInSiteVisibilities
+    [58] => isVisibleInSiteVisibility
+    [59] => isSalable
+    [60] => isVirtual
+    [61] => isSaleable
+    [62] => isInStock
+    [63] => getAttributeText
+    [64] => getCustomDesignDate
+    [65] => getProductUrl
+    [66] => formatUrlKey
+    [67] => getUrlPath
+    [68] => addAttributeUpdate
+  -  [69] => toArray
+    [70] => fromArray
+    [71] => loadParentProductIds
+    [72] => delete
+    [73] => getRequestPath
+    [74] => getGiftMessageAvailable
+    [75] => getRatingSummary
+    [76] => isComposite
+    [77] => getSku
+    [78] => getWeight
+	[79] => getOptionInstance
+  X  [80] => getProductOptionsCollection
+    [81] => addOption
+    [82] => getOptionById
+ X   [83] => getOptions
+    [84] => getIsVirtual
+    [85] => addCustomOption
+    [86] => setCustomOptions
+  X  [87] => getCustomOptions
+    [88] => getCustomOption
+    [89] => hasCustomOptions
+    [90] => canBeShowInCategory
+    [91] => getAvailableInCategories
+    [92] => getDefaultAttributeSetId
+    [93] => getImageUrl
+    [94] => getSmallImageUrl
+    [95] => getThumbnailUrl
+    [96] => getReservedAttributes
+    [97] => isReservedAttribute
+    [98] => setOrigData
+   - [99] => loadByAttribute
+    [100] => getStore
+    [101] => getWebsiteStoreIds
+    [102] => setAttributeDefaultValue
+    [103] => getAttributeDefaultValue
+    [104] => getIdFieldName
+    [105] => getId
+    [106] => setId
+    [107] => getResourceName
+  E  [108] => getCollection
+    [109] => load
+    [110] => afterLoad
+    [111] => save
+    [112] => getResource
+    [113] => getEntityId
+    [114] => __construct
+    [115] => isDeleted
+    [116] => setIdFieldName
+    [117] => addData
+    [118] => setData
+    [119] => unsetData
+    [120] => getData
+    [121] => _getData
+    [122] => setDataUsingMethod
+    [123] => getDataUsingMethod
+    [124] => getDataSetDefault
+    [125] => hasData
+    [126] => __toArray
+    [127] => _prepareArray
+    [128] => __toXml
+    [129] => toXml
+    [130] => __toJson
+    [131] => toJson
+    [132] => __toString
+    [133] => toString
+    [134] => __call
+    [135] => __get
+    [136] => __set
+    [137] => isEmpty
+    [138] => _underscore
+    [139] => _camelize
+    [140] => serialize
+  X  [141] => getOrigData
+    [142] => dataHasChangedFor
+  X  [143] => isDirty
+    [144] => flagDirty
+    [145] => debug
+    [146] => offsetSet
+    [147] => offsetExists
+    [148] => offsetUnset
+    [149] => offsetGet
+)
+ 
+Count of shopping cart item
+ 
+$cart_count = Mage::getSingleton('checkout/cart')->getSummaryQty();
+$session = Mage::getSingleton('checkout/session');
+$subtotal = 0;
+foreach ($session->getQuote()->getAllItems() as $item)
+{
+	$subtotal +=$item->getPrice();
+}
+ 
+Get product quantity
+Mage::getModel('cataloginventory/stock_item')->loadByProduct($_product)->getQty();
+
+
+==================  ELAN =======================
+stop admin notification
+
+system > advanced > Disable Module outputs > admin notifiction > disable
+
+
+get website & store ids
+
+Mage::getModel('core/store')->load($storeId)->getWebsiteId();
+
+$storeIds = Mage::getModel('core/website')->load($WebsiteId)->getStoreIds();
+
+
+
+pub website dropdown in form
+
+if (!Mage::app()->isSingleStoreMode()) {
+            $fieldset->addField('storeid', 'select', array(
+                'name'      => 'storeid',
+                'label'     => Mage::helper('cms')->__('Website'),
+                'title'     => Mage::helper('cms')->__('Website'),
+                'required'  => true,
+                'values'    => Mage::getSingleton('adminhtml/system_store')->getWebsiteValuesForForm(false, true),
+
+	   // OR STORE COMBO  'values'    => Mage::getSingleton('adminhtml/system_store')->getStoreValuesForForm(false, true),
+
+            ));
+        }
+
+remove & add new footer links
+
+-> Add local.xml in layout folder of the theme
+
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <remove name="footer_links" />
+    </default>
+</layout>
+
+-> Change in Admin > CMS > Static Block > Footer Links   (This block can be desabled also - thus all link will be removed)
+
+put new layout
+
+add a file - app/etc/module/local.xml
+
+<?xml version="1.0"?>
+<config>
+    <global>
+        <cms>
+            <layouts>
+                <redirect>
+                    <label>3 Columns With Top Links</label>
+                    <template>page/3columns-main.phtml</template>
+                </redirect>
+            </layouts>
+        </cms>
+    </global>
+</config>
+
+
+can't login to admin with IE,google chrome
+
+1 => admin > system > configuration > Web > Session Cookie Managment > Cookie Lifetime  (change to 86400 from 3600)
+	then try to login, still not then follow 2,3
+2 => app\code\core\Mage\Core\Model\Session\Abstract\Varien.php
+
+	replace 
+
+session_set_cookie_params(
+            $this->getCookie()->getLifetime(),
+            $this->getCookie()->getPath(),
+            $this->getCookie()->getDomain(),
+            $this->getCookie()->isSecure(),
+            $this->getCookie()->getHttponly()
+        );
+
+	TO
+
+session_set_cookie_params(
+            $this->getCookie()->getLifetime(),
+            $this->getCookie()->getPath()
+        );
+
+
+
+3=> app\code\core\Mage\Core\Model\Cookie.php  - function getLifetime()
+
+Replace
+	 $lifetime = 3600;
+with 
+	 $lifetime = 86400;
+
+
+SOME SPECIFICATION FOR GETTING VALUES
+
+Get store data
+Mage::app()->getStore();
+
+Store Id
+Mage::app()->getStore()->getStoreId();
+
+Store code
+Mage::app()->getStore()->getCode();
+
+Website Id
+Mage::app()->getStore()->getWebsiteId();
+
+Store Name
+Mage::app()->getStore()->getName();
+
+Is Active
+Mage::app()->getStore()->getIsActive();
+
+Store Home Url
+Mage::app()->getStore()->getHomeUrl();
+
+get current website code
+Mage::app()->getStore()->getWebsite()->getCode();
+
+
+HOW TO OVERWRITE A FILE FUNCTION
+
+1) app/etc/modules/Extended_Catalog.xml
+
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Extended_Catalog>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Extended_Catalog>
+	</modules>
+</config>
+
+2) app\code\local\Extended\Catalog\Model\Category.php
+
+class Extended_Catalog_Model_Category extends Mage_Catalog_Model_Category
+{
+    public function getProductCollection()
+    {
+        // only this function will be overwritted
+
+        $collection = Mage::getResourceModel('catalog/product_collection')
+            ->setStoreId($this->getStoreId())
+            ->addAttributeToSelect('*')  // added this
+            ->addCategoryFilter($this);
+        return $collection;
+    }
+}
+
+3) app\code\local\Extended\Catalog\etc\Config.xml
+
+<?xml version="1.0"?>
+<config>
+
+	<modules>
+	   <Extended_Catalog>
+		 <version>0.1.0</version>
+	   </Extended_Catalog>
+	</modules>
+
+	<global>
+		<models>
+			<catalog>
+				<rewrite>
+					<category>Extended_Catalog_Model_Category</category>
+				</rewrite>
+			</catalog>
+		</models>
+	</global>
+</config>
+
+-----
+
+to check this module
+
+change the catalog/product/list.phtml
+
+
+from
+$_product->getProductUrl()
+to
+$_product->getUrlPath()
+
+
+
+then check with enable & disable this module
+
+
+LOGGED IN CUSTOMER DETAIL
+
+$customer = Mage::getSingleton('customer/session')->getCustomer();
+echo $customer->getName();
+echo $customer->getEmail();
+$customer = Mage::getModel('customer/customer')->loadByEmail($customerEmail);
+
+MODULE CREATER
+http://www.silksoftware.com/magento-module-creator/
+
+CHANGE THE LAYOUT THROUGH LOCAL.XML
+
+<customer_account_login>
+        <reference name="root">
+            <action method="setTemplate"><template>page/three-columns-main.phtml</template></action>
+        </reference>
+    </customer_account_login>
+
+CHANGE THE 404 PAGE 
+
+cms > 404 page not found (no-route)
+
+Add BreadCrumb through layout.xml
+<reference name="breadcrumbs">
+				<action method="addCrumb">
+					<crumbName>home</crumbName>
+					<crumbInfo><label>Home</label><title>Go to Home Page</title><link>../new/</link></crumbInfo>
+				</action>
+                                	  
+                    	   	<action method="addCrumb">
+                                            	<crumbName>Wine Of The Month</crumbName>
+                                            	<crumbInfo><label>Wine Of The Month</label><title>Wine Of The Month</title></crumbInfo>
+                                	   </action>
+                    	   </reference>
+
+Create new website
+
+1. index - htaccess
+
+create folder shoestore on root
+
+	shoestore/index.php
+
+	 change:	  $mageFilename = 'app/Mage.php';    with   $mageFilename = '../app/Mage.php';
+	 change:	  Mage::run();  with  Mage::run('shoestore', 'website');
+
+	shoestore/.htaccess
+
+	change  "RewriteBase /"  (only if uncommented)
+
+2 Manage Store
+
+Admin > manage store > new website, new store, new view
+
+
+3. Place Folders
+
+put folder in 
+app- design - forntend - default AND skin - frontend - default 
+
+
+4. URL
+
+System > configuration > general > web 
+
+Unsecure: 
+	Base URL  :  www.rootsite.com  (unchecked use defualt)
+	Base Link URL : {{unsecure_base_url}}shoestore/ (unchecked use defualt)
+
+Secure: 
+	Base URL  :  www.rootsite.com (unchecked use defualt)
+	Base Link URL : {{unsecure_base_url}}shoestore/ (unchecked use defualt)
+
+5. Theme
+
+	System > configuration > general > Design > Theme
+
+	Templates : shoestore  (unchecked use defualt)
+	Skin : shoestore  (unchecked use defualt)
+	Layout : shoestore  (unchecked use defualt)
+	Defualt : shoestore  (unchecked use defualt)
+
+6. CMS pages
+
+	Set up the CMS page(s)
+
+
+FETCH PRODUCT COLLECTION
+
+$collection = Mage::getModel('catalog/product')->getCollection();
+    $collection->addStoreFilter();
+    $collection->addAttributeToSelect('*');      // THIS WILL FETCH PRODUCT OF CURRENT STORE ONLY
+    
+    //filter for products whose wine of the month is yes
+    $collection->addFieldToFilter(array(
+            array('attribute'=>'inchoo_featured_product','eq'=>'1'),
+    ));
+
+
+CUSTOM MENU ITEM NOT SHOWING IN ADMIN MENU
+Move the etc/adminhtml.xml content to etc/config.xml
+enclosed with <adminhtml>...</adminhtml>
+
+Magento connect ERROR: unable to unpack
+
+http://kb.magenting.com/content/22/43/en/magento-error-unable-to-unpack.html
+
+REPLACE THIS FILE downloader/pearlib/php/Archive/Tar.php 
+
+WITH THIS - http://kb.magenting.com/images/attachments/Tar.phps
+
+HOW TO CALL API 
+
+Write anywhere in Action file
+
+	$proxy = new SoapClient(Mage::getBaseUrl().'api/soap/?wsdl');
+	$sessionId = $proxy->login('admin', 'admin123');
+		//  create  from system > web services > users
+        
+	echo "<pre>";
+	print_r($proxy->call($sessionId, 'customer.info',1819));
+
+	

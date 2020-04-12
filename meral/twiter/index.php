@@ -1,0 +1,1 @@
+<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://twitter.com/webdev_elan" data-text="This is just amazing !" data-count="vertical" data-via="webdev_elan" data-related="webdev_elan">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>

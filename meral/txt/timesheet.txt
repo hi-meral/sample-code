@@ -1,0 +1,228 @@
+[* - less work ] 
+
+6:58 PM 7/25/2012
+
+1	[Wushu] :: Make the width of image of the photo detail page in proposional to the fb comment box. To ahive that change the upload size of image, change the css & resize the background images accordingaly
+
+3	[Bridge] :: Add a module that catalogue all the downloads in hierarchy format
+
+4	[Bridge] :: Fix the bug. All pages are showing the error Unable to fine menu item 25in rokdownload link, as the footer was trying to display non available menu items. 
+
+
+
+
+
+
+
+
+
+
+6:50 PM 7/17/2012
+##############
+
+site set up with CMS , download awasis CMS & upload - 1
+
+pages module, image size, thumb generation,  header links - 1.5
+
+problem of loading the rock salt fonts , basically block from 1.5
+
+featured pages load - 1
+
+Display items on site with cents ie $12.00, try with money_format & finally achive by number_format - 1
+
+Make all fields in Client sign up Mandatory , also on update profile -  0.5
+
+Once person has created an account this should bring them to their order page -0.5
+
+1 - small tasks
+
+remove - Which of the following best describes what you do from everywhwer
+trying to get idea of the task - Allow for URL redirects
+Order Button when not signed in on product page isn't prompting the "Create an Account" pop up - for product detail page
+
+
+
+5:54 PM 7/16/2012
+#####################
+Homepage - Banner is causing the page to reload - 2
+
+Formatting on Events	0.5
+
+Categories aren't allowing for new categories	1.5
+
+Only Feature the "Featured" things to do on Homepage	0.5
+
+URL/Website isn't going to correct url	-  1.5
+
+
+Career" to "Careers" - Things To-Do" to "Things To Do"     0.5
+
+buttons       0.5
+
+FAQ's in the Navigation, Events Module - "$" is appearing after the numbers, when it should be in front
+
+#############################
+############	18 June	#########
+#############################
+
+-----------------------------
+ 06/18/2012
+-----------------------------
+
+Fulltime 1st Developer
+1
+Meridian Beach :: Customize the addthis.com tool bar & removed unwanted icons
+
+Fulltime 1st Developer
+3
+Meridian Beach :: Try to customize fbml tool so that the whole detail including (title, image, description...) will be posted on facebook, not succeeded
+
+Fulltime 1st Developer
+3
+Swift Current :: Integrate Photo Gallery
+- customize the size of uploading image in CMS
+- front listing page of images including the paging
+- detail view of the photo
+- footer popup box for the photo gallery
+
+Fulltime 1st Developer
+1
+Swift current :: Integrate the contact page with dynamic detail on it.
+
+
+-----------------------------
+ 06/19/2012
+-----------------------------
+
+
+-----------------------------
+ 06/20/2012
+-----------------------------
+
+
+-----------------------------
+ 06/21/2012
+-----------------------------
+
+
+-----------------------------
+ 06/22/2012
+-----------------------------
+
+
+
+#############################
+############	11 June	#########
+#############################
+
+
+-----------------------------
+ 06/11/2012
+-----------------------------
+
+	1.5	SquareFlow	JBS: Make working contact form. Which allow the system to send the mail & stored the detail of submitter
+
+	1.5	SquareFlow	JBS: Make the dyanmic the footer section. including the sections Pages, Latest for Sale and JB's Sausage(contact)
+
+	5	SquareFlow	Waiting for new work as of now completed all pending works.
+
+	
+-----------------------------
+ 06/12/2012
+-----------------------------
+	4	SquareFlow	JBS: Implemented the featured category module. Where all featured category are displayed on header with a sliding panel. User can view all featured category by sliding them. This task was done by using the jquery slider. Set the design of category images in proper manner & give the scroll effect by a group of category images.
+
+	1.5	SquareFlow	JBS : These categories can be added from the CMS module with Text and an image.
+
+	2.5	SquareFlow	Waiting for new work as of now completed all pending works.
+
+-----------------------------
+ 06/13/2012
+-----------------------------
+
+	
+
+
+-----------------------------
+ 06/14/2012
+-----------------------------
+
+
+
+
+
+-----------------------------
+ 06/15/2012
+-----------------------------
+
+
+#############################
+############	2 June	#########
+#############################
+
+
+-----------------------------
+ 06/04/2012
+-----------------------------
+
+	2.5	SquareFlow	Research & study the rokdownload plugin for joomla used in 
+bridge.com as already installed copy was not working well on live site. Where some admin screen were missing. Listings of uploaded files are now viewable. some configuration settings was missing.
+
+	5.5	SquareFlow	Server was not working so i am not able to work on live site. so I made a local joomla configuration & installed the rokdownload pluging to manipulate & test the rokdown code.
+
+
+-----------------------------
+ 06/05/2012
+-----------------------------
+
+	1	SquareFlow	MeridianBeach : Created setting module on CMS  & on contact page & footer panel
+	2.5	SquareFlow	MeridianBeach : Created contact/lead module in front side contact page & lead module in CMS. Where user fill the contact form a mail is sent to user & make a database entry. From CMS admin can view this entries listing & in detail
+
+	3	SquareFlow	MeridianBeach : Create the photo gallary module in front & also gallary module in CMS. From CMS admin can add the photos with required attributes. Those can be view from front listing & detail page. From detail page the photos also can be scrollable.
+
+	1.5	SquareFlow	MeridianBeach : Creage basic page module where user can add a page from CMS & it can be displayed as top category
+
+
+-----------------------------
+ 06/06/2012
+-----------------------------
+
+	2	SquareFlow	MeridianBeach : add facility to cms so that any one page can be set as feature. which page content will be displayed on home page with header & text.
+
+	3	SquareFlow	MeridianBeach : Add Brochure download functionality on gallery page right panel after submitting the form (with valiation) . The form submitting & download file functionality through an ajax call.
+
+	1.5	SquareFlow	MeridianBeach : Integrate the brochure box on the home page with a button link `Get Brachure`. By clicking button the brochure box will appear. After downloading the brochure box will be disappeare
+
+	1.5	SquareFlow	MeridianBeach : Add facility to CMS where admin can update the brochure with exist one. When new brochure added the old one removed automatically.
+
+
+-----------------------------
+ 06/07/2012
+-----------------------------
+
+	2	SquareFlow	MeridianBeach :  Integate the blog module in CMS. admin can post a new blog title, media (can be choose from image, multiple image, video), content, topic (can be add, delete), hot topics.
+
+	1.5	SquareFlow	MeridianBeach : Developed the amenity listing page in CMS with featured & order set up of listed amenities.
+
+	3	SquareFlow	MeridianBeach : Add facility to add & edit the amenity to the system with image support within the same form. (image updating automatically removed the old uploaded image)
+	1.5	SquareFlow	MeridianBeach : Any random 4 amenities will be displayed on home page. On clicking any the detail page will be displayed. When click from header link of amenity show the page all amenities listed. (I didnt have design of the detail page so i made it myself with a simple design for now)
+
+
+-----------------------------
+ 06/08/2012
+-----------------------------
+
+	2	SquareFlow	JBS : I added the edit account stuff. I have created a page named my account where user can edit all detail of his account including the password accept the email address. Email address field will be readonly. User can omit the password to be changed.
+
+	2	SquareFlow	JBS : Implemented the quick search module. By specifying product name (keyword) & category product can be searched.
+- here added jquery hint for the keyword box
+- auto fill after searching
+- validation (without keyword user can not search)
+
+	2	SquareFlow	JBS : Product detail page implementation was pending that i have completed. From any page (home,featured,product) user jump to product detail page by clicking on product name or image. From Product detail page user can view the full detail of the product & can add the product to the cart with required quantity.
+
+	2	SquareFlow	JBS : Added the `My Account Details` box to the edit account page & order page. On updating the account detail box content (through session) will be changed.
+
+	2	SquareFlow	MeridianBeach : Set Basic structure of About Us page & FAQ page
+
+	1	SquareFlow	Random checking of pending work in JBS, Meridian, Sveinco by reading the To-Do s of the basecamp particularly. As of now seem all the basecamp point is clear.

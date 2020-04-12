@@ -1,0 +1,6 @@
+::::::::::::::::::: || ::::::::::::::::::::::
+
+::Magento - wordpress::
+http://developer.practicalecommerce.com/articles/2359-WordPress-Integration-for-Magento-with-FishPig-s-Extension
+
+::::::::::::::::::: || ::::::::::::::::::::::

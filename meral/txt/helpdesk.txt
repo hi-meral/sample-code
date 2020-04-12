@@ -1,0 +1,9 @@
+-----------------
+addthis.com
+addthiscdn.com
+ct5.addthis.com
+s7.addthis.com
+------------------
+
+a.vimeocdn.com
+http://vimeo.com/

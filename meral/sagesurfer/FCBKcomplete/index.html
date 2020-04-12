@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+    <head>
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <title>FCBKcomplete Demo</title>
+        
+        <link rel="stylesheet" href="jquery.fcbkcomplete.css" type="text/css" media="screen" charset="utf-8" />
+        
+        <script src="jquery.js" type="text/javascript" charset="utf-8"></script>
+        <script src="jquery.fcbkcomplete.js" type="text/javascript" charset="utf-8"></script>
+        
+        
+        
+    </head>
+    <body id="test">
+        <h1>FCBKcomplete Demo</h1>
+        <div id="text">
+        </div>
+        <form action="submit.php" method="POST" accept-charset="utf-8">
+            <select id="select3" name="select3">
+                <option value="sleep" class="selected">sleep</option>
+                <option value="sport">sport</option>
+                <option value="freestyle">freestyle</option>
+            </select>
+            <br/>
+            <br/>
+            <input type="submit" value="Send">
+        </form>
+        <script type="text/javascript">
+            $(document).ready(function(){                
+                $("#select3").fcbkcomplete({
+                    json_url: "data.txt",
+                    addontab: true,                   
+                    maxitems: 20,
+                    height: 20,
+                    cache: false,
+					onselect : function(data){
+						//readObj(data);
+						alert(data._value);
+					},
+					onremove : function(data)
+					{
+						alert(data._value);
+					}
+                    
+                });
+            });
+			
+			function readObj(obj)
+{
+ var errors = '';
+								 for (var prop in obj) {
+     errors += prop + ": " + obj[prop] + "\n";
+ }
+ alert(errors);
+}
+        </script>
+        
+        <div id="testme"></div>
+    </body>
+</html>

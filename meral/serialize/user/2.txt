@@ -1,0 +1,1 @@
+parentid*@*2#####entity_id*@*25#####CATEGORY_DATA*@*a:8:{s:4:"name";s:9:"insurance";s:11:"description";s:9:"insurance";s:16:"meta_description";s:9:"insurance";s:13:"meta_keywords";s:9:"insurance";s:15:"default_sort_by";s:8:"position";s:17:"available_sort_by";s:8:"position";s:9:"is_active";i:1;s:10:"idcategory";s:9:"insurance";}#####PARENT_ID*@*2#####ERROR*@*sqllock

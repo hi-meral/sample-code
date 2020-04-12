@@ -1,0 +1,30 @@
+/**
+ * CakeBattles 1.0
+ * Setup Instructions
+ */
+
+1. Create database and import the sql to create all the tables
+2. Edit "database.php" with your database settings
+3. Setup an admin user in the database
+	- default has been created "admin/password"
+	- need to md5 hash the password
+		// get salt
+		Configure::read('Security.salt'); // set in core.php
+		// use salt and your password to create hash
+		md5($salt.'password')
+4. After uploading to server check these folders are fully writeable
+	- '\app\webroot\files'
+	- '\webroot\img\cache'
+	- '\app\webroot\tmp'
+	- '\app\webroot\img\tmp'
+5. Login to the application
+	- http://cakebattlesurl/login
+6. Start to populate with Contenders, Images & Tags
+
+
+==============================
+Notes
+==============================
+- Cakebattles is supposed to be setup in its own (sub)domin
+- If you come across any bugs etc then feel free to let me know
+  on info@jamesfairhurst.co.uk

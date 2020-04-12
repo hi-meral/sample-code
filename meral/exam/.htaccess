@@ -1,0 +1,5 @@
+RewriteEngine On
+
+RewriteRule ^canada/([0-9]+)/?$ index.php?id=$1 [NC]
+#RewriteRule ^canada/?$    index.php [NL]
+#RewriteRule ^new/?$ index.php [NL]

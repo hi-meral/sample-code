@@ -1,0 +1,25 @@
+07-12-14 15:56:43	127.0.0.1	ERROR	shared	ZohoEditor	init	Warning, OpenSSL is active but could not correctly generate a key for Zoho Editor. Please make sure the openssl.cnf file is correctly set up.
+07-12-14 15:58:08	127.0.0.1	ERROR	shared	ZohoEditor	init	Warning, OpenSSL is active but could not correctly generate a key for Zoho Editor. Please make sure the openssl.cnf file is correctly set up.
+07-12-14 15:58:14	127.0.0.1	ERROR	shared	ZohoEditor	init	Warning, OpenSSL is active but could not correctly generate a key for Zoho Editor. Please make sure the openssl.cnf file is correctly set up.
+07-12-14 15:58:17	127.0.0.1	ERROR	shared	ZohoEditor	init	Warning, OpenSSL is active but could not correctly generate a key for Zoho Editor. Please make sure the openssl.cnf file is correctly set up.
+07-12-14 15:58:17	127.0.0.1	ERROR	shared	ZohoEditor	init	Warning, OpenSSL is active but could not correctly generate a key for Zoho Editor. Please make sure the openssl.cnf file is correctly set up.
+07-12-14 15:59:37	127.0.0.1	ERROR	shared	ZohoEditor	init	Warning, OpenSSL is active but could not correctly generate a key for Zoho Editor. Please make sure the openssl.cnf file is correctly set up.
+07-12-14 15:59:37	127.0.0.1	ERROR	shared	dibi.compact.php	error l.848	message=Unknown database 'pydio'
+07-12-14 16:01:01	127.0.0.1	ERROR	shared	ZohoEditor	init	Warning, OpenSSL is active but could not correctly generate a key for Zoho Editor. Please make sure the openssl.cnf file is correctly set up.
+07-12-14 16:01:06	127.0.0.1	ERROR	shared	ZohoEditor	init	Warning, OpenSSL is active but could not correctly generate a key for Zoho Editor. Please make sure the openssl.cnf file is correctly set up.
+07-12-14 16:01:08	127.0.0.1	ERROR	shared	ZohoEditor	init	Warning, OpenSSL is active but could not correctly generate a key for Zoho Editor. Please make sure the openssl.cnf file is correctly set up.
+07-12-14 16:01:09	127.0.0.1	ERROR	shared	ZohoEditor	init	Warning, OpenSSL is active but could not correctly generate a key for Zoho Editor. Please make sure the openssl.cnf file is correctly set up.
+07-12-14 16:01:35	127.0.0.1	ERROR	shared	ZohoEditor	init	Warning, OpenSSL is active but could not correctly generate a key for Zoho Editor. Please make sure the openssl.cnf file is correctly set up.
+07-12-14 16:16:59	127.0.0.1	ERROR	shared	ZohoEditor	init	Warning, OpenSSL is active but could not correctly generate a key for Zoho Editor. Please make sure the openssl.cnf file is correctly set up.
+07-12-14 16:16:59	127.0.0.1	ERROR	shared	dibi.compact.php	error l.846	message=Access denied for user 'root'@'localhost' (using password: YES)
+07-12-14 16:35:13	127.0.0.1	ERROR	shared	ZohoEditor	init	Warning, OpenSSL is active but could not correctly generate a key for Zoho Editor. Please make sure the openssl.cnf file is correctly set up.
+07-12-14 16:35:17	127.0.0.1	ERROR	shared	ZohoEditor	init	Warning, OpenSSL is active but could not correctly generate a key for Zoho Editor. Please make sure the openssl.cnf file is correctly set up.
+07-12-14 16:35:19	127.0.0.1	ERROR	shared	ZohoEditor	init	Warning, OpenSSL is active but could not correctly generate a key for Zoho Editor. Please make sure the openssl.cnf file is correctly set up.
+07-12-14 16:35:19	127.0.0.1	ERROR	shared	ZohoEditor	init	Warning, OpenSSL is active but could not correctly generate a key for Zoho Editor. Please make sure the openssl.cnf file is correctly set up.
+07-12-14 16:35:58	127.0.0.1	ERROR	shared	ZohoEditor	init	Warning, OpenSSL is active but could not correctly generate a key for Zoho Editor. Please make sure the openssl.cnf file is correctly set up.
+07-12-14 16:35:58	127.0.0.1	ERROR	shared	dibi.compact.php	error l.846	message=Access denied for user 'root'@'localhost' (using password: YES)
+07-12-14 16:36:10	127.0.0.1	ERROR	shared	ZohoEditor	init	Warning, OpenSSL is active but could not correctly generate a key for Zoho Editor. Please make sure the openssl.cnf file is correctly set up.
+07-12-14 16:37:34	127.0.0.1	ERROR	shared	ZohoEditor	init	Warning, OpenSSL is active but could not correctly generate a key for Zoho Editor. Please make sure the openssl.cnf file is correctly set up.
+07-12-14 16:42:11	127.0.0.1	ERROR	shared	ZohoEditor	init	Warning, OpenSSL is active but could not correctly generate a key for Zoho Editor. Please make sure the openssl.cnf file is correctly set up.
+07-12-14 16:42:16	127.0.0.1	INFO	shared	AuthService	Create User	user_id=admin
+07-12-14 16:42:16	127.0.0.1	INFO	shared	AuthService	Create User	user_id=meral

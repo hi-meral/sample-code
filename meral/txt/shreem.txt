@@ -1,0 +1,9 @@
+- change mail content
+- bonus merits on friend join
+- FB problem
+- Rejection order
+- replace the validation place
+- add product id on detail page
+- problem with html tag showing for bottom
+- no hyperlink in yahoo mail
+- enable/desable status

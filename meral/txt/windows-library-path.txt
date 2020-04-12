@@ -1,0 +1,1 @@
+C:\Program Files\ActiveState Komodo Edit 5\;C:\Program Files\ActiveState Komodo Edit 6\;%SystemRoot%\system32;%SystemRoot%;%SystemRoot%\System32\Wbem;C:\WINDOWS\system32\WindowsPowerShell\v1.0;C:\Program Files\ZendFrameworkCli\bin;C:\wamp\bin\php\php5.2.6;C:\Program Files\TortoiseSVN\bin;C:\Program Files\QuickTime\QTSystem\;C:\Program Files\Java\jdk1.6.0_11\lib;

@@ -1,0 +1,778 @@
+##############################################
+SOFTWARE
+
+TaskKik
+TrayIt
+Stickies - http://www.zhornsoftware.co.uk/
+
+
+##############################################
+
+ZEND SIMPLE SELECT QUERY
+
+                $select = $this->_db->select()
+                            ->from('tbl_user',array('*'))
+->joinLeft(array('uo'=>$this->_user),'d.allow_id=uo.intid',array('CONCAT(uo.firstname," ",uo.lastname) AS device_owner_name','uo.email as device_ownner_email'))
+			    ->where('intid=?', $checkFId);
+	
+                $friend_pm = $this->_db->query($select)->fetch();
+	// OR  $result = $this->getAdapter()->fetchRow($select);
+
+inser
+
+	$insertdata = array(
+		'int_product_id' 	=> $formData['int_product_id'],
+		'int_attribute_id' 	=> $formData['int_attribute_id'],
+		);
+			
+	$this->_db->insert("tbl_product_attribute",$insertdata);
+
+	$this->_db->update("tbl_product_attribute",$insertdata,'id=1');
+
+	$this->_db->delete('tbl_wishlist','intid = '.$wishid);
+
+
+****>>> send mail
+
+	$mail_data['from']= "admin@punchmob.com";
+	$mail_data['from_name']='PunchMob Admin';
+		
+	//$mail_data['to']= "miral@elantechnologies.com";
+	$mail_data['to']=$device["requester_email"];
+	$mail_data['to_name']=$device["requester_name"];
+		
+	$mail_data['subject']=$return["message"];
+	$mail_data['html']= $HTML;
+		
+	$commanClass->sendMail($mail_data);
+
+##############################################
+
+
+how to mod_rewrite on
+
+
+apche > http.conf file
+
+change
+
+ #
+    # AllowOverride controls what directives may be placed in .htaccess files.
+    # It can be "All", "None", or any combination of the keywords:
+    #   Options FileInfo AuthConfig Limit
+    #
+    AllowOverride None
+
+
+TO
+
+ #
+    # AllowOverride controls what directives may be placed in .htaccess files.
+    # It can be "All", "None", or any combination of the keywords:
+    #   Options FileInfo AuthConfig Limit
+    #
+    AllowOverride All
+
+
+AND
+
+uncommment this
+
+#LoadModule rewrite_module modules/mod_rewrite.so
+
+
+
+
+
+
+##############################################
+
+SELECT DATE_FORMAT(datetime_posted_on,'%W, %M %D, %Y') as BidDate
+
+<?php echo date("jS, M, Y",$currentTime); ?>
+
+##############################################
+
+
+DISABLE LAYOUT
+
+$this->_helper->layout()->disableLayout();
+$this->_helper->viewRenderer->setNoRender(true);
+
+##############################################
+
+GETTING BASE URL
+
+$fc = Zend_Controller_Front::getInstance();
+echo $fc->getBaseUrl();
+
+##############################################
+
+
+$this->view->addScriptPath(APPLICATION_PATH."/theme/default/datagrid/");
+
+##############################################
+
+$this->render("print");
+
+##############################################
+
+<?php echo $this->partial('datagrid.phtml.phtml', $this); ?>
+
+##############################################
+
+SELECT GROUP_CONCAT(UserTypeID) FROM `product_reco_usertypes` where `ProductRecommendationID` = 19
+
+SELECT GROUP_CONCAT(event_id ORDER BY `event_title`) AS event_id FROM `events`
+
+##############################################
+
+
+SET @cnt := 0;
+SELECT
+    @cnt := @cnt + 1,
+    First_Name,
+    Last_Name
+FROM Customers
+ORDER BY Last_Name;
+
+
+##############################################
+
+http:/.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+
+##############################################
+
+revind the resourse
+
+mysql_data_seek
+
+##############################################
+
+if in select
+"SELECT if(display_name != '', display_name, CONCAT(user_firstname,' ',user_lastname)) as user_name FROM users_db WHERE user_id='$uid' LIMIT 0 , 1"
+##############################################
+
+IF UPDATE QUERY
+
+UPDATE 
+    tbl_friendlist
+SET 
+    old_firstname = IF (new_firstname!='', new_firstname, old_firstname), new_firstname = '',
+
+##############################################
+
+
+REgular expression - javascript
+
+var regex_phone = /(^\d{10}$)/;
+	if(!regex_phone.test($('#phone').val()) ){
+		alert("Please Enter Valid Restautant Contact No.);
+	}
+
+only allow 10 digits
+
+
+--
+var regex_phone = /(^\d{10})/;
+allow min 10 digits
+
+##############################################
+
+GET ACTION NAME IN CONTROLLER :: ZEND
+
+: $action = $this->getRequest()->getActionName();
+
+
+##############################################
+
+DEFINE VERTUAL HOST
+
+http://www.learnbycode.com/content/how-assign-virtual-local-domain-name-your-localhost
+
+
+
+##############################################
+MENUPIX SPECIAL
+----------------------
+  how to get domain name  
+
+$mxstateid = $row_restaurant_details["restaurants_masterstate"];
+$query_cookie_qry = sprintf("SELECT * FROM cookie_db where cookie_db_metroid = '".$mxstateid."'");
+$cookie_qry = mysql_query($query_cookie_qry, $db) or die(mysql_error());
+$row_cookie_qry = mysql_fetch_assoc($cookie_qry);
+
+
+  how to create restaurant link  
+
+<?php
+		  $query = "SELECT c.cookiedb_domain as cookiedb_domain, rd.restaurants_menu FROM restaurants_db as rd LEFT JOIN cookie_db AS c ON
+		  rd.restaurants_state = c.cookie_db_metroid WHERE rd.restaurants_id ='".$_GET['id']."'";
+		  $resto_queryres = mysql_query($query);
+		  $resto_res = mysql_fetch_assoc($resto_queryres);
+		  //print_r($resto_res);
+		?>
+		<a href="http://www.menupix.com/<?php echo $resto_res['cookiedb_domain'];?>/restaurants<?php echo $resto_res['restaurants_menu'];?>" >back to the restaurant's page</a></div>
+
+
+######################
+
+net send dsk40 Hi....
+
+Open Windows Explorer.
+In the left pane, right-click My Computer, and then click Manage.
+In the Computer Management window, expand Services and Applications in the left pane, and then click Services.
+In the right pane, double-click Messenger.
+In the Messenger Properties (Local Computer) dialog box, click the General tab.
+On the General tab, select Automatic from the Startup type list, and then click Apply.
+Under Service status, click Start, and then click OK.
+
+
+SYSTEM MSG STORE
+
+My computer > Right click > Manage > System Tools > Event Viewer > System
+
+######################
+
+http://adminschoice.com/crontab-quick-reference
+
+CRONJOB:
+
+	::EDIT::
+
+1. firte to view all the cronjobs  `corntab -l`
+
+2. to edit the cron jobs  `crontab -e`
+
+3. now press `i`
+
+4. write the new cornjob & press :wq
+
+	::VIEW::
+
+view all cron tab  `crontab -l`
+
+	::restart the cron::
+
+`service crond restart`
+
+######################
+
+JQUERY AJAX
+
+$.ajax({
+	url: "save-questionnaire.php",
+	type:"post",
+	dataType: "json",
+	data: 'sequence=' + sequence, 
+	success: function(data){
+		alert(data);	
+	}
+});
+
+
+$.post("?page=Contact",$("#qContact").serialize());
+$.post('ajax/test.html', $("#qContact").serialize(), function(data) {
+  $('.result').html(data);
+});
+######################
+
+REMOVE RECURSIVE FILES
+
+del /s *.txt
+
+######################
+
+CHROME - SAFARI CSS
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+       #paging_grid .dataTables_filter {
+               width:20%;
+       }
+}
+
+######################
+
+<link rel="shortcut icon" type="image/x-icon" href="Images/favicon.ico" />
+
+######################
+
+NEW METHOD TO GET THE FB FRIEND
+
+// get friend list having installed this application using OAUTH_TOKEN (defined in index.php)
+			$fbappfriends= json_decode($this->get_content('https://graph.facebook.com/me/friends?fields=installed&access_token='.OAUTH_TOKEN));
+			
+			if(count($fbappfriends->data))
+			{
+				foreach($fbappfriends->data as $fba)
+				{
+					if($fba->installed)
+						$friend_array[] = $fba->id;
+				}
+			}
+
+######################
+
+$browser = $_SERVER['HTTP_USER_AGENT'];
+
+######################
+
+JQUERY VALIDATION
+
+class="required email equalTo['email']"
+
+######################
+
+STRTOTIME FOR dd/mm/yyyy
+
+$date = '25/05/2010';
+$date = str_replace('/', '-', $date);
+echo date('Y-m-d', strtotime($date));
+
+######################
+
+32 bit/ 64 bit
+
+Method 2: View System Information window
+Click Start, and then click Run.
+Type winmsd.exe, and then click OK.
+When System Summary is selected in the navigation pane, locate Processor under Item in the details pane. Note the value.
+If the value that corresponds to Processor starts with x86, the computer is running a 32-bit version of Windows.
+
+If the value that corresponds to Processor starts with ia64 or AMD64, the computer is running a 64-bit version of Windows.
+
+######################
+
+CONVERT TO PDF
+
+http://www.convertfiles.com/
+
+######################
+
+add location to google map >
+http://googlesystem.blogspot.in/2008/03/add-places-to-google-maps.html
+http://www.google.com/local/add/analytics?storeid=5838093898589587949&hl=en-US&gl=US
+http://www.google.com/local/add/businessCenter?hl=en-US&gl=US
+
+#####################
+
+online image editor
+
+http://www.favicon.cc/?
+
+http://pixlr.com/editor/
+
+
+#####################
+
+ADDTHIS.COM - DOC
+
+http://www.wikihow.com/Customize-Your-Addthis-Button
+
+
+#####################
+ADD BUSINESS TO GOOGLE MAP
+
+http://www.google.com/local/add/analytics?storeid=5838093898589587949&hl=en-US&gl=US
+
+
+#####################
+
+Header("Cache-Control: must-revalidate");      
+$offset = 60 * 60 * 24 * 3;
+$ExpStr = "Expires: " . gmdate("D, d M Y H:i:s", time() + $offset) . " GMT";
+Header($ExpStr);
+
+
+#####################
+
+OPTION OF UNION - ASCENDING BY exact search
+
+SELECT
+  FirstName,
+  LastName,
+  IF (FirstName LIKE '%Microsoft%' || LastName LIKE '%Microsoft%', 1,<
+/span> 0) AS One,
+  IF (FirstName LIKE '%John%' || LastName LIKE '%John%', 1, 0) AS Two
+FROM alumni
+ORDER BY One DESC, Two DESC
+#######################
+
+xml parsing
+----------
+
+
+$content = file_get_contents("http://api.androidhive.info/pizza/?format=xml");
+
+if($content)
+{
+	echo "<pre>";
+	print_r(xml2array($content));
+	echo "</pre>";
+}
+
+function xml2array($contents, $get_attributes=1, $priority = 'tag') 
+{
+    if(!$contents) return array();
+
+    if(!function_exists('xml_parser_create')) {
+        //print "'xml_parser_create()' function not found!";
+        return array();
+    }
+
+	
+    //Get the XML parser of PHP - PHP must have this module for the parser to work
+    $parser = xml_parser_create('');
+    xml_parser_set_option($parser, XML_OPTION_TARGET_ENCODING, "UTF-8"); # http://minutillo.com/steve/weblog/2004/6/17/php-xml-and-character-encodings-a-tale-of-sadness-rage-and-data-loss
+    xml_parser_set_option($parser, XML_OPTION_CASE_FOLDING, 0);
+    xml_parser_set_option($parser, XML_OPTION_SKIP_WHITE, 1);
+    xml_parse_into_struct($parser, trim($contents), $xml_values);
+    xml_parser_free($parser);
+
+	
+	//echo "<pre>"; print_r($xml_values); 
+    if(!$xml_values) return;//Hmm...
+
+    //Initializations
+    $xml_array = array();
+    $parents = array();
+    $opened_tags = array();
+    $arr = array();
+
+    $current = &$xml_array; //Refference
+    //Go through the tags.
+    $repeated_tag_index = array();//Multiple tags with same name will be turned into an array
+    foreach($xml_values as $data) {
+        unset($attributes,$value);//Remove existing values, or there will be trouble
+
+        //This command will extract these variables into the foreach scope
+        // tag(string), type(string), level(int), attributes(array).
+        extract($data);//We could use the array by itself, but this cooler.
+
+        $result = array();
+        $attributes_data = array();
+        
+        if(isset($value)) {
+			if($priority == 'tag') $result = $value;
+            else $result['value'] = $value; //Put the value in a assoc array if we are in the 'Attribute' mode
+        }
+
+        //Set the attributes too.
+        if(isset($attributes) and $get_attributes) {
+            foreach($attributes as $attr => $val) {
+                if($priority == 'tag') $attributes_data[$attr] = $val;
+                else $result['attr'][$attr] = $val; //Set all the attributes in a array called 'attr'
+            }
+        }
+
+        //See tag status and do the needed.
+        if($type == "open") {//The starting of the tag '<tag>'
+            $parent[$level-1] = &$current;
+            if(!is_array($current) or (!in_array($tag, array_keys($current)))) { //Insert New tag
+                $current[$tag] = $result;
+                if($attributes_data) $current[$tag. '_attr'] = $attributes_data;
+                $repeated_tag_index[$tag.'_'.$level] = 1;
+
+                $current = &$current[$tag];
+
+            } else { //There was another element with the same tag name
+
+                if(isset($current[$tag][0])) {//If there is a 0th element it is already an array
+                    $current[$tag][$repeated_tag_index[$tag.'_'.$level]] = $result;
+                    $repeated_tag_index[$tag.'_'.$level]++;
+                } else {//This section will make the value an array if multiple tags with the same name appear together
+                    $current[$tag] = array($current[$tag],$result);//This will combine the existing item and the new item together to make an array
+                    $repeated_tag_index[$tag.'_'.$level] = 2;
+                    
+                    if(isset($current[$tag.'_attr'])) { //The attribute of the last(0th) tag must be moved as well
+                        $current[$tag]['0_attr'] = $current[$tag.'_attr'];
+                        unset($current[$tag.'_attr']);
+                    }
+
+                }
+                $last_item_index = $repeated_tag_index[$tag.'_'.$level]-1;
+                $current = &$current[$tag][$last_item_index];
+            }
+
+        } elseif($type == "complete") { //Tags that ends in 1 line '<tag />'
+            //See if the key is already taken.
+            if(!isset($current[$tag])) { //New Key
+                $current[$tag] = $result;
+                $repeated_tag_index[$tag.'_'.$level] = 1;
+                if($priority == 'tag' and $attributes_data) $current[$tag. '_attr'] = $attributes_data;
+
+
+            } else { //If taken, put all things inside a list(array)
+                if(isset($current[$tag][0]) and is_array($current[$tag])) {//If it is already an array...
+
+                    // ...push the new element into that array.
+                    $current[$tag][$repeated_tag_index[$tag.'_'.$level]] = $result;
+                    
+                    if($priority == 'tag' and $get_attributes and $attributes_data) {
+                        $current[$tag][$repeated_tag_index[$tag.'_'.$level] . '_attr'] = $attributes_data;
+                    }
+                    $repeated_tag_index[$tag.'_'.$level]++;
+
+                } else { //If it is not an array...
+                    $current[$tag] = array($current[$tag],$result); //...Make it an array using using the existing value and the new value
+                    $repeated_tag_index[$tag.'_'.$level] = 1;
+                    if($priority == 'tag' and $get_attributes) {
+                        if(isset($current[$tag.'_attr'])) { //The attribute of the last(0th) tag must be moved as well
+                            
+                            $current[$tag]['0_attr'] = $current[$tag.'_attr'];
+                            unset($current[$tag.'_attr']);
+                        }
+                        
+                        if($attributes_data) {
+                            $current[$tag][$repeated_tag_index[$tag.'_'.$level] . '_attr'] = $attributes_data;
+                        }
+                    }
+                    $repeated_tag_index[$tag.'_'.$level]++; //0 and 1 index is already taken
+                }
+            }
+
+        } elseif($type == 'close') { //End of tag '</tag>'
+            $current = &$parent[$level-1];
+        }
+    }
+	/*echo "<pre>";
+	print_r($xml_array);
+	exit;*/
+	return($xml_array);
+}  
+
+##############################
+
+SEND MAIL WITH html FORMAT
+
+$header = "MIME-Version: 1.0" . "\r\n";
+$header .= "Content-type:text/html;" . "\r\n";
+$header .= "From: Insta-Feed <service@insta-feed.com>\r\n"; 
+
+##############################
+
+<!-- NOTE : this repairs problem of datepicker leaves a white space at bottom-->
+<style>#ui-datepicker-div { display: none; }</style>
+
+##############################
+http://jscolor.com/try.php
+
+##############################
+
+CSS
+
+.colorselection div:nth-child(4) { background-color: #00FFFF; }
+
+-- apply color to 4th div
+
+##############################
+
+FIND_IN_SET($_GET[cat],REPLACE(cats,'|',','))";
+
+
+
+#########################
+
+READ JAVASCRIPT OBJECT
+
+function readObj(obj)
+{
+ var errors = '';
+								 for (var prop in obj) {
+     errors += prop + ": " + obj[prop] + "\n";
+ }
+ alert(errors);
+}
+
+##############################
+print only specific div
+##############################
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js" type="text/javascript"></script>
+<script src="/js/jquery.jqprint.0.3.js" type="text/javascript"></script>
+<script language="javascript" type="text/javascript">
+$(function() {
+                $("#PrintVocab").click( function() {
+                    $('#divToPrint').jqprint();
+                    return false;
+                });
+             });
+</script>
+
+
+##############################
+
+REGULAR EXPRESSION
+
+Here is some very simple example of REG with under standing & can be used in general development.
+
+--------------------------------------
+
+^(\d){3}\.(\d){3}\.(\d){4}$
+
+above string checks for format like 308.756.9484
+
+    (\d) - stands for digit only
+    {3}  - stands for total 3 characters only
+    \.    -  is a static dot . value
+    ^  -   indicates starting of the string
+    $   - indicates end of the string
+
+
+--------------------------------------
+
+^[a-z](.*)\.(\d){3}\.(\d){4}$  will allow something like  abcd.123.999
+
+    [a-z]  - stands for any small alphabet, likewise you can set [A-Z] or [A_Za-z0-9]
+
+    (.*)    - stands for any number of character
+
+
+--------------------------------------
+
+(\S+)\.(xyz)@(\d+)$   will allow something like  meral.xyz@987
+
+    (\S+)  -  allow string (including special chars) without spaces, and + stands for any number of length
+    \.         -  static dot .
+    (xyz)   - is a static  value & must be there
+    @        - is also static
+    (\d+)    - stands for any number of digit
+
+
+check in javasript
+
+var str = $('#input_birthdate').val();
+			
+			if(str.match(/^(\d){3}\.(\d){3}\.(\d){4}$/))
+			{
+				
+			}
+
+
+------------------------------------------
+number only javascript
+
+function isNumberKey(evt)
+       {
+          var charCode = (evt.which) ? evt.which : event.keyCode;
+          if (charCode != 46 && charCode > 31 
+            && (charCode < 48 || charCode > 57))
+             return false;
+
+          return true;
+       }
+
+<INPUT id="txtChar" onkeypress="return isNumberKey(event)"  type="text" name="txtChar">
+
+#################################################
+#################################################
+
+public static function getCommentPhoto($username,$from)
+	{
+		if($from=="fb")
+		{
+			
+			return "http://graph.facebook.com/".$username."/picture?width=96&height=96";
+		
+		}
+		elseif($from=="tw")
+		{
+			$pf_twitter = file_get_contents("http://api.twitter.com/1/users/show.json?screen_name=".$username);
+			$pf_twitter = json_decode($pf_twitter);
+			return $pf_twitter->profile_image_url;
+		}
+		else
+		{
+			return DEFAULT_SITEROOT."images/img4.jpg";
+		}
+		
+	}
+
+##############################
+
+Add in <head>
+
+<script type="text/javascript" src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=xa-4ef255217994f0a9"></script>
+
+<div class="addthis_toolbox addthis_default_style right" >
+	<a class="addthis_button_facebook_like" fb:like:layout="button_count" addthis:url="<?php echo SITEROOT; ?>index.php?page=NewsDetail&id=<?php echo $_BLOG_ID; ?>"></a>
+	<a class="addthis_button_tweet" tw:href="<?php echo SITEROOT; ?>index.php?page=NewsDetail&id=<?php echo $_BLOG_ID; ?>"></a>
+</div>
+
+###############################
+
+GOOGEL AD SENSE
+
+ <!-- BEGIN TAG - 468x60 - mob4.com - DO NOT MODIFY -->
+<script type="text/javascript" src="http://optimizedby.rmxads.com/st?ad_type=ad&ad_size=468x60&section=755822"></script>
+<!-- END TAG -->
+
+
+--------------------
+
+<!-- Begin: AdBrite, Generated: 2009-11-28 1:32:49  -->
+<script type="text/javascript">
+var AdBrite_Title_Color = '0000FF';
+var AdBrite_Text_Color = '000000';
+var AdBrite_Background_Color = 'FFFFFF';
+var AdBrite_Border_Color = 'CCCCCC';
+var AdBrite_URL_Color = '008000';
+try{var AdBrite_Iframe=window.top!=window.self?2:1;var AdBrite_Referrer=document.referrer==''?document.location:document.referrer;AdBrite_Referrer=encodeURIComponent(AdBrite_Referrer);}catch(e){var AdBrite_Iframe='';var AdBrite_Referrer='';}
+</script>
+<span style="white-space:nowrap;"><script type="text/javascript">document.write(String.fromCharCode(60,83,67,82,73,80,84));document.write(' src="http://ads.adbrite.com/mb/text_group.php?sid=1429279&zs=3436385f3630&ifr='+AdBrite_Iframe+'&ref='+AdBrite_Referrer+'" type="text/javascript">');document.write(String.fromCharCode(60,47,83,67,82,73,80,84,62));</script>
+<a target="_top" href="http://www.adbrite.com/mb/commerce/purchase_form.php?opid=1429279&afsid=1"><img src="http://files.adbrite.com/mb/images/adbrite-your-ad-here-banner.gif" style="background-color:#CCCCCC;border:none;padding:0;margin:0;" alt="adHUBS" width="11" height="60" border="0" /></a></span>
+<!-- End: AdBrite -->
+</div>
+
+---------------------
+
+<script language="javascript1.1"
+src="http://adserver.adtech.de/addyn|3.0|687|1720821|0|225|ADTECH;AdId=2065062;BnId=-1;;loc=100;target=_blank;misc=%%RANDOM%%;rdclick=%%PRECLICKURL%%"></script>
+<noscript><a href="%%PRECLICKURL%%http://adserver.adtech.de/adlink|3.0|687|1720821|0|225|ADTECH;loc=300;misc=%%RANDOM%%" target="_blank"><img src="http://adserver.adtech.de/adserv|3.0|687|1720821|0|225|ADTECH;AdId=2065062;BnId=-1;;loc=300;misc=%%RANDOM%%" border="0" width="320" height="90"></a></noscript>
+
+----------------------------
+ <script type="text/javascript"><!--
+google_ad_client = "pub-8021171054773470";
+google_ad_width = 728;
+google_ad_height = 90;
+google_ad_format = "320x50_mb";
+google_ad_type = "image";
+google_ad_channel ="7151328846";
+//--></script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+##############################
+
+css - nth child
+
+#viewUser tr td:nth-last-child(2) a { color: #494039; font-size: 10px; font-weight: bold; }
+#viewUser tr td:nth-last-child(1) a { color: #E11E24; font-size: 10px; font-weight: bold;}
+
+##############################
+####### PHONE GAP  ##############
+##############################
+
+http://www.adobe.com/devnet/html5/articles/getting-started-with-phonegap-in-eclipse-for-android.html
+
+http://mobile.tutsplus.com/tutorials/phonegap/phonegap-from-scratch/
+
+##############################
+####### ANDROID ################
+##############################
+
+
+androidhive.info
+
+layout sample
+http://www.netmite.com/android/mydroid/frameworks/base/core/res/res/layout/
+
+
+sample database demo
+https://github.com/commonsguy/cw-android/tree/master/Database/Constants
+
+
+
+
+

@@ -1,0 +1,23 @@
+FLOAT V/S DOUBLE  (MYSQL)
+
+They both represent floating point numbers. A FLOAT is for single-precision, while a DOUBLE is for double-precision numbers.
+
+MySQL uses four bytes for single-precision values and eight bytes for double-precision values.
+
+---------------------------
+
+JOINS
+
+INNER JOIN - fetches data if present in both the tables.
+
+OUTER JOIN are of 3 types:
+
+	LEFT OUTER JOIN - fetches data if present in the left table.
+	RIGHT OUTER JOIN - fetches data if present in the right table.
+	FULL OUTER JOIN - fetches data if present in either of the two tables.(NOT POSSIBLE IN MYSQL)
+
+CROSS JOIN, as the name suggests, does [n X m] that joins everything to everything.
+Similar to scenario where we simply lists the tables for joining (in the FROM clause of the SELECT statement), using commas to separate them.
+
+
+---------------------------

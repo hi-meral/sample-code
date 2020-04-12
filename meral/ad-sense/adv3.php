@@ -1,0 +1,3 @@
+<script language="javascript1.1"
+src="http://adserver.adtech.de/addyn|3.0|687|1720821|0|225|ADTECH;AdId=2065062;BnId=-1;;loc=100;target=_blank;misc=%%RANDOM%%;rdclick=%%PRECLICKURL%%"></script>
+<noscript><a href="%%PRECLICKURL%%http://adserver.adtech.de/adlink|3.0|687|1720821|0|225|ADTECH;loc=300;misc=%%RANDOM%%" target="_blank"><img src="http://adserver.adtech.de/adserv|3.0|687|1720821|0|225|ADTECH;AdId=2065062;BnId=-1;;loc=300;misc=%%RANDOM%%" border="0" width="320" height="90"></a></noscript>

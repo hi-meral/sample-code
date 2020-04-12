@@ -1,8 +1,8 @@
 Git base here
 
 
-git config --global user.name "Your Name"
-git config --global user.email "youremail@domain.com"
+git config --global user.name "Meral"
+git config --global user.email "hi.meral@gmail.com"
 
 other commands
 git clone (url)

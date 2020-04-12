@@ -1,0 +1,308 @@
+
+HTACCESS USE
+
+Error Documents - 
+Password protection - 
+Enabling SSI via htaccess
+Blocking users by IP
+Blocking users/ sites by referrer
+Blocking bad bots and site rippers (aka offline browsers)
+Change your default directory page - 
+Redirects - 
+Prevent viewing of htaccess
+Adding MIME types
+Preventing hot linking of your images and other file types
+Preventing directory listing
+Conclusion and more information
+-----------------------
+DATABASE ENGINE IN MYSQL
+
+MyISAM is MySQL's extended ISAM format and default database engine. In addition to providing a number of indexing and field management functions not available in ISAM
+fast but recovety not possible and not supporting savepoint
+
+INNODB
+direct  products of the technology that makes MySQL so flexible
+foreign-key support 
+recovery possible
+
+HEAP
+HEAP allows for temporary tables that reside only in memory. Residing in memory makes HEAP faster than ISAM or MyISAM, but the data it manages is volatile and will be lost if it's not saved prior to shutdown.
+
+----------------------
+
+CHAR Vs VARCHAR
+
+CHAR is used for Fixed Length Size Variable
+VARCHAR is used for Variable Length Size Variable.
+
+E.g.
+
+Create table temp (City CHAR(10), Street VARCHAR(10));
+
+Insert into temp values('Pune','Oxford');
+
+select length(city), length(street) from temp;
+
+Output will be
+
+length(City)          Length(street)
+10                    6
+
+
+----------------------------------
+
+Overload Vs Overriding
+
+overload : same name, different params
+override : redefine the same function of parent class (not possible with final)
+
+----------------------------------
+
+AJAX 
+
+ASYNCHRONOUS
+there is no need of specif interval 
+also called start-stop transmission.
+
+telephone call is asynchronous
+SMS is synchronous
+
+ajax status
+
+0: request not initialized 
+1: server connection established
+2: request received 
+3: processing request 
+4: request finished and response is ready
+
+-----------
+
+php 5.5.3
+mysql 6.0
+
+--------
+
+Are all cookies the same?
+
+There are two different types of cookies:
+
+Session cookies - these are temporary and are erased when you close your browser at the end of your surfing session. The next time you visit that particular site it will not recognise you and will treat you as a completely new visitor as there is nothing in your browser to let the site know that you have visited before (more on session cookies).
+
+Persistent cookies - these remain on your hard drive until you erase them or they expire. How long a cookie remains on your browser depends on how long the visited website has programmed the cookie to last (more on persistent cookies).
+
+---------------------
+
+SUPER GLOBAL VARIABLE
+
+$GLOBALS
+$_SERVER
+$_GET
+$_POST
+$_FILES
+$_COOKIE
+$_SESSION
+$_REQUEST
+$_ENV
+
+----------------------
+
+FINAL KEYWORD
+
+prevents child classes from overriding a method 
+class itself is being defined final then it cannot be extended.
+
+----------------------
+
+STATIC KEYWORD
+
+Declaring class properties or methods as static makes them accessible without needing an instantiation of the class.
+
+A property declared as static can not be accessed with an instantiated class object (though a static method can).
+
+
+-----------------
+
+php.ini will run very first when php loads
+it is for initiate the php & php settings like
+
+display error
+short tags
+max upload file size
+magic quotes
+
+----------------
+
+join
+
+inner join - common in both
+left join - all left value
+right join - all right value
+outer join - all value
+
+---------------
+
+max file upload
+
+upload_max_filesize = 2M
+post_max_size = 8M
+
+------------------
+
+session & cookie
+
+cookies is stored client side/local browser
+session is also stored at server side but the link connection is maintained by the cookie only. actual data is stored in server side
+
+
+---------------------
+
+set session timeout
+in php.ini set session.gc_maxlifetime = value
+
+---------------------
+
+web optimization
+
+less http request
+less mysql query
+compress css & js
+dont scale the image size
+
+##############
+
+Zend
+
+--------------------------------------------
+ZEND
+
+$this->getRequest()->getParams();
+$this->getRequest()->getPost();
+
+--------
+disable layout?
+
+$this->_helper->layout()->disableLayout();
+$this->_helper->viewRenderer->setNoRender(true);
+
+add css
+$this->headLink()->appendStylesheet(‘filename.css’); 
+
+
+add script
+$this->view->headLink()->appendStylesheet(‘filename.css’); 
+
+-------------
+
+
+############################
+
+Mageno
+
+getModel() - To create an instance of a Model class
+
+	$Product = Mage::getModel(’catalog/product’);
+
+getData() - To get relevant data from the object instance
+	$product->getData("sku");
+
+getSingleton() -  ensures a class has only one instance. So when you are using getSingleton you are calling already instantiated object
+	Mage::getSingleton('checkout/cart')->getSummaryQty();
+
+------
+
+Access blocks content from .phtml template file by :
+echo $this->getLayout()->createBlock("cms/block")
+->setBlockId("static_block_id")->toHTML();
+
+-----
+Add js & css through xml
+
+<action method="addItem">
+	<type>skin_js</type>
+	<name>js/ yourfile.js</name>
+</action>
+
+<action method="addItem">
+	<type>skin_js</type>
+	<name>js/ yourfile.js</name>
+</action>
+
+
+-----------
+
+USE of addAttributeToFilter
+
+$_products->addAttributeToFilter('status', array('eq' => 1));
+
+----------
+
+fetch all products
+
+$products = Mage::getModel('catalog/product')->getCollection();
+
+$products->addAttributeToSelect('name');
+foreach($products as $product) {
+	//do something
+}
+
+------------
+
+Core query
+
+$db = Mage::getSingleton('core/resource')->getConnection('core_write');
+ 
+$result=$db->query("SELECT * FROM PCDSTable");
+
+
+------------
+
+Create new website
+
+1. index - htaccess
+
+create folder shoestore on root
+
+	shoestore/index.php
+
+	 change:	  $mageFilename = 'app/Mage.php';    with   $mageFilename = '../app/Mage.php';
+	 change:	  Mage::run();  with  Mage::run('shoestore', 'website');
+
+	shoestore/.htaccess
+
+	change  "RewriteBase /"  (only if uncommented)
+
+2 Manage Store
+
+Admin > manage store > new website, new store, new view
+
+
+3. Place Folders
+
+put folder in 
+app- design - forntend - default AND skin - frontend - default 
+
+
+4. URL
+
+System > configuration > general > web 
+
+Unsecure: 
+	Base URL  :  www.rootsite.com  (unchecked use defualt)
+	Base Link URL : {{unsecure_base_url}}shoestore/ (unchecked use defualt)
+
+Secure: 
+	Base URL  :  www.rootsite.com (unchecked use defualt)
+	Base Link URL : {{unsecure_base_url}}shoestore/ (unchecked use defualt)
+
+5. Theme
+
+	System > configuration > general > Design > Theme
+
+	Templates : shoestore  (unchecked use defualt)
+	Skin : shoestore  (unchecked use defualt)
+	Layout : shoestore  (unchecked use defualt)
+	Defualt : shoestore  (unchecked use defualt)
+
+6. CMS pages
+
+	Set up the CMS page(s)

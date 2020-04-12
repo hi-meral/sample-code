@@ -1,0 +1,22 @@
+.abc{
+    background-color:black;
+    height:100px;
+    width:100px;
+}
+.xyz{
+    background:url(smile.jpg);
+    height:300px;
+    width:300px;
+}
+
+
+.redabc{
+    background-color:red;
+    height:100px;
+    width:100px;
+}
+.redxyz{
+    background:url(sad.jpg);
+    height:100px;
+    width:100px;
+}

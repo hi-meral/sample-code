@@ -1,0 +1,329 @@
+ http://www.sleepingpills-online.com/zopiclone-sleeping-pills
+
+Company Email
+--------------
+
+https://login.secureserver.net/index.php?app=wbe
+miral@sweet60online.com
+meral#123
+
+miral@sagesurfer.com (zoho)
+yahoo@321
+
+thunderbird
+master password : yahoo@thu
+
+
+teslla/phpmyadmin
+--------------
+sage@pune
+sage@1397
+
+
+
+\\teslla\dev
+--------------
+miral
+miral@123
+
+
+
+\\192.168.1.50
+\\teslla\sagetest
+----------------------------
+sagesurfer - 123456
+
+\\192.168.1.45
+-----------------------------
+sambauser - 123456
+
+
+
+vaibhav pc
+----------------------------
+\\VAIBHAV
+VAIBHAV\vaibhavj
+Jadia@123
+
+
+
+Motorolla API
+--------------
+banand
+Google@87
+
+
+
+Mail
+--------------
+mi@5974
+
+
+
+SVN
+----------
+username - miral
+password - guj@44rat
+
+
+khusbu/khush@123
+param/param@321
+
+svn://192.168.1.116/newdesign
+
+
+mantis
+----------
+
+http://senior.sagesurfer.com/mantis/login_page.php
+miral
+miral@123
+
+----------
+
+
+Skype
+----------
+meral.sagesurfer
+yahoo@111
+-- yahoo@123
+-- meral#123
+
+
+Apple ID
+----------
+miral.jd.maradia@yahoo.com
+Miral@123
+
+https://developer.apple.com/
+- anupam@sweet60online.com
+- Anup@8386
+
+(By Girish- anupam@sweet60online.com
+anupindia
+
+
+istockphoto - shutterstock
+akhandu@gmail.com / kanupam
+anup8386
+
+Google
+----------
+
+miral.jd.maradia@gmail.com
+meral#123
+
+----------
+
+hdesign.sagesurfer.com
+
+pallavi-pallavi123
+miral_1885-miral_1885
+
+
+miral.sos
+miral@123
+
+
+orange hrm
+----------------------------------
+
+http://24.6.44.200:9400/orange/symfony/web/index.php/auth/login
+miral
+meral#123
+
+OLD
+http://www.google.com/url?q=http%3A%2F%2F98.234.115.89%3A9400%2Forange%2Fsymfony%2Fweb%2Findex.php%2Fauth%2Flogin&sa=D&sntz=1&usg=AFQjCNEDxvla9cg1Zj5rrhnHYgJVusrjlA
+
+http://98.234.115.89:9400/orange/symfony/web/index.php/auth/login
+http://98.234.115.89:9400/orange/index.php
+
+
+
+mir@175!4@A
+
+
+-----------------------------------------------
+
+Prashant Complex - Customer Number of light bill
+http://wss.mahadiscom.in/wss/wss?uiActionName=getViewPayBill
+Client ID : 170016214976
+Division :  4614
+
+sagesurfer123
+hodcomp01@gmail.com
+
+yammer
+miral@sweet60online.com
+meral#123
+
+\\win-domain
+ miral - Maradia@123
+--------------------------------------------------------------------------------------
+
+\\replica\newdesign
+\\replica\newsurfer
+
+sagesurfer
+123456
+
+
+bitly
+login - FB (miral.sos, miral@123)
+Login : o_1gtbidubou
+apikey : R_2ddb48941f7f4e34a5f7e435ee7fdfd2
+
+
+BSNL
+hi_meral
+[same]
+
+sqlyog
+varunk
+8d8120df-a5c3-4989-8f47-5afc79c56e7c
+
+
+trial.sagesurfer.com/phpmyadmin
+sagepune
+Sage@791!*
+
+
+db
+instruction-method-html.php
+dx@-m%oc6
+
+AVG
+AMJKB-CSE6F-2Y4XP-AEYUT-SK4CW-HQVOC
+
+
+pc password
+
+pkumar@123
+msparam  - welcome
+Shing@123
+
+
+remote
+salil 	- 149 	- salilp/welcome
+sagar 	- 21 	- sagar/welcome
+deva	- 9	- devidas/welcome
+yogesh	- 17 	- yogesh/welcome
+pallavi 	- 21 	- pallavis/@abcd1234
+//pallavi 	- 185 	- pallavi/welcome@123 (pallavis/Thehorizon_2104)
+prashant  - 27	- prashant/sage@1234 
+msparam	- 114	- msparam/welcome
+
+===========================================
+
+Twitter - miral_ss, miral@123
+
+Facebook: miral.sos, miral@123
+
+Flickr/yahoo -  miral_ss, SageSurfer123
+
+goggle/youtube  -  miral.sagesurfer, miral@123
+
+Linkedin: miral@sweet60online.com, miral@123
+
+four square - Hod.entc@yahoo.com – sagesurfer123
+
+TED Labs - miral@sweet60online.com, meral, sagesurfer123
+
+===========================================
+
+
+config - path change
+
+short tag - 
+
+rewrite url - http config
+
+
+##############################
+
+restrat svn
+
+remote desktop - 
+192.168.1.152
+administrator
+disco@123
+
+192.168.1.6
+administrator
+Mantra@123
+
+
+vmware
+
+start replica service first if needed
+(first window first green button- run kind of button)
+
+ctr + alt + f1
+(command window)
+
+user : varunk
+!@jsk$KSK@pc!@
+
+sudo -s
+again same password
+
+svnserve -d -r /var/opt/svn
+
+##############################
+2968
+FTP
+
+192.168.1.12
+varunk
+varunk@123
+port : 22
+
+
+hdesing
+
+sftp://54.87.1.196
+user : varun
+pass : (16)
+port : 2085
+\var\www\
+
+
+define('DB_NAME', 'hdesign');
+define('DB_USER', 'vaak_admn');
+define('DB_PASSWORD', 'sd&fg!=Aga#');
+ds&oh!=SDg#
+
+
+host: appcodetechnology.net
+user: sages@appcodetechnology.net
+pwd: S@ge@2015
+Use Explicit over TLS
+
+
+#########################
+
+x-lite conference
+
+Conference Number :- 571-223-5825
+Pin No. :- 5100 & Press #
+Now Say Your Name & Press #be ready 
+
+
+#########################
+
+loudoun admin
+ajeetm/punesage@123
+
+
+#########################
+
+https://trial.sagesurfer.com/analytics/
+
+admin - sage@1234
+kristin - sage#78$
+
+#########################
+
+https://loudoun.sagesurfer.com/admin/login.php
+
+ajeetm/punesage@123

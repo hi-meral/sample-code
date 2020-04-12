@@ -1,0 +1,7 @@
+https://api.instagram.com/oauth/authorize/?client_id=bd24a8e6b62f4c43b65fbb870107a8ac&redirect_uri=http://www.weareyoung.com&response_type=code&q=#waystudios
+
+
+https://apigee.com/console/instagram
+
+
+https://api.instagram.com/v1/tags/movie/media/recent?client_id=bd24a8e6b62f4c43b65fbb870107a8ac

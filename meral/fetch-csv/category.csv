@@ -1,0 +1,634 @@
+
+2,"Amusement Parks","Arts and Entertainment",1
+3,"Aquariums","Arts and Entertainment",1
+4,"Arcades","Arts and Entertainment",1
+5,"Art Galleries","Arts and Entertainment",1
+6,"Arts & Crafts Activites","Arts and Entertainment",1
+7,"Ballet & Dance","Arts and Entertainment",1
+8,"Biking","Arts and Entertainment",1
+9,"Boating","Arts and Entertainment",1
+10,"Botanical Gardens ","Arts and Entertainment",1
+11,"Bowling","Arts and Entertainment",1
+12,"Canoe & Kayak Rentals","Arts and Entertainment",1
+13,"Casinos","Arts and Entertainment",1
+14,"Children's Museum","Arts and Entertainment",1
+15,"Circus","Arts and Entertainment",1
+16,"Country Clubs","Arts and Entertainment",1
+17,"Dance Companies","Arts and Entertainment",1
+18,"Dinner Theater","Arts and Entertainment",1
+19,"Entertainment","Arts and Entertainment",1
+20,"Festivals ","Arts and Entertainment",1
+21,"Fishing","Arts and Entertainment",1
+22,"Fun Centers","Arts and Entertainment",1
+23,"Gambling & Gaming","Arts and Entertainment",1
+24,"Go Karts","Arts and Entertainment",1
+25,"Plane & Helicopter Tours","Arts and Entertainment",1
+26,"Hot Air Balloon","Arts and Entertainment",1
+27,"Kid's Activities","Arts and Entertainment",1
+28,"Laser Tag","Arts and Entertainment",1
+29,"Live Music","Arts and Entertainment",1
+30,"Miniature Golf","Arts and Entertainment",1
+31,"Movie Theaters","Arts and Entertainment",1
+32,"Museums","Arts and Entertainment",1
+33,"Opera","Arts and Entertainment",1
+34,"Paintball","Arts and Entertainment",1
+35,"Psychics & Astrologers","Arts and Entertainment",1
+36,"Segway Tours","Arts and Entertainment",1
+37,"Skating","Arts and Entertainment",1
+38,"Skydiving","Arts and Entertainment",1
+39,"Speedway","Arts and Entertainment",1
+40,"Sporting Events","Arts and Entertainment",1
+41,"Symphony & Orchestra","Arts and Entertainment",1
+42,"Theater & Plays","Arts and Entertainment",1
+43,"Theme Parks","Arts and Entertainment",1
+44,"Tours","Arts and Entertainment",1
+45,"Walking Tours","Arts and Entertainment",1
+46,"Water Parks","Arts and Entertainment",1
+47,"Yacht Clubs","Arts and Entertainment",1
+48,"Zoos","Arts and Entertainment",1
+50,"Auto Glass Services ","Automotive",2
+51,"Auto Parts & Accessories","Automotive",2
+52,"Auto Repair & Services","Automotive",2
+53,"Body Shops & Painting","Automotive",2
+54,"Car Dealers ","Automotive",2
+55,"Car Wash & Detailing","Automotive",2
+56,"Gas & Services Stations ","Automotive",2
+57,"Motorcycle Dealers ","Automotive",2
+58,"Motorcycle Repair ","Automotive",2
+59,"Oil Change Stations ","Automotive",2
+60,"Parking ","Automotive",2
+61,"Scooters & Mopeds","Automotive",2
+62,"Stereo Installation ","Automotive",2
+63,"Tires & Wheels","Automotive",2
+64,"Towing ","Automotive",2
+66,"Beauty Supply","Beauty & Spas",3
+67,"Day Spas ","Beauty & Spas",3
+68,"Eyelash Services ","Beauty & Spas",3
+69,"Hair Removal","Beauty & Spas",3
+70,"Hair Salons & Barbers","Beauty & Spas",3
+71,"Makeup Artists ","Beauty & Spas",3
+72,"Massage","Beauty & Spas",3
+73,"Medical Spas ","Beauty & Spas",3
+74,"Men's Salons","Beauty & Spas",3
+75,"Nail Salons ","Beauty & Spas",3
+76,"Piercing ","Beauty & Spas",3
+77,"Skin Care & Facials","Beauty & Spas",3
+78,"Tanning Salons","Beauty & Spas",3
+79,"Tattoo Removal","Beauty & Spas",3
+80,"Tattoos","Beauty & Spas",3
+81,"Waxing","Beauty & Spas",3
+83,"Acting Classes","Education",4
+84,"Adult Education ","Education",4
+85,"Art Classes ","Education",4
+86,"Bartending Schools","Education",4
+87,"Boating & Sailing Classes","Education",4
+88,"Business Schools","Education",4
+89,"Catholic Schools","Education",4
+90,"Charter Schools","Education",4
+91,"Colleges & Universities ","Education",4
+92,"Comedy Classes","Education",4
+93,"Cooking Classes ","Education",4
+94,"Cosmetology Schools ","Education",4
+95,"Culinary Schools","Education",4
+96,"Dance Lessons ","Education",4
+97,"Driving Lessons ","Education",4
+98,"Educational Services ","Education",4
+99,"Educational Supply Stores","Education",4
+100,"Elementary Schools ","Education",4
+101,"Flight Instruction ","Education",4
+102,"Graduate Schools","Education",4
+103,"Language Schools ","Education",4
+104,"Massage Schools ","Education",4
+105,"Middle Schools & High Schools ","Education",4
+106,"Music Lessons","Education",4
+107,"Parochial Schools","Education",4
+108,"Preparatory Schools","Education",4
+109,"Preschools ","Education",4
+110,"Private Schools","Education",4
+111,"Private Tutors ","Education",4
+112,"Specialty Schools ","Education",4
+113,"Swimming Lessons","Education",4
+114,"Training & Vocational Schools","Education",4
+115,"Trucking Schools","Education",4
+116,"Voice Lessons","Education",4
+117,"Wine Classes","Education",4
+119,"Banks & Credit Unions ","Financial Services",5
+120,"Check Cashing/Pay-day Loans ","Financial Services",5
+121,"Credit Counseling Services","Financial Services",5
+122,"Financial Advising ","Financial Services",5
+123,"Insurance ","Financial Services",5
+124,"Investing ","Financial Services",5
+125,"Mortgage Brokers ","Financial Services",5
+126,"Stock Brokers","Financial Services",5
+127,"Tax Preparation","Financial Services",5
+129,"Bagel Shops","Food & Drink",6
+130,"Bakeries","Food & Drink",6
+131,"Breweries","Food & Drink",6
+132,"Butchers & Meat Shops","Food & Drink",6
+133,"Candy Stores ","Food & Drink",6
+134,"Cheese Shops ","Food & Drink",6
+135,"Chocolate Shops","Food & Drink",6
+136,"Convenience Stores","Food & Drink",6
+137,"Espresso Bars","Food & Drink",6
+138,"Ethnic Foods","Food & Drink",6
+139,"Farmers Market ","Food & Drink",6
+140,"Food Delivery Services ","Food & Drink",6
+141,"Fruits & Veggies ","Food & Drink",6
+142,"Gourmet Foods","Food & Drink",6
+143,"Grocery Stores","Food & Drink",6
+144,"Health Stores","Food & Drink",6
+145,"Home Brewing","Food & Drink",6
+146,"Ice Cream & Frozen Yogurt ","Food & Drink",6
+147,"Juice Bars & Smoothies ","Food & Drink",6
+148,"Liquor Stores","Food & Drink",6
+149,"Seafood Markets ","Food & Drink",6
+150,"Snack Bars","Food & Drink",6
+151,"Specialty Food ","Food & Drink",6
+152,"Takeout","Food & Drink",6
+153,"Wine Shops","Food & Drink",6
+154,"Wineries ","Food & Drink",6
+156,"Acupuncture ","Health & Fitness",7
+157,"Addiction Treatment Centers","Health & Fitness",7
+158,"Adult Day Care Centers","Health & Fitness",7
+159,"Allergists ","Health & Fitness",7
+160,"Alternative Medicine Practitioners","Health & Fitness",7
+161,"Ambulance Services","Health & Fitness",7
+162,"Anesthesiologists","Health & Fitness",7
+163,"Aromatherapy","Health & Fitness",7
+164,"Assisted Living Facilities","Health & Fitness",7
+165,"Bootcamps","Health & Fitness",7
+166,"Cannabis Clinics/Evaluations ","Health & Fitness",7
+167,"Cardiologists ","Health & Fitness",7
+168,"Child Psychologists","Health & Fitness",7
+169,"Chiropractors ","Health & Fitness",7
+170,"Cosmetic Dentistry / Teeth Whitening","Health & Fitness",7
+171,"Cosmetic Surgeons ","Health & Fitness",7
+172,"Counseling & Mental Health ","Health & Fitness",7
+173,"Dentists ","Health & Fitness",7
+174,"Dermatologists ","Health & Fitness",7
+175,"Detoxification","Health & Fitness",7
+176,"Doctors","Health & Fitness",7
+177,"Ear, Nose & Throat ","Health & Fitness",7
+178,"Endodontists ","Health & Fitness",7
+179,"Exercise Equipment","Health & Fitness",7
+180,"Family Practice ","Health & Fitness",7
+181,"Fertility ","Health & Fitness",7
+182,"Gerontologists ","Health & Fitness",7
+183,"Golf","Health & Fitness",7
+184,"Gyms & Fitness Centers","Health & Fitness",7
+185,"Health Clubs","Health & Fitness",7
+186,"Holistic Medicine","Health & Fitness",7
+187,"Home Health Care ","Health & Fitness",7
+188,"Hospitals ","Health & Fitness",7
+189,"Infectious Disease Physicians","Health & Fitness",7
+190,"Internal Medicine ","Health & Fitness",7
+191,"Laser Eye Surgery/Lasik ","Health & Fitness",7
+192,"Martial Arts","Health & Fitness",7
+193,"Medical Groups","Health & Fitness",7
+194,"Midwives ","Health & Fitness",7
+195,"Naturopathic","Health & Fitness",7
+196,"Neonatal Physicians","Health & Fitness",7
+197,"Nutritionists ","Health & Fitness",7
+198,"Obstetricians and Gynecologists ","Health & Fitness",7
+199,"Occupational Medical Physicians","Health & Fitness",7
+200,"Ophthalmologists ","Health & Fitness",7
+201,"Optometrists ","Health & Fitness",7
+202,"Oral Surgeons ","Health & Fitness",7
+203,"Orthodontists ","Health & Fitness",7
+204,"Orthopedists ","Health & Fitness",7
+205,"Osteopathic Physicians ","Health & Fitness",7
+206,"Pain Management Physicians","Health & Fitness",7
+207,"Pediatric Dentists ","Health & Fitness",7
+208,"Pediatricians ","Health & Fitness",7
+209,"Periodontists ","Health & Fitness",7
+210,"Personal Trainers","Health & Fitness",7
+211,"Pharmacies","Health & Fitness",7
+212,"Physical Therapy ","Health & Fitness",7
+213,"Pilates","Health & Fitness",7
+214,"Podiatrists ","Health & Fitness",7
+215,"Proctologists ","Health & Fitness",7
+216,"Psychiatrists ","Health & Fitness",7
+217,"Racquetball Clubs","Health & Fitness",7
+218,"Recreation Centers","Health & Fitness",7
+219,"Retirement Homes ","Health & Fitness",7
+220,"Rock Climbing","Health & Fitness",7
+221,"Skiing","Health & Fitness",7
+222,"Sports Medicine ","Health & Fitness",7
+223,"Tennis","Health & Fitness",7
+224,"Urgent Care ","Health & Fitness",7
+225,"Weight Loss Centers ","Health & Fitness",7
+226,"Yoga","Health & Fitness",7
+228,"Agricultural Services","Home Services ",8
+229,"Appliance Repair & Supplies","Home Services ",8
+230,"Building Supplies ","Home Services ",8
+231,"Cable & Satellite Equipment & Services","Home Services ",8
+232,"Carpet Cleaning ","Home Services ",8
+233,"Carpeting ","Home Services ",8
+234,"Chimney Sweep","Home Services ",8
+235,"Cleaning Services & Supplies","Home Services ",8
+236,"Contractors ","Home Services ",8
+237,"Custom Home Builders","Home Services ",8
+238,"Electricians ","Home Services ",8
+239,"Fire Protection","Home Services ",8
+240,"Fireplaces","Home Services ",8
+241,"Garage Doors","Home Services ",8
+242,"Gardeners ","Home Services ",8
+243,"Gutter Cleaning Services","Home Services ",8
+244,"Handyman Services","Home Services ",8
+245,"Heating, Ventilation & Air Conditioning","Home Services ",8
+246,"Home Cleaning ","Home Services ",8
+247,"Home Inspectors ","Home Services ",8
+248,"Home Repair","Home Services ",8
+249,"Home Theatre Installation ","Home Services ",8
+250,"Interior Designers & Decorators","Home Services ",8
+251,"Keys & Locksmiths ","Home Services ",8
+252,"Landscape Architects ","Home Services ",8
+253,"Landscaping ","Home Services ",8
+254,"Lawn Care Services","Home Services ",8
+255,"Movers ","Home Services ",8
+256,"Painters ","Home Services ",8
+257,"Pest & Animal Control","Home Services ",8
+258,"Plumbing ","Home Services ",8
+259,"Pool Cleaners ","Home Services ",8
+260,"Roofing ","Home Services ",8
+261,"Security Systems ","Home Services ",8
+262,"Snow Removal Services","Home Services ",8
+263,"Solar Installation ","Home Services ",8
+264,"Sprinklers & Irrigation","Home Services ",8
+265,"Swimming Pool Equipment & Supplies","Home Services ",8
+266,"Tree Services ","Home Services ",8
+267,"Utilities - Gas, Water & Electric","Home Services ",8
+268,"Vacuum Cleaners","Home Services ",8
+269,"Waste Management Services","Home Services ",8
+270,"Water Heaters","Home Services ",8
+271,"Window Installation ","Home Services ",8
+272,"Window Washing ","Home Services ",8
+274,"Adoption Services","Legal Services",9
+275,"Bail Bonds","Legal Services",9
+276,"Business & Corporate Lawyers","Legal Services",9
+277,"Criminal Lawyers","Legal Services",9
+278,"Divorce and Family Law ","Legal Services",9
+279,"Driving & Traffic Law","Legal Services",9
+280,"Family Law Attorney","Legal Services",9
+281,"Financial & Bankruptcy","Legal Services",9
+282,"General Litigation Lawyers","Legal Services",9
+283,"Governmental Law","Legal Services",9
+284,"Juvenile Lawyers","Legal Services",9
+285,"Labor & Employment Lawyers","Legal Services",9
+286,"Malpractice Lawyers","Legal Services",9
+287,"Patent, Trademark & Copyright Lawyers","Legal Services",9
+288,"Personal Injury Lawyers","Legal Services",9
+289,"Real Estate Lawyers","Legal Services",9
+290,"Wills & Estate Planning","Legal Services",9
+292,"Bars","Nightlife",10
+293,"Champagne Bars ","Nightlife",10
+294,"Cigar Bars","Nightlife",10
+295,"Cocktail Bars","Nightlife",10
+296,"Comedy Clubs ","Nightlife",10
+297,"Dance Clubs ","Nightlife",10
+298,"Dive Bars ","Nightlife",10
+299,"Gay Bars ","Nightlife",10
+300,"Hookah Bars ","Nightlife",10
+301,"Irish Pubs","Nightlife",10
+302,"Jazz & Blues Clubs","Nightlife",10
+303,"Karaoke ","Nightlife",10
+304,"Lounges ","Nightlife",10
+305,"Music Venues ","Nightlife",10
+306,"Night Clubs","Nightlife",10
+307,"Piano Bars","Nightlife",10
+308,"Pool Halls ","Nightlife",10
+309,"Pubs ","Nightlife",10
+310,"Social Clubs ","Nightlife",10
+311,"Sports Bars ","Nightlife",10
+312,"Wine Bars ","Nightlife",10
+314,"Animal Hospitals","Pets",11
+315,"Animal Shelters","Pets",11
+316,"Breeders","Pets",11
+317,"Dog Walkers ","Pets",11
+318,"Horse Services & Equipment","Pets",11
+319,"Pet Boarding/Pet Sitting ","Pets",11
+320,"Pet Groomers ","Pets",11
+321,"Pet Stores ","Pets",11
+322,"Pet Training ","Pets",11
+323,"Veterinarians ","Pets",11
+325,"Accountants ","Professional Services",12
+326,"Advertising","Professional Services",12
+327,"Appraisers","Professional Services",12
+328,"Architects","Professional Services",12
+329,"Career Counseling ","Professional Services",12
+330,"Caretakers","Professional Services",12
+331,"Catering & Bartending Services","Professional Services",12
+332,"Charity","Professional Services",12
+333,"Child Day Care ","Professional Services",12
+334,"Construction Companies","Professional Services",12
+335,"Consultants","Professional Services",12
+336,"Copy Shops","Professional Services",12
+337,"Courier & Delivery Services","Professional Services",12
+338,"Dating Services","Professional Services",12
+339,"Demolition Companies","Professional Services",12
+340,"Diaper Services","Professional Services",12
+341,"DJs ","Professional Services",12
+342,"Dry Cleaning & Laundry ","Professional Services",12
+343,"Electronics Repair ","Professional Services",12
+344,"Employment Agencies","Professional Services",12
+345,"Engineers","Professional Services",12
+346,"Equipment Rental","Professional Services",12
+347,"Equipment Repair","Professional Services",12
+348,"Event Planner","Professional Services",12
+349,"Family Counselors","Professional Services",12
+350,"Fashion Design","Professional Services",12
+351,"Florists","Professional Services",12
+352,"Freight Services","Professional Services",12
+353,"Funeral Services & Cemeteries ","Professional Services",12
+354,"Furniture Reupholstery ","Professional Services",12
+355,"Genealogists","Professional Services",12
+356,"General Contractors","Professional Services",12
+357,"Graphic Design","Professional Services",12
+358,"Internet Services Providers ","Professional Services",12
+359,"Investigation Services","Professional Services",12
+360,"IT Services & Computer Repair ","Professional Services",12
+361,"Junk Removal and Hauling ","Professional Services",12
+362,"Life Coaches","Professional Services",12
+363,"Marketing","Professional Services",12
+364,"Modeling","Professional Services",12
+365,"Music Production","Professional Services",12
+366,"Non-Profit Organizations","Professional Services",12
+367,"Notaries ","Professional Services",12
+368,"Party & Event Planning ","Professional Services",12
+369,"Personal Chefs ","Professional Services",12
+370,"Personal Shopping ","Professional Services",12
+371,"Photographers","Professional Services",12
+372,"Portrait Studios","Professional Services",12
+373,"Printing & Copying Equipment & Services","Professional Services",12
+374,"Public & Social Services","Professional Services",12
+375,"Publishers","Professional Services",12
+376,"Recording & Rehearsal Studios ","Professional Services",12
+377,"Recruiters","Professional Services",12
+378,"Recycling Centers ","Professional Services",12
+379,"Screen Printing & Embroidery","Professional Services",12
+380,"Secretarial Services","Professional Services",12
+381,"Security Guards","Professional Services",12
+382,"Self Storage ","Professional Services",12
+383,"Sewing & Alterations ","Professional Services",12
+384,"Shipping Centers & Mail Services","Professional Services",12
+385,"Shoe Repair ","Professional Services",12
+386,"Singing Telegrams","Professional Services",12
+387,"Taxidermy","Professional Services",12
+388,"Ticket Sales","Professional Services",12
+389,"Video & Film Production","Professional Services",12
+390,"Volunteer Organizations","Professional Services",12
+391,"Watch Repair ","Professional Services",12
+392,"Website Design","Professional Services",12
+393,"Wedding Planning ","Professional Services",12
+394,"Writing Services","Professional Services",12
+396,"Departments of Motor Vehicles ","Public Services & Government",13
+397,"Government Services","Public Services & Government",13
+398,"Landmarks & Historical Buildings ","Public Services & Government",13
+399,"Libraries ","Public Services & Government",13
+400,"Police Departments ","Public Services & Government",13
+401,"Post Offices ","Public Services & Government",13
+403,"Apartments ","Real Estate",14
+404,"Appraisers","Real Estate",14
+405,"Condominiums","Real Estate",14
+406,"Facilities & Warehouses","Real Estate",14
+407,"Home Staging ","Real Estate",14
+408,"Housing Assistance & Shelters","Real Estate",14
+409,"Mobile Home Dealers","Real Estate",14
+410,"Mobile Home Parks","Real Estate",14
+411,"Moving Services","Real Estate",14
+412,"Portable Buildings","Real Estate",14
+413,"Property Management ","Real Estate",14
+414,"Real Estate Agents ","Real Estate",14
+415,"Real Estate Appraisers","Real Estate",14
+416,"Real Estate Services ","Real Estate",14
+417,"Retirement Communities","Real Estate",14
+418,"Title Companies","Real Estate",14
+419,"Truck Rental","Real Estate",14
+420,"University Housing ","Real Estate",14
+422,"Anglican Churches","Religious Organizations",15
+423,"Baptist Churches","Religious Organizations",15
+424,"Buddhist Temples ","Religious Organizations",15
+425,"Catholic Churches","Religious Organizations",15
+426,"Christian Churchless","Religious Organizations",15
+427,"Church of Jesus Christ of Latter-day Saints","Religious Organizations",15
+428,"Evangelical Churches","Religious Organizations",15
+429,"Hindu Temples ","Religious Organizations",15
+430,"Hispanic Churches","Religious Organizations",15
+431,"Jehovah's Witness Churches","Religious Organizations",15
+432,"Korean Churches","Religious Organizations",15
+433,"Lutheran Churches","Religious Organizations",15
+434,"Methodist Churches","Religious Organizations",15
+435,"Missions","Religious Organizations",15
+436,"Monasteries","Religious Organizations",15
+437,"Mosques ","Religious Organizations",15
+438,"Non-Denominational Churches","Religious Organizations",15
+439,"Orthodox Churches","Religious Organizations",15
+440,"Pentecostal Churches","Religious Organizations",15
+441,"Presbyterian Churches","Religious Organizations",15
+442,"Protestant Churches","Religious Organizations",15
+443,"Reformed Churches","Religious Organizations",15
+444,"Seventh-day Adventist Churches","Religious Organizations",15
+445,"Synagogues ","Religious Organizations",15
+446,"Temples","Religious Organizations",15
+447,"Unitarian Churches","Religious Organizations",15
+449,"Afghan ","Restaurants",16
+450,"African ","Restaurants",16
+451,"American ","Restaurants",16
+452,"Andouille","Restaurants",16
+453,"Argentine ","Restaurants",16
+454,"Armenian","Restaurants",16
+455,"Asian Fusion ","Restaurants",16
+456,"Barbeque ","Restaurants",16
+457,"Basque ","Restaurants",16
+458,"Belgian ","Restaurants",16
+459,"Brasseries ","Restaurants",16
+460,"Brazilian ","Restaurants",16
+461,"Breakfast & Brunch ","Restaurants",16
+462,"British ","Restaurants",16
+463,"Buffets ","Restaurants",16
+464,"Burgers ","Restaurants",16
+465,"Burmese ","Restaurants",16
+466,"Café","Restaurants",16
+467,"Cafeteria","Restaurants",16
+468,"Cajun ","Restaurants",16
+469,"Cambodian ","Restaurants",16
+470,"Caribbean ","Restaurants",16
+471,"Cheese steaks ","Restaurants",16
+472,"Chicken Wings ","Restaurants",16
+473,"Chinese ","Restaurants",16
+474,"Coffee House","Restaurants",16
+475,"Continental","Restaurants",16
+476,"Creole","Restaurants",16
+477,"Creperies ","Restaurants",16
+478,"Cuban ","Restaurants",16
+479,"Cyber Café","Restaurants",16
+480,"Delis ","Restaurants",16
+481,"Dessert","Restaurants",16
+482,"Dim Sum","Restaurants",16
+483,"Diners ","Restaurants",16
+484,"English","Restaurants",16
+485,"Ethiopian ","Restaurants",16
+486,"Family","Restaurants",16
+487,"Fast Food ","Restaurants",16
+488,"Filipino ","Restaurants",16
+489,"Fine Dining","Restaurants",16
+490,"Fish & Chips ","Restaurants",16
+491,"Fondue ","Restaurants",16
+492,"Food Stands ","Restaurants",16
+493,"French ","Restaurants",16
+494,"Gastropubs ","Restaurants",16
+495,"German ","Restaurants",16
+496,"Gluten-Free ","Restaurants",16
+497,"Greek ","Restaurants",16
+498,"Halal ","Restaurants",16
+499,"Hawaiian ","Restaurants",16
+500,"Himalayan","Restaurants",16
+501,"Hot Dogs ","Restaurants",16
+502,"Hungarian ","Restaurants",16
+503,"Indian ","Restaurants",16
+504,"Indonesian ","Restaurants",16
+505,"Iranian","Restaurants",16
+506,"Irish ","Restaurants",16
+507,"Italian ","Restaurants",16
+508,"Jamaican","Restaurants",16
+509,"Japanese ","Restaurants",16
+510,"Korean ","Restaurants",16
+511,"Kosher ","Restaurants",16
+512,"Latin American ","Restaurants",16
+513,"Lebanese","Restaurants",16
+514,"Live Food","Restaurants",16
+515,"Malaysian ","Restaurants",16
+516,"Mediterranean ","Restaurants",16
+517,"Mexican ","Restaurants",16
+518,"Middle Eastern ","Restaurants",16
+519,"Modern European ","Restaurants",16
+520,"Mongolian ","Restaurants",16
+521,"Moroccan ","Restaurants",16
+522,"Nepalese ","Restaurants",16
+523,"Organic","Restaurants",16
+524,"Oyster Bars","Restaurants",16
+525,"Packaged Meals","Restaurants",16
+526,"Pakistani ","Restaurants",16
+527,"Pancake House","Restaurants",16
+528,"Persian ","Restaurants",16
+529,"Peruvian ","Restaurants",16
+530,"Pizza ","Restaurants",16
+531,"Po Boys","Restaurants",16
+532,"Polish ","Restaurants",16
+533,"Portuguese ","Restaurants",16
+534,"Raw Food","Restaurants",16
+535,"Russian ","Restaurants",16
+536,"Sandwiches ","Restaurants",16
+537,"Scandinavian ","Restaurants",16
+538,"Seafood ","Restaurants",16
+539,"Singaporean ","Restaurants",16
+540,"Small Plates","Restaurants",16
+541,"Soul Food ","Restaurants",16
+542,"Soup ","Restaurants",16
+543,"Southern ","Restaurants",16
+544,"Southwestern","Restaurants",16
+545,"Spanish ","Restaurants",16
+546,"Steakhouses ","Restaurants",16
+547,"Surinamese","Restaurants",16
+548,"Sushi Bars ","Restaurants",16
+549,"Swiss","Restaurants",16
+550,"Taiwanese ","Restaurants",16
+551,"Tapas","Restaurants",16
+552,"Tea Rooms ","Restaurants",16
+553,"Tex-Mex ","Restaurants",16
+554,"Thai ","Restaurants",16
+555,"Turkish ","Restaurants",16
+556,"Ukrainian ","Restaurants",16
+557,"Vegan ","Restaurants",16
+558,"Vegetarian ","Restaurants",16
+559,"Vietnamese ","Restaurants",16
+561,"Accessories ","Shopping",17
+562,"Antiques ","Shopping",17
+563,"Appliances ","Shopping",17
+564,"Art","Shopping",17
+565,"Arts & Crafts Supplies","Shopping",17
+566,"Athletic Apparel","Shopping",17
+567,"Auctions","Shopping",17
+568,"Baby Furniture","Shopping",17
+569,"Baby Gear","Shopping",17
+570,"Bike Shops","Shopping",17
+571,"Book Stores","Shopping",17
+572,"Boutiques","Shopping",17
+573,"Bridal ","Shopping",17
+574,"Cards & Stationery ","Shopping",17
+575,"Carpet & Flooring","Shopping",17
+576,"Children's Clothing ","Shopping",17
+577,"Collectibles","Shopping",17
+578,"Comic Books ","Shopping",17
+579,"Computers ","Shopping",17
+580,"Costumes ","Shopping",17
+581,"Dance Apparel","Shopping",17
+582,"Department Stores ","Shopping",17
+583,"Discount Stores ","Shopping",17
+584,"Drugstores ","Shopping",17
+585,"Electronics ","Shopping",17
+586,"Eyewear & Opticians ","Shopping",17
+587,"Fabric Stores ","Shopping",17
+588,"Flea Markets","Shopping",17
+589,"Formal Wear","Shopping",17
+590,"Framing ","Shopping",17
+591,"Furniture Stores ","Shopping",17
+592,"Gift Shops","Shopping",17
+593,"Hardware Stores ","Shopping",17
+594,"Hobby Shops ","Shopping",17
+595,"Home Décor","Shopping",17
+596,"Home Improvement Stores","Shopping",17
+597,"Hot Tub and Pool ","Shopping",17
+598,"Industrial Equipment Supplier","Shopping",17
+599,"Jewelry ","Shopping",17
+600,"Junk & Scrap Dealers","Shopping",17
+601,"Kitchen & Bath ","Shopping",17
+602,"Leather Goods ","Shopping",17
+603,"Lighting Fixtures","Shopping",17
+604,"Lingerie ","Shopping",17
+605,"Luggage ","Shopping",17
+606,"Maternity Stores","Shopping",17
+607,"Mattresses ","Shopping",17
+608,"Men's Clothing ","Shopping",17
+609,"Mobile Phones ","Shopping",17
+610,"Music & DVDs","Shopping",17
+611,"Musical Instruments","Shopping",17
+612,"Newspapers & Magazines ","Shopping",17
+613,"Nurseries & Garden Centers","Shopping",17
+614,"Office Supplies & Equipment","Shopping",17
+615,"Outlet Stores ","Shopping",17
+616,"Party Supplies ","Shopping",17
+617,"Pawn Shops ","Shopping",17
+618,"Photography Stores & Services ","Shopping",17
+619,"Religious Goods","Shopping",17
+620,"Shades & Blinds ","Shopping",17
+621,"Shoe Stores ","Shopping",17
+622,"Shopping Centers ","Shopping",17
+623,"Sporting Goods ","Shopping",17
+624,"Swimwear ","Shopping",17
+625,"Thrift Stores ","Shopping",17
+626,"Tobacco Shops ","Shopping",17
+627,"Toy Stores ","Shopping",17
+628,"Trophies & Engraving","Shopping",17
+629,"Uniforms","Shopping",17
+630,"Used, Vintage & Consignment ","Shopping",17
+631,"Vending Machines","Shopping",17
+632,"Videos and Video Game Rental ","Shopping",17
+633,"Watches ","Shopping",17
+634,"Wholesale Stores ","Shopping",17
+635,"Women's Clothing ","Shopping",17
+637,"Airlines","Travel",18
+638,"Bed & Breakfasts","Travel",18
+639,"Bus Lines","Travel",18
+640,"Car Rental","Travel",18
+641,"Cruises","Travel",18
+642,"Hostels","Travel",18
+643,"Hotels","Travel",18
+644,"Lodging","Travel",18
+645,"Motels","Travel",18
+646,"Resorts","Travel",18
+647,"RV - Recreational Vehicles","Travel",18
+648,"Taxis","Travel",18
+649,"Timeshare Agencies","Travel",18
+650,"Travel Agencies","Travel",18
+651,"Vacation Home Rental","Travel",18

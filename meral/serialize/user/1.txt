@@ -1,0 +1,1 @@
+parentid*@*2#####entity_id*@*25#####CATEGORY_DATA*@*a:8:{s:4:"name";s:4:"Neph";s:11:"description";s:4:"Neph";s:16:"meta_description";s:4:"Neph";s:13:"meta_keywords";s:4:"Neph";s:15:"default_sort_by";s:8:"position";s:17:"available_sort_by";s:8:"position";s:9:"is_active";i:1;s:10:"idcategory";s:4:"neph";}#####PARENT_ID*@*2#####ERROR*@*sqllock

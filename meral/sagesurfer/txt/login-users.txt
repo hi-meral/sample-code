@@ -1,0 +1,22 @@
+county
+ericpatrick/sage1234
+
+
+[19:36:29] Ajeet Maurya: ajeetm/sage1234 on nami
+[19:37:01] Ajeet Maurya: sagesurfer4/punesage@123
+[19:37:04] Ajeet Maurya: on county
+
+
+hdesign blog admin
+admin
+aBcOn7u8i9o0p
+
+before update
+chown -R www-data /var/www/prasage/wpblog
+
+
+hcare blog admin
+
+admin
+admin@pradeep
+chown -R www-data /var/www/prasage/wpblog

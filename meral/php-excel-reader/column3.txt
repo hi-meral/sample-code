@@ -1,0 +1,1434 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Klaipeda
+ Muscat
+ Aberdeen
+ Bath
+ Bolton
+ Atlanta
+ Austin
+ Hollywood
+ HoNolulu
+ Houston
+ Lakewood
+ Lancaster
+ Losangeles
+ Miami
+ Naperville
+ Nashville
+ Neworleans
+ Sanjose
+
+
+ Provo
+ Clarksville
+ Fortcollins
+ Sterling Height
+ Thousandoaks
+ Westvalley
+
+
+ Coralspring
+ Cedarrapids
+ Cary
+ Denton
+ Elizabeth
+ Concord
+ Columbia
+ Elkgrove
+ Fullerton
+ Hartford
+ Killeen
+ Mcallen
+ Mckinney
+ Mesquite
+ Newhaven
+ Olathe
+ Elmonte
+ Orange
+ Stamford
+ Sunnyvale
+ Syracuse
+ Topeka
+ Visalia
+ Waco
+ Birmingham
+ Bellevue
+ Boston
+ Flushing
+ Fortwayne
+ Longbeach
+ Memphis
+ Mesa
+ Milwaukee
+ Torrance
+ Tucson
+ Tulsa
+ Washington
+ Wichita
+
+
+
+
+
+
+
+
+
+ Bradford
+ Bridgend
+ Bristol
+ Cheltenham
+ Colchester
+ Coventry
+ Derby
+ Edinburgh
+ Glasgow
+ Keswick
+ Bridgeport
+ Carrollton
+ Lasvegas
+ Luray
+ Mountbaker
+ Pittsburgh
+ ReNo
+ Santaclara
+ Savannah
+ Seattle
+ Simivalley
+ Stowe
+
+
+ Brighton
+
+ Belfast
+ Kansascity
+ Naples
+ Oakland
+ Oceanside
+ Omaha
+ Pasadena
+ Phoenix
+ PlaNo
+ Portland
+ Richardson
+ Sacramento
+ Salinas
+ Sanantonio
+ Sandiego
+ San Jose
+
+
+
+ Khulna
+ Gomel
+ Liverpool
+ Nottingham
+ Sheffield
+ Carlsbad
+ Decatur
+ Hayward
+
+ Aalst
+ Leeds
+ London
+ Manchester
+ Sandwell
+ York
+ Brooklyn
+ Dallas
+ Escondido
+ Hampton
+ Namur
+ Warren
+ Leicester
+ Plymouth
+ Sunderland
+ Bronx
+ Columbus
+ Detroit
+ Greensboro
+ Hilo
+Peoria
+ Charleston
+ Abilene
+ Lafayette
+ Lansing
+ Moscow
+ Vallejo
+ Gainesville
+ Thornton
+ Roseville
+ Corona
+ Eugene
+ Pomona
+ Norman
+ Midland
+  Lewisville
+ Joliet
+ Inglewood
+ Flint
+ Evansville
+ Elgin
+ Cambridge
+ Billings
+ Arvada
+ Allentown
+ Aurora
+ Beaumont
+ Clearwater
+ Costamesa
+ Downey
+ Jackson
+ Miramar
+ Providence
+ Siouxfalls
+ Tempe
+ Waterbury
+ Westcovina
+ Brownsville
+ ChattaNooga
+ Gardengrove
+ Grandprairie
+ Miamigardens
+ Murfreesboro
+ Overlandpark
+Ranchocucamonga
+Santaclarita
+Tallahassee
+ Victorville
+ Westminster
+ Annarbor
+ Roundrock
+ Calgary
+ Edmonton
+ Winnipeg
+ Xian
+ Yunnan
+ Santiago
+ Douala
+ Yaounde
+ Guangzhou
+ Shanghai
+ Shenyang
+ Kampongsom
+ Georgetown
+ Akron
+ Amarillo
+ Anaheim
+ Antioch
+ Arlington
+ Augusta
+ Berkeley
+ Boise
+ Boulder
+ Burbank
+ Capecoral
+ Centennial
+ Chandler
+ Charlotte
+ Chicago
+ Chulavista
+ Dalycity
+ Davenport
+ Dayton
+ Desmoines
+ Durham
+ Fairfield
+ Fortworth
+ Laredo
+ KNoxville
+ Jerseycity
+ Irving
+ Irvine
+ Huntsville
+ Highpoint
+ Hialeah
+ Henderson
+ Gresham
+ Greenbay
+ Glendale
+ Gilbert
+ Garland
+ FresNo
+ Frisco
+ Lexington
+ Southbend
+ St.louis
+
+ Lincoln
+ GlendaleCA
+ Littlerock
+ Louisville
+ Lowell
+ Lubbock
+ Madison
+ Mobile
+ Newark
+ Norfolk
+ Norwalk
+ Orlando
+ Pueblo
+ Raleigh
+ Richmond
+ Riverside
+ Rochester
+ Rockford
+ Salem
+ Santaana
+ Ouagadougou
+ Milan
+ Burgas
+ Melnik
+ Plovdiv
+ Pomorie
+ Sinemorets
+ Sofia
+ Sozopol
+ Varna
+ Bujumbura
+ Ruse
+ Rangoon
+ Pag
+ Porec
+ Split
+ Zadar
+ Havana
+ Varadero
+ Limassol
+ Nicosia
+ Paphos
+ BrNo
+ Carlsbad
+ Decin
+ Kutnahora
+ Liberec
+ Ostrava
+ Plzen
+ Prague
+ TrutNov
+ Zatec
+ Zlin
+ ZNojmo
+ Novigrad
+ Pasman
+ Rijeka
+ Sibenik
+ Trogir
+ LivorNo
+ Vodice
+ Manarola
+ Palermo
+ Parma
+ Perugia
+ Battambang
+ Siemreap
+
+ Batonrouge
+ Ontario
+
+ Cebu City
+ Piura
+ Huaraz
+ Djibouti
+ Tallinn
+ Viljandi
+Alexandria
+ Cairo
+ Giza
+ Luxor
+ Asmara
+ Narva
+ Parnu
+ Tartu
+ Helsinki
+ Joensuu
+ Tampere
+ Vantaa
+ Savusavu
+ Suva
+ Espoo
+ Kotka
+ Lahti
+ Pori
+ Turku
+ Klaksvik
+ Torshavn
+ Cayenne
+ Malabo
+ Dili
+
+
+
+
+
+ Caloocan
+ Lima
+
+ Zakopane
+
+ Kiel
+ Halle
+ Essen
+ Bonn
+ Faro
+ Funchal
+ Stuttgart
+ Nuremberg
+ Munster
+ Munich
+ Mannheim
+ Magdeburg
+ Leipzig
+ Kassel
+ Karlsruhe
+ HanNover
+ Hamburg
+
+
+ Opole
+
+
+
+
+
+
+
+
+
+
+
+ Kiel
+
+
+ Munich
+Winstonsalem
+Stpetersburgur
+ Halle
+SpringFieldMA
+ Essen
+ Bonn
+ Stuttgart
+
+ Nuremberg
+
+
+
+
+
+
+ Munster
+ Rochester NH
+ Mannheim
+ Portstlucie
+ Bakersfield
+ GeNoa
+ Magdeburg
+ Leipzig
+ Kassel
+ Karlsruhe
+ HanNover
+ Hamburg
+ Dresden
+ Dortmund
+ Cologne
+ Yonkers
+ Worcester
+ Wilmington
+ Vannuys
+ Toledo
+ Tampa
+ Chemnitz
+ Erie
+ Bremen
+ Bochum
+
+ Saaremaa
+ Kuressaare
+ Haapsalu
+ Guayaquil
+ Rosalie
+ Augsburg
+ Aachen
+PhNompenh
+ Bielefeld
+ Gibraltar
+ Patrai
+ Paros
+ Aegina
+ Shreveport
+ Scottsdale
+ Santarosa
+ Kumasi
+ Accra
+ Montgomery
+ Wiesbaden
+
+ Keynsham
+ Modena
+ Foggia
+ Zagreb
+ Novalja
+ Makarska
+ Korcula
+ Dubrovnik
+ Addisababa
+ Quito
+ Roseau
+ Copenhagen
+ Krk
+ Hvar
+ Bol
+ Tamarindo
+ Samara
+ Heredia
+ Alajuela
+ Cali
+ Richmond IN
+
+
+
+
+
+
+ Berlin
+ Wuppertal
+ T bilisi
+ Mestia
+ Batumi
+ Banjul
+
+ Libreville
+
+
+
+Medellin
+
+
+ Saintpaul
+ Papeete
+ Cleveland
+ Anchorage
+ Buffalo
+ Baltimore
+ Messina
+ Aarhus
+ Aalborg
+ Cartagena
+ Bogota
+ Avarua
+ Abidjan
+ Kinshasa
+
+
+
+ Nuuk
+ Conakry
+ Bouillante
+ Ierapetra
+ Monemvasia
+ Olympia
+ Guatemala
+ Hagatna
+ Bissau
+ Georgetown
+ Chania
+ Athens
+ Delphi
+ Lesvos
+ Naxos
+ Basseterre
+ Kaposvar
+ Miskolc
+ Siofok
+ Szeged
+ Eger
+ Pecs
+ Czestochowa
+ Ahmedabad
+ Amritsar
+ Bangalore
+ Calcutta
+ Agra
+ Hyderabad
+ Bombay
+ Bhopal
+ Goa
+ Indore
+ Jaipur
+ Jodhpur
+ Kalyan
+ Kanpur
+ Nainital
+ Pune
+ Udaipur
+ Bali
+ Bandung
+ Bogor
+ Husavik
+ Reykjanes
+ Reykjavik
+ Lagos
+ LuckNow
+ Ruda Slaska
+ Gdansk
+ Gdynia
+ GniezNo
+ Karpacz
+ Katowice
+ Hongkong
+ Budapest
+ Amritsar
+ Bangalore
+ Cirebon
+ Esfahan
+ Mashhad
+ Shiraz
+ Tehran
+ Baghdad
+ Killarney
+
+ Tula
+ Tver
+ Tyumen
+ Ufa
+ UlyaNovsk
+ Vladikavkaz
+ Vladimir
+ Astrakhan
+ Irkutsk
+ Izhevsk
+ Kazan
+ Kostroma
+ KrasNodar
+ Kirov
+ Magadan
+ Norilsk
+ Omsk
+ Ryazan
+
+
+
+Donu
+
+ Inverness
+ Springfield MO
+ Newyork
+ Wroclaw
+ Bialystok
+ Bydgoszcz
+ LeszNo
+ Lodz
+ Lublin
+ Olsztyn
+ Rzeszow
+ Poznan
+ Szczecin
+
+
+
+
+
+
+
+
+ Krakow
+Arkhangelsk
+ Vila Real
+
+
+ Krynica
+ Saint_Petersburg
+ Samara
+ Saratov
+ Severodvinsk
+ Smolensk
+ Ashkelon
+ MoNopoli
+ Rome
+ SanRemo
+ Siena
+ ToriNo
+ Venice
+ Fukuoka
+ Hiroshima
+ Kawasak
+ Kobe
+ Kyoto
+ Nagoya
+ Osaka
+ Sapporo
+ Sendai
+ Tokyo
+ Yokohama
+ Kitakyushu
+ Bologna
+ Jerusalem
+ Capri
+ Catania
+ Corniglia
+ Cortona
+ Florence
+ Verona
+ Quezon City
+ Davao
+ Manila
+ Adamstown
+ Horta
+ Madeira
+ Chelyabinsk
+ Kaliningrad
+ Khabarovsk
+ KrasNoyarsk
+ Magnitogorsk
+ Sochi
+ Stavropol
+ Taganrog
+ Penza
+ Tomsk
+ Perm
+ Petrozavodsk
+
+
+ Jakarta
+ Dublin
+ Galway
+ Wicklow
+
+ Kemerovo
+ Kursk
+ Dublin
+ Lithuania 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ Klaipeda
+ Muscat
+ Aberdeen
+ Bath
+ Bolton
+ Atlanta
+ Austin
+ Hollywood
+ HoNolulu
+ Houston
+ Lakewood
+ Lancaster
+ Losangeles
+ Miami
+ Naperville
+ Nashville
+ Neworleans
+ Sanjose
+
+
+ Provo
+ Clarksville
+ Fortcollins
+ Sterling Height
+ Thousandoaks
+ Westvalley
+
+
+ Coralspring
+ Cedarrapids
+ Cary
+ Denton
+ Elizabeth
+ Concord
+ Columbia
+ Elkgrove
+ Fullerton
+ Hartford
+ Killeen
+ Mcallen
+ Mckinney
+ Mesquite
+ Newhaven
+ Olathe
+ Elmonte
+ Orange
+ Stamford
+ Sunnyvale
+ Syracuse
+ Topeka
+ Visalia
+ Waco
+ Birmingham
+ Bellevue
+ Boston
+ Flushing
+ Fortwayne
+ Longbeach
+ Memphis
+ Mesa
+ Milwaukee
+ Torrance
+ Tucson
+ Tulsa
+ Washington
+ Wichita
+
+
+
+
+
+
+
+
+
+ Bradford
+ Bridgend
+ Bristol
+ Cheltenham
+ Colchester
+ Coventry
+ Derby
+ Edinburgh
+ Glasgow
+ Keswick
+ Bridgeport
+ Carrollton
+ Lasvegas
+ Luray
+ Mountbaker
+ Pittsburgh
+ ReNo
+ Santaclara
+ Savannah
+ Seattle
+ Simivalley
+ Stowe
+
+
+ Brighton
+
+ Belfast
+ Kansascity
+ Naples
+ Oakland
+ Oceanside
+ Omaha
+ Pasadena
+ Phoenix
+ PlaNo
+ Portland
+ Richardson
+ Sacramento
+ Salinas
+ Sanantonio
+ Sandiego
+ San Jose
+
+
+
+ Khulna
+ Gomel
+ Liverpool
+ Nottingham
+ Sheffield
+ Carlsbad
+ Decatur
+ Hayward
+
+ Aalst
+ Leeds
+ London
+ Manchester
+ Sandwell
+ York
+ Brooklyn
+ Dallas
+ Escondido
+ Hampton
+ Namur
+ Warren
+ Leicester
+ Plymouth
+ Sunderland
+ Bronx
+ Columbus
+ Detroit
+ Greensboro
+ Hilo
+Peoria
+ Charleston
+ Abilene
+ Lafayette
+ Lansing
+ Moscow
+ Vallejo
+ Gainesville
+ Thornton
+ Roseville
+ Corona
+ Eugene
+ Pomona
+ Norman
+ Midland
+  Lewisville
+ Joliet
+ Inglewood
+ Flint
+ Evansville
+ Elgin
+ Cambridge
+ Billings
+ Arvada
+ Allentown
+ Aurora
+ Beaumont
+ Clearwater
+ Costamesa
+ Downey
+ Jackson
+ Miramar
+ Providence
+ Siouxfalls
+ Tempe
+ Waterbury
+ Westcovina
+ Brownsville
+ ChattaNooga
+ Gardengrove
+ Grandprairie
+ Miamigardens
+ Murfreesboro
+ Overlandpark
+Ranchocucamonga
+Santaclarita
+Tallahassee
+ Victorville
+ Westminster
+ Annarbor
+ Roundrock
+ Calgary
+ Edmonton
+ Winnipeg
+ Xian
+ Yunnan
+ Santiago
+ Douala
+ Yaounde
+ Guangzhou
+ Shanghai
+ Shenyang
+ Kampongsom
+ Georgetown
+ Akron
+ Amarillo
+ Anaheim
+ Antioch
+ Arlington
+ Augusta
+ Berkeley
+ Boise
+ Boulder
+ Burbank
+ Capecoral
+ Centennial
+ Chandler
+ Charlotte
+ Chicago
+ Chulavista
+ Dalycity
+ Davenport
+ Dayton
+ Desmoines
+ Durham
+ Fairfield
+ Fortworth
+ Laredo
+ KNoxville
+ Jerseycity
+ Irving
+ Irvine
+ Huntsville
+ Highpoint
+ Hialeah
+ Henderson
+ Gresham
+ Greenbay
+ Glendale
+ Gilbert
+ Garland
+ FresNo
+ Frisco
+ Lexington
+ Southbend
+ St.louis
+
+ Lincoln
+ GlendaleCA
+ Littlerock
+ Louisville
+ Lowell
+ Lubbock
+ Madison
+ Mobile
+ Newark
+ Norfolk
+ Norwalk
+ Orlando
+ Pueblo
+ Raleigh
+ Richmond
+ Riverside
+ Rochester
+ Rockford
+ Salem
+ Santaana
+ Ouagadougou
+ Milan
+ Burgas
+ Melnik
+ Plovdiv
+ Pomorie
+ Sinemorets
+ Sofia
+ Sozopol
+ Varna
+ Bujumbura
+ Ruse
+ Rangoon
+ Pag
+ Porec
+ Split
+ Zadar
+ Havana
+ Varadero
+ Limassol
+ Nicosia
+ Paphos
+ BrNo
+ Carlsbad
+ Decin
+ Kutnahora
+ Liberec
+ Ostrava
+ Plzen
+ Prague
+ TrutNov
+ Zatec
+ Zlin
+ ZNojmo
+ Novigrad
+ Pasman
+ Rijeka
+ Sibenik
+ Trogir
+ LivorNo
+ Vodice
+ Manarola
+ Palermo
+ Parma
+ Perugia
+ Battambang
+ Siemreap
+
+ Batonrouge
+ Ontario
+
+ Cebu City
+ Piura
+ Huaraz
+ Djibouti
+ Tallinn
+ Viljandi
+Alexandria
+ Cairo
+ Giza
+ Luxor
+ Asmara
+ Narva
+ Parnu
+ Tartu
+ Helsinki
+ Joensuu
+ Tampere
+ Vantaa
+ Savusavu
+ Suva
+ Espoo
+ Kotka
+ Lahti
+ Pori
+ Turku
+ Klaksvik
+ Torshavn
+ Cayenne
+ Malabo
+ Dili
+
+
+
+
+
+ Caloocan
+ Lima
+
+ Zakopane
+
+ Kiel
+ Halle
+ Essen
+ Bonn
+ Faro
+ Funchal
+ Stuttgart
+ Nuremberg
+ Munster
+ Munich
+ Mannheim
+ Magdeburg
+ Leipzig
+ Kassel
+ Karlsruhe
+ HanNover
+ Hamburg
+
+
+ Opole
+
+
+
+
+
+
+
+
+
+
+
+ Kiel
+
+
+ Munich
+Winstonsalem
+Stpetersburgur
+ Halle
+SpringFieldMA
+ Essen
+ Bonn
+ Stuttgart
+
+ Nuremberg
+
+
+
+
+
+
+ Munster
+ Rochester NH
+ Mannheim
+ Portstlucie
+ Bakersfield
+ GeNoa
+ Magdeburg
+ Leipzig
+ Kassel
+ Karlsruhe
+ HanNover
+ Hamburg
+ Dresden
+ Dortmund
+ Cologne
+ Yonkers
+ Worcester
+ Wilmington
+ Vannuys
+ Toledo
+ Tampa
+ Chemnitz
+ Erie
+ Bremen
+ Bochum
+
+ Saaremaa
+ Kuressaare
+ Haapsalu
+ Guayaquil
+ Rosalie
+ Augsburg
+ Aachen
+PhNompenh
+ Bielefeld
+ Gibraltar
+ Patrai
+ Paros
+ Aegina
+ Shreveport
+ Scottsdale
+ Santarosa
+ Kumasi
+ Accra
+ Montgomery
+ Wiesbaden
+
+ Keynsham
+ Modena
+ Foggia
+ Zagreb
+ Novalja
+ Makarska
+ Korcula
+ Dubrovnik
+ Addisababa
+ Quito
+ Roseau
+ Copenhagen
+ Krk
+ Hvar
+ Bol
+ Tamarindo
+ Samara
+ Heredia
+ Alajuela
+ Cali
+ Richmond IN
+
+
+
+
+
+
+ Berlin
+ Wuppertal
+ T bilisi
+ Mestia
+ Batumi
+ Banjul
+
+ Libreville
+
+
+
+Medellin
+
+
+ Saintpaul
+ Papeete
+ Cleveland
+ Anchorage
+ Buffalo
+ Baltimore
+ Messina
+ Aarhus
+ Aalborg
+ Cartagena
+ Bogota
+ Avarua
+ Abidjan
+ Kinshasa
+
+
+
+ Nuuk
+ Conakry
+ Bouillante
+ Ierapetra
+ Monemvasia
+ Olympia
+ Guatemala
+ Hagatna
+ Bissau
+ Georgetown
+ Chania
+ Athens
+ Delphi
+ Lesvos
+ Naxos
+ Basseterre
+ Kaposvar
+ Miskolc
+ Siofok
+ Szeged
+ Eger
+ Pecs
+ Czestochowa
+ Ahmedabad
+ Amritsar
+ Bangalore
+ Calcutta
+ Agra
+ Hyderabad
+ Bombay
+ Bhopal
+ Goa
+ Indore
+ Jaipur
+ Jodhpur
+ Kalyan
+ Kanpur
+ Nainital
+ Pune
+ Udaipur
+ Bali
+ Bandung
+ Bogor
+ Husavik
+ Reykjanes
+ Reykjavik
+ Lagos
+ LuckNow
+ Ruda Slaska
+ Gdansk
+ Gdynia
+ GniezNo
+ Karpacz
+ Katowice
+ Hongkong
+ Budapest
+ Amritsar
+ Bangalore
+ Cirebon
+ Esfahan
+ Mashhad
+ Shiraz
+ Tehran
+ Baghdad
+ Killarney
+
+ Tula
+ Tver
+ Tyumen
+ Ufa
+ UlyaNovsk
+ Vladikavkaz
+ Vladimir
+ Astrakhan
+ Irkutsk
+ Izhevsk
+ Kazan
+ Kostroma
+ KrasNodar
+ Kirov
+ Magadan
+ Norilsk
+ Omsk
+ Ryazan
+
+
+
+Donu
+
+ Inverness
+ Springfield MO
+ Newyork
+ Wroclaw
+ Bialystok
+ Bydgoszcz
+ LeszNo
+ Lodz
+ Lublin
+ Olsztyn
+ Rzeszow
+ Poznan
+ Szczecin
+
+
+
+
+
+
+
+
+ Krakow
+Arkhangelsk
+ Vila Real
+
+
+ Krynica
+ Saint_Petersburg
+ Samara
+ Saratov
+ Severodvinsk
+ Smolensk
+ Ashkelon
+ MoNopoli
+ Rome
+ SanRemo
+ Siena
+ ToriNo
+ Venice
+ Fukuoka
+ Hiroshima
+ Kawasak
+ Kobe
+ Kyoto
+ Nagoya
+ Osaka
+ Sapporo
+ Sendai
+ Tokyo
+ Yokohama
+ Kitakyushu
+ Bologna
+ Jerusalem
+ Capri
+ Catania
+ Corniglia
+ Cortona
+ Florence
+ Verona
+ Quezon City
+ Davao
+ Manila
+ Adamstown
+ Horta
+ Madeira
+ Chelyabinsk
+ Kaliningrad
+ Khabarovsk
+ KrasNoyarsk
+ Magnitogorsk
+ Sochi
+ Stavropol
+ Taganrog
+ Penza
+ Tomsk
+ Perm
+ Petrozavodsk
+
+
+ Jakarta
+ Dublin
+ Galway
+ Wicklow
+
+ Kemerovo
+ Kursk
+ Dublin
+ Lithuania 
+
+
+
+
+

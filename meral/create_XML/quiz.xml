@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DATA>
+	<OPTIONS>
+		<TIMEPERQUESTION>0</TIMEPERQUESTION>
+		<0-25>you can do better! </0-25>
+		<25-50>that's alright, not bad.</25-50>
+		<50-75>pretty good score there!</50-75>
+		<75-99>very well done, amazing score!</75-99>
+		
+		<100>it doesnt get any better then this! Perfect Score!!! yooooo</100>
+		<ENDTEXT> of the questions was answered correct.</ENDTEXT>
+		<SHOWRIGHTANSWER>true</SHOWRIGHTANSWER>
+		<USESOUND>true</USESOUND>
+		<BUTTONCOLOURS>0x0098FF</BUTTONCOLOURS>
+		
+		<BACKGROUNDCOLOUR>0x004E84</BACKGROUNDCOLOUR>
+		<RANDOMQUESTIONORDER>true</RANDOMQUESTIONORDER>
+		<MAXQUESTIONS>1</MAXQUESTIONS>
+		<SENDEMAIL>true</SENDEMAIL>
+		<YOUREMAIL>miral@elantechnologies.com</YOUREMAIL>
+		
+		<EMAILERROR>Please enter a correct email-address</EMAILERROR>
+		<NAMEERROR>Please enter your name</NAMEERROR>
+		<SCORESUBMITTING>submitting your score </SCORESUBMITTING>
+		<SCORESUBMITTED>your score has been submitted</SCORESUBMITTED>
+		<SUBMITERROR>there was a problem submitting your score, please try again later</SUBMITERROR>
+		
+		<SCORETXT>Score</SCORETXT>
+		<TIMETXT>Time</TIMETXT>
+		<NAMETXT>Name</NAMETXT>
+		<EMAILTXT>Email</EMAILTXT>
+		<TRYAGAINBTN>Try Again</TRYAGAINBTN>
+		
+		<BACKBTN>Back</BACKBTN>
+		<SUBMITSCOREBTN>Submit Score</SUBMITSCOREBTN>
+		<LOCATIONPHP>http://localhost/flodev2.com/sasknac/flashden/php/email.php</LOCATIONPHP>
+		<FINALTIME>Your Time Was:</FINALTIME>
+		<MINUTES>m</MINUTES>
+		
+		<SECONDS>s</SECONDS>
+		<LASTNAMETXT>Surname</LASTNAMETXT>
+		<LASTNAMEERROR>Please enter your surname</LASTNAMEERROR>
+		<RIGHTANSWERTIME>3</RIGHTANSWERTIME>
+		<RANDOMANSWERORDER>true</RANDOMANSWERORDER>
+	</OPTIONS>
+	
+	
+<questions><question question="Which actor who starred in Superman the movie broke his neck?" images="yes"><answer image="images/William_Reeves.jpg">William Reeves</answer><answer image="images/Melissa_Reeves.jpg">Melissa Reeves</answer><answer image="images/Christopher_Reeves.jpg">!!@Christopher Reeves</answer><answer image="images/Keanu_Reeves.jpg">Keanu Reeves</answer></question><question question="This Saskatchewan-raised celebrity had a much-publicized artwork exhibition entitled &quot;Voices&quot; at Saskatoon's Mendel Art Gallery in 2000" images="no"><answer>Brent Butt</answer><answer>Colin James</answer><answer>Lynda Haverstock</answer><answer>!!@Joni Mitchell</answer></question></questions></DATA>

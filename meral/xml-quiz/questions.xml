@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<quiz random="yes">
+	<question type='multiplechoice' illustration='colourchanger.swf' answerillustration='crayons.png'>
+		<questiontext><![CDATA[What colour is the rectangle below?]]></questiontext>
+		<answers>
+			<answer correct="no"><![CDATA[Green]]></answer>
+			<answer correct="no"><![CDATA[Red]]></answer>
+			<answer correct="no"><![CDATA[Applepie-colour!]]></answer>
+			<answer correct="yes"><![CDATA[A lot of different colours!]]></answer>
+		</answers>
+		<explaination><![CDATA[The rectangle was a lot of different colours, since this awesome quiz lets you embed .swf files as illustrations!]]></explaination>
+	</question>
+	<question type='guesstimate' answer='9000000' margin='1000000' answerillustration='abstract.png'>
+		<questiontext><![CDATA[How many bicycles are there in Beijing?]]></questiontext>
+		<explaination><![CDATA[Katie Melua said so, so it is true! No really, there are actually 9 million bicycles in Beijing. I counted.]]></explaination>
+	</question>
+	<question type='trueorfalse' answer='true' illustration='balls.png' answerillustration='balls.png'>
+		<questiontext><![CDATA[These balls are the most used asset on FlashDen.]]></questiontext>
+		<explaination><![CDATA[As far as I know, they are. I dare you to prove me wrong!]]></explaination>
+	</question>
+	<question type='guesstimate' answer='0' margin='0' illustration='penguin.png'>
+		<questiontext><![CDATA[How many penguins can you keep as pets after you visit the Arctic regions?]]></questiontext>
+		<explaination><![CDATA[TRICK QUESTION! There are no penguins up north!]]></explaination>
+	</question>
+	<question type='guesstimate' answer='16500156' margin='1000000'>
+		<questiontext><![CDATA[How many people are currently living in The Netherlands?]]></questiontext>
+		<explaination><![CDATA[Hooray to the Dutch! There's no stoppin' us! RAaawrh (or some other battlecry)]]></explaination>
+	</question>
+	<question type='multiplechoice'>
+		<questiontext><![CDATA[What is your favourite pi?]]></questiontext>
+		<answers>
+			<answer correct="no"><![CDATA[Cherry!]]></answer>
+			<answer correct="no"><![CDATA[Butterscotch!]]></answer>
+			<answer correct="yes"><![CDATA[Isn't that just 3.14159..?!]]></answer>
+		</answers>
+		<explaination><![CDATA[Obviously, the answer is 3.14159..(endless decimals)! Many people, however, think of pie when someone says pi!]]></explaination>
+	</question>
+	<question type='trueorfalse' answer='false'>
+		<questiontext><![CDATA[Onomatopeia is spelled correctly.]]></questiontext>
+		<explaination><![CDATA[An onomatopoeia is a word or phrase that sounds like the sound it describes. Cool huh?]]></explaination>
+	</question>
+	<question type='multiplechoice' illustration='crayons.png'>
+		<questiontext><![CDATA[Would you eat these crayons if there wasn't any other food left?]]></questiontext>
+		<answers>
+			<answer correct="no"><![CDATA[Hell no!]]></answer>
+			<answer correct="no"><![CDATA[Eww, crayons]]></answer>
+			<answer correct="no"><![CDATA[Sure, why not?]]></answer>
+			<answer correct="yes"><![CDATA[I already eat crayons!]]></answer>
+		</answers>
+		<explaination><![CDATA[Everybody secretly eats crayons. Don't you? Well, get started then! They're delicious!]]></explaination>
+	</question>
+</quiz>
