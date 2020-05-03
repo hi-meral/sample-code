@@ -1,3 +1,21 @@
+So I researched on this and found there are no Database Connection Pooling provision from php side (however in documentation  you may find PHP connection pooling but it is not database connection pooling). Of course there are few substitute available for the same and MySQL persistent connection is one of the substitutes. We can try but with 151 connection we cannot achieve the actual requirement and we need to increase that up to 1000 approx as I believe. There are few other options too with PHP but could find for Oracle, postgres etc but not specifically for MySQL. In this case I would suggest we should try with persistent connection. If you say so I will make it working in symfony.
+
+References :
+https://www.quora.com/Why-does-PHP-not-support-database-connection-pool
+https://stackoverflow.com/questions/39753/connection-pooling-in-php
+https://blogs.oracle.com/opal/highly-scalable-connection-pooling-in-php
+
+---
+
+
+I would like to update you regarding SMPFC. 
+- A lately generated issue has not been fixed yet and continue working on this
+- I asked Matthew to raise an email thread for new issue but still no update
+- This issue is basically not a bug but a scalability issue of the server. On bulk requests (1000+) server stuck on responding. Mainly it is from database side. Got few ideas that will be implemented further. 
+
+
+MYSQLI_NO_CHANGE_USER_ON_PCONNECT 
+
 https://www.facebook.com/hi.meral.m/videos/10158688056089883/?notif_id=1586087065538358&notif_t=feedback_reaction_generic
 
 ECMAScript

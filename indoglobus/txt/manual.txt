@@ -1543,6 +1543,7 @@ sudo php /bin/composer.phar require aws/aws-sdk-php "^3.0.0"
 OR simply (for dev may be)
 composer require tymon/jwt-auth
 
+php -d memory_limit=-1 composer update  (Bypass memory issue)
 
 ### check php settings by command line
 
@@ -1576,18 +1577,32 @@ if(event.target.tagName.toLowerCase()=='i')
 
 ## SETUP XDEBUG DEBUG IN WAMP AND PHP STORM 
 
-in php.ini
+Setup
+1.Download Xdebug for PHP 7: http://xdebug.org/files/php_xdebug-2....
+2.Copy file 'php_xdebug-2.4.0rc3-7.0-vc14.dll' to: C:\xampp\php\ext
+3.Open file with notepad++: C:\xampp\php\php.ini
+4.Disbale output buffering: output_buffering = Off
+5.Scroll down to [XDebug] section and copy this lines:
 
-; XDEBUG Extension
-[xdebug]
-zend_extension ="D:/wamp64/bin/php/php7.0.4/zend_ext/php_xdebug-2.4.0-7.0-vc14-x86_64.dll"
-; you need to add the above file by downloading it 
-xdebug.remote_enable = on
-xdebug.profiler_enable = off
-xdebug.profiler_enable_trigger = Off
-xdebug.profiler_output_name = cachegrind.out.%t.%p
-xdebug.profiler_output_dir ="D:/wamp64/tmp"
-xdebug.show_local_vars=0
+[XDebug]
+zend_extension = "c:\xampp\php\ext\php_xdebug-2.4.0rc3-7.0-vc14.dll"
+xdebug.profiler_append = 0
+xdebug.profiler_enable = 0
+xdebug.profiler_enable_trigger = 0
+xdebug.profiler_output_dir = "c:\xampp\tmp"
+;xdebug.profiler_output_name = "cachegrind.out.%t-%s"
+xdebug.remote_enable = 1
+xdebug.remote_handler = "dbgp"
+xdebug.remote_host = "127.0.0.1"
+xdebug.remote_log="c:\xampp\tmp\xdebug.txt"
+xdebug.remote_port = 9000
+xdebug.trace_output_dir = "c:\xampp\tmp"
+; 3600 (1 hour), 36000 = 10h
+xdebug.remote_cookie_expire_time = 36000
+
+6.Stop/Start Apache
+7. run http://localhost/dashboard/phpinfo.php and check .
+
 
 GO to PHP Storm
 RUN -> Edit CONFIGURATION
