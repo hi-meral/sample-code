@@ -1,0 +1,46 @@
+path of vhost file
+
+cd /etc/httpd/conf.d
+vi vhost.conf
+
+
+## Start Apache ######
+## status 
+service httpd status 
+## start 
+service httpd start
+## Stop 
+service httpd stop
+## Restart 
+service httpd restart
+
+#######################
+
+## Start mysql ########
+
+## status 
+systemctl status mariadb.service
+## start
+systemctl start mariadb.service
+
+#########################
+
+## rename file
+mv smpfc smpfc-old
+
+## remove non empty directory 
+rm -rf smpfc-middleware-backup
+
+
+## zip file
+sudo yum install zip
+zip bundle.zip *.* 
+zip -r bundle.zip directory_name
+unzip bundle.zip
+
+
+## Permission
+ chmod -R 777 smpfc-middleware
+
+## composer update
+php72 -d memory_limit=-1 composer.phar update

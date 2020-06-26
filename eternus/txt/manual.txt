@@ -1677,3 +1677,33 @@ systemctl install httpd  -- > install apache
 apachectl restart 
 
 -- push 3
+
+robocopy 
+C:>   robocopy  \Meral\folder1   D:\Meral\folder2
+
+
+##########################			##########################
+##########################	Angular	########################## 
+##########################			##########################
+
+
+How to make working Angular
+
+Install Node Latest App in machine
+check ,  node --version,  npm --version
+npm install
+npm cache clean
+npm install -g @angular/cli.
+ng --version
+ng new Project1
+cd Project1
+ng serve
+yahoo.. working
+
+how to install boostrap 
+npm install --save bootstrap jquery
+@import "~bootstrap/dist/css/bootstrap.css" (in componant css)
+
+##########################					##########################
+##########################	[END] Angular	########################## 
+##########################					##########################

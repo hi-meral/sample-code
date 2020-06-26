@@ -1,0 +1,67 @@
+password : Yl5uqynJ   	(Hostname : 119.81.194.102)
+cd /					(jump to root folder)
+clear
+df -h					(see the usage)
+lsblk					(see the partition)
+[take screenshot - before.png]
+sudo du -h --max-depth=1	(show detail usage of directories )
+[copy output to txt temporarily]
+cd /root					(move to highly usage of data folder)
+ls ltr						(show file and folder details, to check whether it has dir or files, if dir is there hit the next command)
+sudo du -h --max-depth=1	(show detail usage of directories )
+cd /espl_log				(move to highly usage of data folder)
+ls -ltr						(show file and folder details,so now it must have all the files)
+cat /dev/null > worker_script_run_log.log		(clear the log file)
+ls -ltr						(check the size of the file now, seems almost clear just few recent process data)
+cd /						(go back)
+cd var
+sudo du -h --max-depth=1	(show detail usage of directories )
+cd log
+sudo du -h --max-depth=1	(show detail usage of directories )
+cd httpd
+ls -ltr
+ls -ltr *log-*
+zip *log-*					(zip all the log files)
+[download the zip using winSCP]
+rm *log-*
+clear
+ls -ltr
+cp ssl_error_log ssl_error_log _25062020	(copy all files with dodyas date)
+zip *_25062020
+[download the zip using winSCP]
+rm *_25062020*
+cat /dev/null > ssl_error_log		(null all the files now)
+
+cat /dev/null > worker_script_run_log.log		(clear the log file again)
+
+clear
+df -h					(see the usage)
+lsblk					(see the partition)
+[take screenshot - after.png]
+
+
+######################################
+
+QUICK PROCESS
+-------------
+df -h					
+lsblk					
+[take screenshot - before.png]
+
+cd /var/httpd
+zip *log-*
+cp ssl_error_log ssl_error_log _25062020	(all the files)
+zip *_25062020
+[download both the zip]
+rm *log-*
+rm *_25062020*
+cat /dev/null > ssl_error_log		(null all the files now)
+
+cd /root/espl_log
+cat /dev/null > worker_script_run_log.log
+
+df -h				
+lsblk					
+[take screenshot - before.png]
+
+######################################
