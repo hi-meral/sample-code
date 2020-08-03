@@ -60,8 +60,13 @@ cat /dev/null > ssl_error_log		(null all the files now)
 cd /root/espl_log
 cat /dev/null > worker_script_run_log.log
 
-df -h				
+				
 lsblk					
 [take screenshot - before.png]
 
 ######################################
+
+Can we delete these ??
+
+/var/lib/mysql/ib_logfile0
+/var/lib/mysql/ib_logfile1

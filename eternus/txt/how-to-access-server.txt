@@ -1,8 +1,15 @@
+Know OS
+cat /etc/os-release
+
+
+
 path of vhost file
 
-cd /etc/httpd/conf.d
-vi vhost.conf
+vi /etc/httpd/conf.d/vhost.conf
 
+sudo su (permission as super user)
+
+su root (login as super user with password )
 
 ## Start Apache ######
 ## status 
@@ -22,6 +29,8 @@ service httpd restart
 systemctl status mariadb.service
 ## start
 systemctl start mariadb.service
+## stop
+systemctl stop mariadb.service
 
 #########################
 
@@ -44,3 +53,85 @@ unzip bundle.zip
 
 ## composer update
 php72 -d memory_limit=-1 composer.phar update
+
+Login as root user
+--------------------
+su root
+welcome1
+
+Troubleshoot
+--------------------
+
+cat /etc/my.cnf
+cat /etc/httpd/conf/httpd.conf
+
+
+
+
+########################################################
+########################################################
+########################################################
+
+	STEPS TO SET UP THE SERVER
+	
+########################################################
+########################################################
+########################################################
+install apache
+sudo yum install httpd
+
+
+install php
+https://phoenixnap.com/kb/install-php-7-on-centos
+sudo yum install yum-utils –y
+sudo yum install epel-release –y
+sudo yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+sudo yum-config-manager ––enable remi–php72  (if not working first run this yum-config-manager )
+sudo yum install php php-common php-opcache php-mcrypt php-cli php-xml php-gd php-curl php-mysql –y
+			
+			(yum remove php*)
+sudo yum remove php php-common php-opcache php-mcrypt php-cli php-xml php-gd php-curl php-mysql –y
+php -v
+
+install mysql
+https://www.vultr.com/docs/how-to-install-mariadb-10-1-on-centos-7
+step 1
+cat <<EOF | sudo tee -a /etc/yum.repos.d/MariaDB.repo
+# MariaDB 10.1 CentOS repository list
+# http://downloads.mariadb.org/mariadb/repositories/
+[mariadb]
+name = MariaDB
+baseurl = http://yum.mariadb.org/10.1/centos7-amd64
+gpgkey=https://yum.mariadb.org/RPM-GPG-KEY-MariaDB
+gpgcheck=1
+EOF
+
+step 2
+sudo yum install MariaDB-server MariaDB-client -y
+
+step 3
+sudo systemctl start mariadb.service
+sudo systemctl enable mariadb.service
+
+step 4
+sudo /usr/bin/mysql_secure_installation
+ 
+
+restart apache
+service httpd stop
+service httpd start
+
+yum install php-xml
+chmod 777 /var/www/symfony/smpfc-middleware/app/logs
+chmod 777 /var/www/symfony/smpfc-middleware/app/logs/*
+chmod 777 /var/www/symfony/smpfc-middleware/app/cache
+chmod 777 /var/www/symfony/smpfc-middleware/app/cache/*
+chmod 777 /var/www/symfony/smpfc-middleware/app/cache/dev/annotations
+
+mv app.php app_prod.php
+mv app_dev.php app.php
+(vi app.php and comment exit() from the file )
+
+Following error indicates database is not connected
+An exception occurred while establishing a connection to figure out your platform version.
+You can circumvent this by setting a 'server_version' configuration value
