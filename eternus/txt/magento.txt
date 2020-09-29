@@ -1,0 +1,26 @@
+Magento 1.0+					Magento 2.0+
+API Added Retroactively			API is Core to the technology
+Flexible Architecture			New Architecture for Speed
+Open Source						Open Source
+No Front-end Library			Ships with LESS
+Legacy PHP						PHP5.6+ / 7.0
+No Support for HTML5/CSS3		Native Support HTML5/CSS3
+RWD Theme Included				RWD Theme Included
+Weak Content Staging			Advanced Content Staging
+Sub-Par Search (SOLR)			Elastic Search (Commerce Edition)
+External PayPal					In-Site PayPal Experience
+Secure Bridge					PCI Compliance Hosted Fields
+Minimal Video Features			Integrated Video (PDP)
+Full Page Cache (EE)			FPC (Commerce Edition)/Varnish
+Severe DB Locking Issues		Zero Table Locking (Checkout)
+Decent Automated Tests			Better Automated Tests
+JS – Prototype	JS – Jquery
+Stale Admin Panel (Backoffice)	Fresh New Design in Admin
+No Data Grid	Customizable Data Grid for Catalog
+Admin Non-Responsive	Responsive Admin Panel
+EE Pricing by License	Commerce Edition Pricing by Order Volume
+5-12 Month Project Cycle	Claimed 4-8 Month Project Cycle
+Legacy Checkout	Streamlined Checkout Process
+Popular Payment & Shipping Methods	Same Payment & Shipping Methods
+“Wild West” Extension Market	Rigorous Extension Testing
+Connect Store	New “Marketplace”

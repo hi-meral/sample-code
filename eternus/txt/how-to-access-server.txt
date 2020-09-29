@@ -67,6 +67,15 @@ cat /etc/httpd/conf/httpd.conf
 
 
 
+CPU Usage command
+--------------------
+
+top
+(yum install sysstat : to run following command)
+mpstat –P ALL
+sar 5
+
+
 
 ########################################################
 ########################################################
@@ -135,3 +144,14 @@ mv app_dev.php app.php
 Following error indicates database is not connected
 An exception occurred while establishing a connection to figure out your platform version.
 You can circumvent this by setting a 'server_version' configuration value
+
+[6/29 9:45 PM] Vishwamber Shetty
+
+<IfModule prefork.c>
+StartServers       4
+MinSpareServers    3
+MaxSpareServers   10
+ServerLimit      256
+MaxClients       256
+MaxRequestsPerChild  10000
+</IfModule>
