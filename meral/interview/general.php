@@ -467,3 +467,60 @@ php inheritance
 access modifiers
 
 scope of variable
+
+
+
+mysql_pconnect < ---  when not to use
+
+
+data_seek
+
+1, 1,2   1,2,3    1,2,3,4
+
+
+echo ctype_alnum("foo!#*bar");
+
+
+Is it possible to remove the HTML tags from data?
+The strip_tags() function enables us to clean a string from the HTML tags.
+
+
+46) what is the static variable in function useful for?
+
+function testFunction() { static $testVariable = 1; echo $testVariable; $testVariable++; } 
+ testFunction();      // print 1 
+ testFunction();       // print 2
+ testFunction();        // print 2
+
+
+
+ 47) 
+ 
+if("12" == 12)  // true
+	echo 1;
+
+
+	
+	
+48) 	
+$x = 12;
+echo $X;
+
+function ABC(){ echo 1; }
+abc();
+
+
+49)
+
+How do you execute a PHP script from the command line?
+
+php myfile.php daily
+$type = $argv[1];
+
+OR
+php abc.php --name=xyz
+
+$val = getopt(null, ["name:"]);
+print_r($val); // output: ['name' => 'xyz'];
+
+
