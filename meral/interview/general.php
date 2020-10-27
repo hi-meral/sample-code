@@ -1,26 +1,58 @@
+
+
+- XAMPP SETUP
+- 
+
 <pre>
 <h1>MYSQL</h1>Latest mysql 6.0
 -----------------------
 
-MySQL is RDBMS
-RDBMS enforce the rules
+MySQL v/s MariaDB
+
+Both are different 
+Mysql was took over by Sun Microsystem
+Mysql Core developer developed MariaDB having almost same functionality 
+XAMPP replaced mysql with maria dba_close
 
 -----------------------
 
+How do you login in mysql using command line
+
+
+mysql -u root -p  [Enter]
+
+show databases;
+
+use wordpress1;
+
+SHOW VARIABLES; // show all configuration settings 
+
+
+default mysql connection 
+
+show variables like "max_connections";
+
+set global max_connections = 200;
+
+
+
+------------------------
+
 DATABASE ENGINE IN MYSQL
 
-MyISAM is MySQL's extended ISAM format and default database engine. In addition to providing a number of indexing 
-and field management functions not available in ISAM
-fast but recovety not possible and not supporting savepoint
+ MyISAM – MyISAM is the default storage engine for MySQL. It extends the former ISAM storage engine. MyISAM offers big storage, up to 256TB! The tables can also be compressed to get extra storage. MyISAM tables are not transaction-safe. 
 
-INNODB
-direct  products of the technology that makes MySQL so flexible
-foreign-key support 
-recovery possible
+· MERGE – A MERGE table is a virtual table that consolidates different MyISAM tables that have a comparable structure to one table. MERGE tables use the indexes of the base tables, as they do not have indexes of their own.
 
-HEAP
-HEAP allows for temporary tables that reside only in memory. Residing in memory makes HEAP faster than ISAM or 
-MyISAM, but the data it manages is volatile and will be lost if it's not saved prior to shutdown.
+· ARCHIVE – As the name suggests, Archive helps in archiving the tables by compressing them, in-turn reducing the storage space. Hence, you can store a lot of records with the Archive. It uses the compression-decompression procedure while writing and reading the table records. It is done using the Zlib library.
+
+· CSV – This is more like a storage format. CSV engine stores the values in the Comma-separated values (CSV) format. This engine makes it easier to migrate the tables into a non-SQL pipeline.
+
+· InnoDB – InnoDB is the most optimal while choosing an engine to drive performance. InnoDB is a transaction-safe engine. Hence it is ACID-compliant and can efficiently restore your database to the most stable state in case of a crash.
+
+· Memory– Memory tables were formerly known as HEAP. With memory tables, there can be a performance boost as the tables are stored in the memory. But it does not work with large data tables due to the same reason.
+
+· Federated – Federated tables allow accessing remote MySQL server tables. It can be done without any third-party integration or cluster technology.
 
 ----------------------
 
@@ -93,10 +125,45 @@ How can i find specific record having of a perticular day
 
 <a href="http://www.careerride.com/MySQL-Interview-Questions.aspx">http://www.careerride.com/MySQL-Interview-Questions.aspx</a>
 
+
+7. How does database import/export work in MySQL?
+
+export
+· mysqldump -u username -p databasename > dbsample.sql
+
+import 
+
+· mysql -u username -p databasename < dbsample.sql
+
+
+
 trigger
-store precedure
+
+store procedure
+
 view
-foreigh key contrain - cascade
+
+
+foreign key constrain - 
+ RESTRICT | CASCADE | SET NULL | NO ACTION | SET DEFAULT
+ 
+ eg on CREATE TABLE parent (
+    id INT NOT NULL,
+    PRIMARY KEY (id)
+) ENGINE=INNODB;
+
+CREATE TABLE child (
+    id INT,
+    parent_id INT,
+    INDEX par_ind (parent_id),
+    FOREIGN KEY (parent_id)
+        REFERENCES parent(id)
+        ON DELETE RESTRICT
+		ON UPDATE CASCADE
+) ENGINE=INNODB;
+
+Cascaded foreign key actions do not activate triggers.
+
 
 commit , rollback & save point
 
@@ -114,6 +181,8 @@ Latest php 5.5.3
 
 php.ini will run very first when php loads
 it is for initiate the php & php settings like
+
+The function parse_ini_file() enables us to load in the ini file specified in filename and returns the settings in it in an associative array.
 
 display error
 short tags
@@ -485,12 +554,6 @@ Is it possible to remove the HTML tags from data?
 The strip_tags() function enables us to clean a string from the HTML tags.
 
 
-46) what is the static variable in function useful for?
-
-function testFunction() { static $testVariable = 1; echo $testVariable; $testVariable++; } 
- testFunction();      // print 1 
- testFunction();       // print 2
- testFunction();        // print 2
 
 
 
@@ -524,3 +587,151 @@ $val = getopt(null, ["name:"]);
 print_r($val); // output: ['name' => 'xyz'];
 
 
+What is the difference between null and empty?
+
+$a = "" ;   // this is empty and hold a memorey
+$b = NULL;  // this is null not holding any memory
+
+
+Is it possible to remove the HTML tags from data?
+strip_tags();
+
+
+What is the most convenient hashing method to be used to hash passwords?
+
+It is preferable to use crypt() which natively supports several hashing algorithms or the function hash() which supports more variants than crypt() rather than using the common hashing algorithms such as md5, sha1 or sha256 because they are conceived to be fast. Hence, hashing passwords with these algorithms can create vulnerability.
+
+
+ [OOP] Are Parent constructors called implicitly inside a class constructor?
+
+
+ 
+ 
+ 46) what is the static variable in function useful for?
+
+ <?php
+function testFunction() { static $testVariable = 1; echo $testVariable; $testVariable++; } 
+ testFunction();      // print 1 
+ testFunction();       // print 2
+ testFunction();        // print 2
+ ?>
+ 
+50) persistent cookie
+ <?php setcookie( "cookieName2", $value2, strtotime( '+30 days' ) ); ?>
+ 
+ Cookies with an expiration date are called persistent.
+ can you check in your browser
+ 
+ 
+ 
+51) Something about $_FILE
+
+
+
+83) How can we determine whether a PHP variable is an instantiated object of a certain class?
+
+<?php
+/*
+ * 
+ * opcode number: 138
+ */
+  class A{
+	 
+ }
+ class B{
+	 
+ }
+$obj = new B();
+
+if ($obj instanceof A) {
+   echo 'A';
+}
+?>
+
+
+99) deal with an array as a property of object.
+
+<?php 
+{$obj->$properties}['name']
+
+$a = array('a'=> 'apple', 'b' => 'ball');
+
+$a['c'] = new StdClass();
+
+$a['c']->prop = "hello";
+
+$obj1 = new stdClass();
+
+$obj1->prop = $a;
+
+echo $obj1->prop['c']->prop;
+
+?>
+
+100)
+
+
+<?php
+switch ($expr) {
+	case 'a' :  
+		echo 123;  // this will exexute 
+	break;
+	
+	case 'a' :  
+		echo 456;
+	break;
+	
+    default:
+         echo "Goodbye Moon!";
+         break;
+		 
+	 //default:		// duplicate default case will give you error
+	 //echo "Goodbye Moon!";
+	 //break;
+}
+
+?>
+
+101) Scalar Type Hints  
+
+<?php
+declare(strict_types=1);
+
+function sendHttpStatus(int $statusCode, string $message) {
+     header('HTTP/1.0 ' .$statusCode. ' ' .$message);
+}
+
+sendHttpStatus("403", "OK"); // string "403" coerced to int(403)
+
+?>
+
+102) Return type 
+
+<?php
+
+echo isValidStatusCode();
+
+//declare(strict_types=1);
+
+function isValidStatusCode(): bool {    return 1;  }  // on function call will print 1 and throw error in case of strict type
+function isValidStatusCode(): bool {    return true;  }  // on function call will print 1 and good for strict type
+function isValidStatusCode(): bool {    return 100;  }  // on function call will print 1
+
+?>
+
+103) Combined Comparison Operator,
+
+<?php
+
+echo order_func(3,2);
+
+function order_func($a, $b) {
+    return $a <=> $b;
+}
+
+// <=> simply called 'is bigger than'
+?>
+
+104) which IDE
+
+what are the good facilities in that ?

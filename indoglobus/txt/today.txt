@@ -1,3 +1,5 @@
+bhagyashree.matere@fourtech.com
+
 So I researched on this and found there are no Database Connection Pooling provision from php side (however in documentation  you may find PHP connection pooling but it is not database connection pooling). Of course there are few substitute available for the same and MySQL persistent connection is one of the substitutes. We can try but with 151 connection we cannot achieve the actual requirement and we need to increase that up to 1000 approx as I believe. There are few other options too with PHP but could find for Oracle, postgres etc but not specifically for MySQL. In this case I would suggest we should try with persistent connection. If you say so I will make it working in symfony.
 
 References :
