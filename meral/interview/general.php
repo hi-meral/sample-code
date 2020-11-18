@@ -6,6 +6,8 @@
 <pre>
 <h1>MYSQL</h1>Latest mysql 6.0
 -----------------------
+https://www.bestinterviewquestion.com/mysql-interview-questions
+
 
 MySQL v/s MariaDB
 
@@ -34,8 +36,6 @@ show variables like "max_connections";
 
 set global max_connections = 200;
 
-
-
 ------------------------
 
 DATABASE ENGINE IN MYSQL
@@ -55,6 +55,22 @@ DATABASE ENGINE IN MYSQL
 · Federated – Federated tables allow accessing remote MySQL server tables. It can be done without any third-party integration or cluster technology.
 
 ----------------------
+
+Difference between MyISAM and InnoDB are given below:-
+MyISAM does no longer support transactions, however InnoDB supports transactions.
+MyISAM helps Table-level Locking, however InnoDB supports Row-level Locking.
+MyISAM helps full-text search, however InnoDB does not.
+MyISAM designed for the need for speed but InnoDB designed for most performance.
+MyISAM does now not aid overseas keys, but InnoDB helps foreign keys.
+We can use commit and rollback with InnoDB however not in MyISAM.
+MyISAM does no longer assist ACID (Atomicity, Consistency, Isolation, and Durability) however InnoDB supports the ACID property.
+In the InnoDB table, the AUTO_INCREMENT field is a section of the index but now not in MyISAM.
+MyISAM stores its tables, data, and indexes in disk area the usage of a separate table name.FRM, desk name.MYD and table name.MYI however InnoDB stores its tables and indexes in a tablespace.
+
+----------------------
+
+Default port 3306
+
 
 CHAR Vs VARCHAR
 
@@ -139,7 +155,26 @@ import
 
 trigger
 
+CREATE TRIGGER data_backup BEFORE UPDATE ON users
+
+   FOR EACH ROW
+
+   BEGIN
+
+     IF NEW.amount < 0 THEN
+
+        SET NEW.amount = 0;
+
+     ELSEIF NEW.amount > 100 THEN
+
+       SET NEW.amount = 100;
+
+     END IF;
+
+   END;// 
+
 store procedure
+
 
 view
 
@@ -167,6 +202,41 @@ Cascaded foreign key actions do not activate triggers.
 
 commit , rollback & save point
 
+
+Q. What is the Transactions in database ? 
+
+Single unit of an entire process -> Atomic, Consistent, Isolated, Durable 
+
+https://www.youtube.com/watch?v=5Pia4UFuMKo
+
+
+Q Write a query to fetch duplicate records from a table using MySQL?
+SELECT EmpId, Project, Salary, COUNT(*) FROM EmployeeSalary GROUP BY EmpId, Project, Salary HAVING COUNT(*) > 1
+
+
+Q . How to create case insensitive query in MySQL?
+The standard way to perform case insensitive queries in SQL is to use the SQL upper or lower functions like the following:
+
+select * from users where upper(first_name) = 'AJAY';
+
+OR
+
+select * from users where lower(first_name) = 'ajay';
+
+
+Q How to get Nth highest salary from table in a MySQL?
+
+SELECT * FROM EmployeeTable1 AS Emp1 WHERE (1) = ( SELECT COUNT(DISTINCT(Emp2.amount)) FROM EmployeeTable2 AS Emp2 WHERE Emp2.amount > Emp1.amount)
+
+
+Q. What are the difference between NOW and CURRENT_DATE in MySQL?
+
+NOW() give you the current date time in the format 'YYYY-MM_DD HH:MM: SS'	
+CURRENT_DATE() will only give you the current date in format "YYYY-MM_DD"
+
+Q. mysql_pconnect() -- use of that and when not to use that
+
+
 ##############################################
 
 </pre>
@@ -190,6 +260,34 @@ max upload file size
 magic quotes
 ---------------------
 
+ERROR TYPES IN PHP
+
+1. Notices: 
+These are small, non-critical errors 
+for example, accessing a variable that has not yet been defined. 
+By default, such errors are not displayed to the user at all 
+
+2. Warnings: 
+Warnings are more severe errors like attempting to include() a file which does not exist. 
+By default, these errors are displayed to the user, but they do not result in script termination.
+
+3. Fatal errors: These are critical errors - 
+for example, instantiating an object of a non-existent class,
+calling a non-existent function. 
+These errors cause the immediate termination of the script
+
+----------------------------
+value pass by reference 
+
+function doSomething( &amp;$arg )  {     $arg = 5;      }    <br />$a = 3;  <br />doSomething( $a );<br />echo $a;
+
+
+now remove the argument
+
+function doSomething(  )  {     $a = 5;      }   $a = 3;   doSomething();  echo $a;
+
+----------------------------
+
 SUPER GLOBAL VARIABLE
 
 $GLOBALS
@@ -210,6 +308,16 @@ upload_max_filesize = 2M
 post_max_size = 8M
 
 ------------------
+
+
+</pre>
+<p>$a = 012;<br />
+  echo $a / 4;</p>
+<p>// answer 2.5</p>
+<p>When a number is preceded by a 0 in PHP, the number is treated as an octal number (base-8). Therefore the octal number 012 is equal to the decimal number 10.<br />
+</p>
+
+
 
 Oops Concept
 
@@ -327,23 +435,7 @@ ob_get_flush() prints the buffer, removes it, and returns its content
 
 ----------------------------
 
-ERROR TYPES IN PHP
 
-1. Notices: 
-These are small, non-critical errors 
-for example, accessing a variable that has not yet been defined. 
-By default, such errors are not displayed to the user at all 
-
-2. Warnings: 
-Warnings are more severe errors like attempting to include() a file which does not exist. 
-By default, these errors are displayed to the user, but they do not result in script termination.
-
-3. Fatal errors: These are critical errors - 
-for example, instantiating an object of a non-existent class,
-calling a non-existent function. 
-These errors cause the immediate termination of the script
-
-----------------------------
 
 GARBAGE COLLECTION
 
@@ -356,8 +448,6 @@ var_dump(gc_collect_cycles()); // # of elements cleaned up
 gc_disable(); // Disable Garbage Collector
 ?>
 
-REST API
-----------------------------
 
 Security Aspects of PHP
 
@@ -391,22 +481,8 @@ DAL - data access layer
 
 ----------------------------
 
-value pass by reference 
-
-function doSomething( &amp;$arg )  {     $arg = 5;      }    <br />$a = 3;  <br />doSomething( $a );<br />echo $a;
 
 
-now remove the argument
-
-function doSomething(  )  {     $a = 5;      }   $a = 3;   doSomething();  echo $a;
-
-----------------------------
-</pre>
-<p>$a = 012;<br />
-  echo $a / 4;</p>
-<p>// answer 2.5</p>
-<p>When a number is preceded by a 0 in PHP, the number is treated as an octal number (base-8). Therefore the octal number 012 is equal to the decimal number 10.<br />
-</p>
 <p>----------------</p>
 <pre>
 ###############################
@@ -731,7 +807,22 @@ function order_func($a, $b) {
 
 // <=> simply called 'is bigger than'
 ?>
+103)  Soap & Rest API
+
+soap is old and heave and xml base
+rest is new , light weight and advance and URL base
 
 104) which IDE
 
 what are the good facilities in that ?
+
+105) what is composer
+
+
+106) what is version control system 
+branch & Tag
+do you have git hub account 
+
+
+111) whats new in PHP 7
+https://www.youtube.com/watch?v=thGH8jYlQCc

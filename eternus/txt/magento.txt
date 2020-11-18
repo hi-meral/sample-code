@@ -211,6 +211,49 @@ grep Espl_CartPrice app/etc/config.php
 bin/magento module:disable Espl_CartPrice
  bin/magento module:status Espl_CartPrice
  
+ 
+https://www.bay20.com/important-commands-in-magento-2/
+ 
+ 
+Check command log history log
+With the help of this command you can check all command run on that server. You just need to press “up arrow” key check history commands.
+Clean and flush cache
+You need to manually refresh cache like magento 1 in magento 2. This easily can be done via command line.
+php bin/magento cache:clean
+php bin/magento cache:flush
+php bin/magento cache:status
+php bin/magento cache:disable
+php bin/magento cache:enable
+Re-indexing
+php bin/magento indxer:reindex
+php bin/magento indexer:reset
+php bin/magento indexer:status
+php bin/magento indexer:info
+Check site information like admin URL, dependencies etc
+php bin/magento info:adminuri
+php bin/magento info:dependencies:show-modules
+php bin/magento info:language:list
+php bin/magento info:timezone:list
+
+Check deployment mode
+php bin/magento deploy:mode:set production
+php bin/magento deploy:mode:set dev
+php bin/magento deploy:mode:show
+Deploy, remove and reset sample data
+php bin/magento sampledata:deploy
+php bin/magento sampledata:remove
+php bin/magento sampledata:reset
+Setup upgrade and deploy
+php bin/magento setup:upgrade
+php bin/magento setup:static-content:deploy
+php bin/magento setup:static-content:deploy en_US (You can use this command if you want to do language specific deploment).
+php bin/magento setup:static-content:deploy –theme Vendor/firsttheme(Theme specific deployment)
+
+Create admin user
+
+php bin/magento admin:user:create --admin-user=meral --admin-password=Meral#321 --admin-email=meral.maradia_c@shoptimize.ai --admin-firstname=Meral --admin-lastname=Miranda
+
+
 #############################################
 d6f664b4679da062221ceaeb6e7f973966737d347c60bbce6b12e9a70be8e599:EegEmEmQ0eUO7g7eSbWiNb1o6vyogkyy:1
 admin@123
@@ -225,4 +268,24 @@ how to install theme
 go to  app/code/Shoptimize  (create if does not exist)
 git clone git@bitbucket.org:team-shoptimize/theme-candyskin-mobile.git  (copy this from bit bucket using clone button)
 bin/magento setup:upgrade
+
+##############################################
+
+create fork
+1) https://www.loom.com/share/6029401f10214823bf584682186f53b4
+2) https://www.loom.com/share/283f818d6f1f463084a1a08eb46cace7
+3) https://www.loom.com/share/53eede7715da4f8dbf49f8ccdda02dff
+
+[git remote add --track master upstream git@github.com:facebook/react-native.git
+git fetch upstream]
+
+################################################
+
+to make enable the product listing page in admin use following module
+https://bitbucket.org/team-shoptimize/module-unstableattributeselection/src/master/
+
+how to reindex a specific
+bin/magento indexer:status
+bin/magento indexer:reindex catalogsearch_fulltext
+
 

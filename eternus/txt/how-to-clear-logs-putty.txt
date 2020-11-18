@@ -7,7 +7,7 @@ lsblk					(see the partition)
 sudo du -h --max-depth=1	(show detail usage of directories )
 [copy output to txt temporarily]
 cd /root					(move to highly usage of data folder)
-ls ltr						(show file and folder details, to check whether it has dir or files, if dir is there hit the next command)
+ls -ltr						(show file and folder details, to check whether it has dir or files, if dir is there hit the next command)
 sudo du -h --max-depth=1	(show detail usage of directories )
 cd /espl_log				(move to highly usage of data folder)
 ls -ltr						(show file and folder details,so now it must have all the files)
@@ -44,11 +44,11 @@ lsblk					(see the partition)
 
 QUICK PROCESS
 -------------
-df -h					
-lsblk					
+df -h
+lsblk
 [take screenshot - before.png]
 
-cd /var/httpd
+cd /var/log/httpd
 zip *log-*
 cp ssl_error_log ssl_error_log _25062020	(all the files)
 zip *_25062020

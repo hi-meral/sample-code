@@ -76,13 +76,6 @@ mpstat –P ALL
 sar 5
 
 
-// switch PHP versions 
-sudo update-alternatives --set php /usr/bin/php7.2
-
-
-sudo systemctl restart nginx 
-sudo systemctl restart mysql 
-
 
 ########################################################
 ########################################################
@@ -104,8 +97,13 @@ sudo yum install epel-release –y
 sudo yum install http://rpms.remirepo.net/enterprise/remi-release-7.rpm
 sudo yum-config-manager ––enable remi–php72  (if not working first run this yum-config-manager )
 sudo yum install php php-common php-opcache php-mcrypt php-cli php-xml php-gd php-curl php-mysql –y
-			
-			(yum remove php*)
+
+
+Remove PHP
+
+sudo apt-get purge php7.*
+sudo apt-get autoclean
+sudo apt-get autoremove
 sudo yum remove php php-common php-opcache php-mcrypt php-cli php-xml php-gd php-curl php-mysql –y
 php -v
 
@@ -162,3 +160,21 @@ ServerLimit      256
 MaxClients       256
 MaxRequestsPerChild  10000
 </IfModule>
+
+
+CHECK AND switch php
+sudo update-alternatives --config php  # and serve the number for required
+## sudo update-alternatives -set php /usr/bin/php7.2
+nano /etc/nginx/sites-available/fastcgi.conf
+
+upstream fastcgi_backend {
+        server unix:/var/run/php7-fpm.sock;
+}
+
+sudo service nginx restart    
+sudo service php7.2-fpm restart
+
+grep php /proc/net/unix
+https://stackoverflow.com/questions/44757189/where-is-php7-0-fpm-sock-located
+
+
