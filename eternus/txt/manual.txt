@@ -1141,7 +1141,7 @@ function html_cut($text, $max_length)
 
 ##############
 
-sudo chmod -R 777  folder_name
+sudo chmod -R 777 Â folder_name
 
 
 ##############
@@ -1735,5 +1735,10 @@ npm install --save bootstrap jquery
 @import "~bootstrap/dist/css/bootstrap.css" (in componant css)
 
 ##########################					##########################
-##########################	[END] Angular	########################## 
+##########################	[END] Angular			########################## 
 ##########################					##########################
+
+# hide phpmyadmin warnings
+ nano /etc/phpmyadmin/config.inc.php 
+
+$cfg['SendErrorReports'] = 'never';
