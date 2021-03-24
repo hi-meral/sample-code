@@ -163,6 +163,17 @@ use database1;
 SHOW VARIABLES;  (list out all settings of mysql)
 
 
+# when mysql status is failed
+
+/etc/init.d/mysql stop
+service mysql stop
+killall -KILL mysql mysqld_safe mysqld
+/etc/init.d/mysql start
+service mysql start
+
+
+ssh -i ~/.ssh/stagingkey.ppk meral@13.233.192.153
+
 ##############################################
 
 if in select
@@ -1321,7 +1332,7 @@ Authentication Type: true
 Username: Gmail account username
 Password: Gmail account password
 SMTP Server: smtp.gmail.com
-Secure Transport Layer: tls
+Secure Transport Layer: TLS
 Port: 587
 
 
@@ -1528,6 +1539,7 @@ sudo php /bin/composer.phar require aws/aws-sdk-php "^3.0.0"
 
 OR simply (for dev may be)
 composer require tymon/jwt-auth
+composer require shoptimize/suite-Loyalty  "^100.0.6"
 
 php -d memory_limit=-1 composer.phar update  (Bypass memory issue)
 
@@ -1547,6 +1559,12 @@ crontab -e
 :x!
 
 Enter
+
+
+NGINX
+
+
+sudo netstat -tulpn | grep nginx  (or LISTEN)
 
 
 ######################### System message in windows 10 ############################
@@ -1737,3 +1755,58 @@ npm install --save bootstrap jquery
 ##########################					##########################
 ##########################	[END] Angular	########################## 
 ##########################					##########################
+
+
+# hide phpmyadmin warnings
+ nano /etc/phpmyadmin/config.inc.php 
+
+$cfg['SendErrorReports'] = 'never';
+
+
+// import sql database from command line
+mysql -u root -p fkfj_stage < /home/espladmin/Downloads/fkfj.sql
+
+// export
+cd /tmp  (bcoz 777 is set for tmp)
+mysqldump --add-drop-table -u admin -p  dbname > dbname.sql
+
+
+#########
+
+Connect existing folder to existing repository 
+
+rm -rf .git
+git init
+git remote add origin git@bitbucket.org:team-shoptimize/module-fkfj-customization.git
+git add .
+git commit -m "Launching Module"
+git pull origin master --allow-unrelated-histories
+git push -u origin master
+
+Fork repository 
+
+[change origin]
+git remote set-url origin git@bitbucket.org:meralm/theme-almutlaq-en-mobile.git
+
+- git remote add meral git@bitbucket.org:meralm/module-extracharge.git
+- git remote add meral git@bitbucket.org:meralm/core-platform.git
+
+- git fetch shoptimize
+- git pull shoptimize master
+
+other git command
+
+// save temp
+git stash 
+// then get back and start from where left
+git stash pop
+
+git config core.fileMode false
+git fetch remote shoptimize
+ 
+reset to original
+
+> git fetch --all && git reset --hard origin/<branch_name>
+
+
+has:nouserlabels !in:inbox -label:sent -label:drafts -label:[imap]/sent 

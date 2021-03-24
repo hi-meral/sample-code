@@ -253,6 +253,19 @@ Create admin user
 
 php bin/magento admin:user:create --admin-user=meral --admin-password=Meral#321 --admin-email=meral.maradia_c@shoptimize.ai --admin-firstname=Meral --admin-lastname=Miranda
 
+change admin password
+UPDATE admin_user SET password = SHA2('NewPassword', 256) WHERE username='admin';
+
+
+## INSTALL MODULE FROM ALMUTLAQ PROJECT : Espl_CreateCustomer (google drive -> code -> magento )
+bin/magento customer:user:create --customer-firstname="Meral" --customer-lastname="Rodrix" --customer-email="hi.meral@gmail.com" --customer-password="meral@123" --website="1"
+
+change customer password
+
+UPDATE `customer_entity`
+SET `password_hash` = CONCAT(SHA2('xxxxxxxxYOURPASSWORD', 256), ':xxxxxxxx:1')
+WHERE `entity_id` = 1;
+
 
 #############################################
 d6f664b4679da062221ceaeb6e7f973966737d347c60bbce6b12e9a70be8e599:EegEmEmQ0eUO7g7eSbWiNb1o6vyogkyy:1
@@ -276,8 +289,12 @@ create fork
 2) https://www.loom.com/share/283f818d6f1f463084a1a08eb46cace7
 3) https://www.loom.com/share/53eede7715da4f8dbf49f8ccdda02dff
 
-[git remote add --track master upstream git@github.com:facebook/react-native.git
-git fetch upstream]
+[
+
+git remote add --track master upstream git@github.com:facebook/react-native.git
+git fetch upstream
+
+]
 
 ################################################
 
@@ -288,4 +305,17 @@ how to reindex a specific
 bin/magento indexer:status
 bin/magento indexer:reindex catalogsearch_fulltext
 
+field validation
+https://mage2.pro/t/topic/356
 
+// change attribute id sort order
+UPDATE `eav_entity_attribute` SET `sort_order` = '15' WHERE `eav_entity_attribute`.`attribute_id` = 204;
+
+
+####################################
+
+when search page has error
+
+cd /var/lib/mysql/DBNAME
+rm -rf catalogsearch_fulltext_scope1.ibd
+php bin/magento indexer:reindex catalogsearch_fulltext
