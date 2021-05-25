@@ -172,7 +172,20 @@ killall -KILL mysql mysqld_safe mysqld
 service mysql start
 
 
+create new user from command line
+
+CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
+FLUSH PRIVILEGES;
+
+
 ssh -i ~/.ssh/stagingkey.ppk meral@13.233.192.153
+
+sudo chown -R parth:root www
+sudo chown -R espladmin:root www
+
+
+sudo update-alternatives --config php
 
 ##############################################
 
@@ -1784,24 +1797,29 @@ Connect existing folder to existing repository
 
 rm -rf .git
 git init
-git remote add origin git@bitbucket.org:team-shoptimize/module-fkfj-customization.git
+git remote add origin git@bitbucket.org:team-shoptimize/module-almf-customization.git
 git add .
 git commit -m "Launching Module"
 git pull origin master --allow-unrelated-histories
-git push -u origin master
+git push -u origin master -f
 
 Fork repository 
 
 [change origin]
-git remote set-url origin git@bitbucket.org:meralm/theme-almutlaq-en-mobile.git
+git remote set-url origin git@bitbucket.org:team-shoptimize/hyperpay-extension.git
 
-- git remote add meral git@bitbucket.org:meralm/module-extracharge.git
-- git remote add meral git@bitbucket.org:meralm/core-platform.git
+- git remote add meral git@bitbucket.org:team-shoptimize/module-almf-customization.git
+- git remote add meral git@bitbucket.org:meralm/theme-almutlaq-en-desktop.git
+
+[to remove]
+git remote rm meral
 
 - git fetch shoptimize
 - git pull shoptimize master
 
 other git command
+
+git push meral theme-almutlaq-en-desktop-fork --force
 
 // save temp
 git stash 
@@ -1813,8 +1831,87 @@ git fetch remote shoptimize
  
 reset to original
 
-> git fetch --all && git reset --hard origin/<branch_name>
+> git fetch --all && git reset --hard origin/master
 
 
-has:nouserlabels !in:inbox -label:sent -label:drafts -label:[imap]/sent 
+@if not able to checkout branch
+
+git remote update
+git fetch 
+git checkout --track origin/<BRANCH-NAME>
+
+
+git restore --staged
+
+@revert back to previous commit -----
+
+git revert --no-commit 0d59107..HEAD
+git commit
+[https://stackoverflow.com/questions/4114095/how-do-i-revert-a-git-repository-to-a-previous-commit]
+
+add branch name in your command line
+
+
+put this in ~/.bashrc  
+
+
+		parse_git_branch() {
+			 git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+		}
+
+		set-title(){
+		  ORIG=$PS1
+		  TITLE="\e]2;$@\a"
+		  PS1=${ORIG}${TITLE}
+		}
+
+		export PS1="\u@\h \[\e[32m\]\w \[\e[91m\]\$(parse_git_branch)\[\e[00m\]$ "
+
+
+
+source ~/.bashrc
+
+### 
+
+has:nouserlabels !in:inbox -label:sent -label:drafts -label:[imap]/sent
+
+
+color in shell script
+
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+printf "I ${RED}love${NC} Stack Overflow\n"
+
+
+Black        0;30     Dark Gray     1;30
+Red          0;31     Light Red     1;31
+Green        0;32     Light Green   1;32
+Brown/Orange 0;33     Yellow        1;33
+Blue         0;34     Light Blue    1;34
+Purple       0;35     Light Purple  1;35
+Cyan         0;36     Light Cyan    1;36
+Light Gray   0;37     White         1;37
+
+Visual Studio Short cut
+
+ctr + k + c    (comment)
+ctr + k + u    (uncomment)
+
+ctr + k + 0 (zero)   Fold all
+ctr + k + j   UnFold all
+
+
+UBUNTU basic commands
+
+to find any file in the system
+find -type f -name "ar.xml"
+
+grep -r "hello"  ./app
+grep -R "message" ./var --include="*.php"
+grep -R "message" ./app --exclude="*.html"
+
+
+nano -ul /var/etc.php
+	- ctr + _  (go to line)
+
 

@@ -190,8 +190,8 @@ php bin/magento indexer:reindex
 Change user/customer's password from db
 
 UPDATE `customer_entity`
-SET `password_hash` = CONCAT(SHA2('xxxxxxxxSecret@123', 256), ':xxxxxxxx:1')
-WHERE `entity_id` = 1;
+SET `password_hash` = CONCAT(SHA2('xxxxxxxxmeral@123', 256), ':xxxxxxxx:1')
+WHERE `email` = 'meral.miranda_c@shoptimize.ai';
 
 #############################################
 
@@ -251,10 +251,10 @@ php bin/magento setup:static-content:deploy –theme Vendor/firsttheme(Theme spe
 
 Create admin user
 
-php bin/magento admin:user:create --admin-user=meral --admin-password=Meral#321 --admin-email=meral.maradia_c@shoptimize.ai --admin-firstname=Meral --admin-lastname=Miranda
+php bin/magento admin:user:create --admin-user=meral --admin-password=meral@123 --admin-email=meral.maradia_c@shoptimize.ai --admin-firstname=Meral --admin-lastname=Miranda
 
 change admin password
-UPDATE admin_user SET password = SHA2('NewPassword', 256) WHERE username='admin';
+UPDATE admin_user SET password = SHA2('meral@123', 256) WHERE username='meral';
 
 
 ## INSTALL MODULE FROM ALMUTLAQ PROJECT : Espl_CreateCustomer (google drive -> code -> magento )
@@ -263,9 +263,10 @@ bin/magento customer:user:create --customer-firstname="Meral" --customer-lastnam
 change customer password
 
 UPDATE `customer_entity`
-SET `password_hash` = CONCAT(SHA2('xxxxxxxxYOURPASSWORD', 256), ':xxxxxxxx:1')
-WHERE `entity_id` = 1;
+SET `password_hash` = CONCAT(SHA2('xxxxxxxxmeral@123', 256), ':xxxxxxxx:1')
+WHERE `email` = 'meral.miranda_c@shoptimize.ai';
 
+DELETE from customer_address_entity where parent_id = (select entity_id from customer_entity where email = "hi.meral@gmail.com")
 
 #############################################
 d6f664b4679da062221ceaeb6e7f973966737d347c60bbce6b12e9a70be8e599:EegEmEmQ0eUO7g7eSbWiNb1o6vyogkyy:1
@@ -319,3 +320,12 @@ when search page has error
 cd /var/lib/mysql/DBNAME
 rm -rf catalogsearch_fulltext_scope1.ibd
 php bin/magento indexer:reindex catalogsearch_fulltext
+
+
+check log
+$writer = new \Zend\Log\Writer\Stream(BP . '/var/log/meral.log');
+$logger = new \Zend\Log\Logger();
+$logger->addWriter($writer);
+$logger->info('meral');
+
+		

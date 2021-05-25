@@ -1,3 +1,24 @@
+<script> function createFcn(nm){(window.freshsales)[nm]=function(){(window.freshsales).push([nm].concat(Array.prototype.slice.call(arguments,0)))}; } (function(url,appToken,formCapture){window.freshsales=window.freshsales||[];if(window.freshsales.length==0){list='init identify trackPageView trackEvent set'.split(' ');for(var i=0;i<list.length;i++){var nm=list[i];createFcn(nm);}var t=document.createElement('script');t.async=1;t.src='https://assets.freshsales.io/assets/analytics.js'; var ft=document.getElementsByTagName('script')[0]; ft.parentNode.insertBefore(t,ft);freshsales.init('https://farahkhan.freshsales.io','49f6df8302a9cfe5990b7c7224ce88985fda4afe4855cda946f88fbc618443ce',true);}})();</script>
+<script>console.log('Default Store')</script>
+
+phone number validation
+https://bitbucket.org/team-shoptimize/theme-panini-mobile/pull-requests/1/emtech-25?link_source=email
+
+I need a favor if you can.
+My appraisal process is going and in which the feedback is a considerable section now.
+Would you like to add a feedback in insync for me when you get a chance.
+
+https://insync.eternussolutions.com/eternussolutions/zp#performance/myreview/feedback
+
+Thanks,
+
+Appointment forms
+jotform.com
+
+hebde teeth
+zipri-zapari - hair
+bhobadcoli - without teeth
+chamba chokasi - keep asking with out consent 
 
 https://www.browserling.com/tools/text-reverse
 
@@ -172,6 +193,12 @@ JVT1841352
 
 Delete request
 OPX007438135
+
+complaint ID : D1B4099EAE9A
+
+complaint ID : 07620027EED9
+
+8275006945
 
 Events Reports
 MOved Event
