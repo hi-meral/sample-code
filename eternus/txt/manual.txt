@@ -1913,5 +1913,3 @@ grep -R "message" ./app --exclude="*.html"
 
 nano -ul /var/etc.php
 	- ctr + _  (go to line)
-
-
