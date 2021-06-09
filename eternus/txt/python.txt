@@ -1,0 +1,7 @@
+
+## install python in Ubuntu
+
+sudo apt update
+sudo apt install python3-pip
+sudo pip3 install discord.python3-pip
+sudo pip3 install numpy

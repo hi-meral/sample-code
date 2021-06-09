@@ -1849,6 +1849,15 @@ git revert --no-commit 0d59107..HEAD
 git commit
 [https://stackoverflow.com/questions/4114095/how-do-i-revert-a-git-repository-to-a-previous-commit]
 
+
+.gitignore
+
+touch .gitignore
+echo "path/today.txt" >>  .gitignore
+git rm --cache path/today.txt
+git commit -m "Untrack files in .gitignore"
+git push
+
 add branch name in your command line
 
 

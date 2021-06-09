@@ -1,0 +1,270 @@
+Steps to Install Shoptimize Platform
+PHP Version
+
+PHP 7.0.x: If you are installing Magento 2.0. PHP 7.2.x: If you are installing Magento 2.3. If you are installing PHP7.2 then use php7.2-<package_name> for installing additional PHP packages below.
+
+Steps to install PHP
+PHP Installation
+#sudo apt-get install python-software-properties
+sudo apt-get install software-properties-common
+sudo add-apt-repository ppa:ondrej/php
+sudo apt-get update
+sudo apt-get install -y php7.2
+sudo apt remove --purge apache*
+sudo service ufw stop
+sudo apt-get install php7.2 php7.2-fpm php7.2-curl php7.2-gd php7.2-mysql php7.2-mbstring php7.2-common php7.2-xml php7.2-soap php7.2-xsl php7.2-zip php7.2-intl php7.2-bcmath
+
+#sudo apt-get install php7.0 php7.0-fpm php7.0-curl php7.0-gd php7.0-mysql php7.0-mbstring php7.0-common php7.0-xml php7.0-soap php7.0-xsl php7.0-zip php7.0-intl php7.0-bcmath
+
+# switch php verions
+#sudo update-alternatives --config php  # and serve the number for required
+
+# restart PHP
+sudo service php7.2-fpm status
+
+
+Steps to install Composer
+
+sudo apt-get update
+sudo apt-get install curl
+sudo curl -s https://getcomposer.org/installer | php
+sudo mv composer.phar /usr/local/bin/composer
+composer # To verify if composer has been installed properly
+
+
+
+Steps to install Nginx
+Nginx Installation
+sudo apt-get update
+sudo apt-get install nginx
+sudo systemctl start nginx  # Starting the Nginx Service
+sudo systemctl enable nginx # To automatically start the nginx service when the machine restarts
+sudo service php7.2-fpm status # To verify if the FPM service is running
+
+
+
+Steps to install MySQL
+Skip this step if you are installing everything on a cloud server.
+
+sudo apt-get update
+sudo apt-get install mysql-server
+mysql_secure_installation # To set the various settings of the database
+The Root user's password is not set when you run mysql_secure_installation. To access the database and set the root user's password take the following steps.
+
+sudo mysql #Opens the mysql database using root privileges
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass'; #In MySQL: to set the root user's password
+Magento Account Creation
+You'll need a magento account to pull the core-magento platform. Shoptimize's core-platform is built on magento and that's why you first need to create an account on the following link. After creating the account take the following steps.
+
+Login to Magento Account
+Click Marketplace in the dashboard (You'll be redirected to a different website)
+Click on your name(top right) and click in My profile
+Click on Access Keys
+Create new access keys if there aren't any already.
+Important
+
+The access keys will be used to download the magento platform. During magento installation it asks for username and password. The public key is the username and the private key is the password.
+
+You are always required to provide the access keys whenever magento platform is installed. You can store them in the auth.json file to avoid this step.
+
+/home/<user>/.composer/auth.json
+{
+ 
+"http-basic": {
+"repo.magento.com": {
+"username": "<public key>",
+"password": "<private key>" 
+ 
+}
+If you are installing Composer on a server and you want to configure the composer to access the Magento repo, copy it from an existing webserver.
+
+Creation of SSH Keys
+On your machine, generate an SSH key to use for your bitbucket account using the following command.
+
+ssh-keygen -f ~/.ssh/id.bitbucket
+
+This will create a SSH identity for your machine. After that, add your public key '~/.ssh/id.bitbucket.pub' to your Bitbucket account under Bitbucket Settings -> Security -> SSH Keys
+
+Once you create SSH identity, you will have to add that identity using following commands
+
+
+eval `ssh-agent -s` && ssh-add ~/.ssh/id.bitbucket
+
+
+
+User Modification
+Your user needs to be in the www-data user group of the system. This is because this group belongs to nginx and whenever any file is created in magento dynamically such as cache, you user must be able to access them. You add your user to www-data using the following command.
+
+
+
+sudo usermod -a -G www-data <username>
+sudo groups <espladmin> # To verify if your user has been added to the group.
+
+
+Server Configurations
+The magento application at Shoptimize runs with a combination of Nginx and PHP-FPM. Nginx cannot directly run PHP files so it communicates to the PHP files using PHP-FPM. The communication is facilitated using a socket. For your magento application to run, you need to make the following changes to your php-fpm config file and you nginx config file.
+
+PHP FPM Config
+Replace the contents of the file /etc/php/7.2/fpm/pool.d/www.conf with the following:  (cat /dev/null > www.conf)
+
+[www]
+listen = /var/run/php7-fpm.sock
+listen.owner = www-data
+listen.group = www-data
+listen.mode = 0660
+user = www-data
+group = www-data
+pm = dynamic
+pm.max_children = 10
+pm.start_servers = 2
+pm.min_spare_servers = 1
+pm.max_spare_servers = 3
+pm.max_requests = 1000
+
+
+Nginx Config
+Create a file fastcgi.conf  in /etc/nginx/sites-available/ directory and add the following contents.
+
+nano /etc/nginx/sites-available/fastcgi.conf
+
+upstream fastcgi_backend {
+        server unix:/var/run/php7-fpm.sock;
+}
+After adding the file run the following nginx commands to apply the Settings
+
+sudo ln -s /etc/nginx/sites-available/fastcgi.conf /etc/nginx/sites-enabled/ #To create a symlink between the files.
+sudo nginx -t                  # To verify if nginx settings are okay
+sudo service nginx restart     # To restart nginx and apply settings
+sudo service php7.2-fpm restart   # To restart fpm and apply settings
+Getting the code
+
+
+Using Git Clone
+By cloning repository directly, you won't be able to run a full fledged Magento 2 installation. You will have to run Composer manually to resolve dependencies.
+
+git clone git@bitbucket.org:team-shoptimize/core-platform.git
+
+
+# needed to install the elasticsearch
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-elasticsearch-on-ubuntu-18-04
+
+Using Composer
+When using this option, project dependencies on Magento 2 will be automatically resolved once you run the following command.
+
+composer create-project --repository-url=https://repo.toolz.shoptimize.in/ shoptimize/magento-platform public/ 10.1.x-dev --keep-vcs
+
+composer create-project --repository-url=https://repo.toolz.shoptimize.in/ shoptimize/magento-platform public1/ 10.2.x-dev --keep-vcs
+
+composer create-project --repository-url=https://repo.toolz.shoptimize.in/ shoptimize/magento-platform public/ dev-10.2.x-fixed --keep-vcs
+
+composer create-project --repository-url=https://repo.toolz.shoptimize.in/ shoptimize/magento-platform public/ 10.1.12 --keep-vcs
+
+ #composer dumpautoload
+# dest-directory - directory in which project will be created
+# version - Check available tags for versions. If no tags are available, use 'dev-master'
+
+
+Installation and Store Setup
+Pre-requisites
+You need to create a database for your new store in MySQL.
+
+In shared user / web server group environment, you need to set correct permissions before installing Magento. Run * fix-permissions * script present in the root directory to set up permissions.
+For example,
+chmod 777 ./fix-permissions
+./fix-permissions --user espladmin
+Additionally, you can specify web server group as well using option '--group' . By default, this is set to 'www-data'. Run * ./fix-permissions --help * for full list of options.
+
+Also, make sure to create a virtual host configuration for your store in your web server.
+
+Nginx configuration is to be created in '/etc/nginx/sites-available/<config_file_name>.conf'
+
+Here is an example nginx configuration for store 'http://local.magento/'
+
+server {
+        listen 80;
+        server_name local.magento;
+        set $MAGE_ROOT /home/<user>/public_html/local.magento/public;
+        set $MAGE_MODE developer;
+        include /home/<user>/public_html/local.magento/public/nginx.conf.sample;
+ 
+        access_log /home/<user>/public_html/local.magento/log/access.log timed_combined;
+        error_log /home/<user>/public_html/local.magento/log/error.log;
+}
+
+
+Important: Once you create a file in sites-available, a symlinked file has to be created in sites-enabled. After doing that, the nginx server needs to be restarted. The steps to do that are explained above in the Server Configurations section.
+
+Installation
+Run the command to add the elasticsearch IP in the magento module. Skipping this step would result in an error.
+
+#skip next time if index problem after installation
+#sed -i -e 's/localhost/15.206.82.7:9200/g' vendor/smile/elasticsuite/src/module-elasticsuite-core/etc/config.xml
+#sed -i -e 's/localhost/localhost:9200/g' vendor/smile/elasticsuite/src/module-elasticsuite-core/etc/config.xml
+
+Once all the above steps are completed, run following command to install Magento 2
+
+#bin/magento setup:install --db-name=magento_10_1_x_dev --db-user=root --db-password=Meral#321 --db-host=localhost --admin-user=admin --admin-password=admin@123 --admin-firstname=Shoptimize --admin-lastname=Admin --admin-email=meral.miranda_c@shoptimize.ai --currency=INR --language=en_US --base-url=http://localhost:90 --es-hosts 15.206.82.7:9200 
+
+#13.126.50.50:9200
+
+bin/magento setup:install --db-name=setupdb --db-user=root --db-password=Meral#321 --db-host=localhost --admin-user=admin --admin-password=admin@123 --admin-firstname=Shoptimize --admin-lastname=Admin --admin-email=meral.miranda_c@shoptimize.ai --currency=INR --language=en_US --base-url=http://almutlaq2.local:8084 --es-hosts=15.206.82.7:9200  --disable-modules=Shoptimize_RMA
+
+bin/magento module:status | grep Smile | xargs php bin/magento module:disable -f
+bin/magento module:status | grep Shoptimize | xargs php bin/magento module:enable -f
+
+[nano /etc/hosts]
+[ln -s]
+[service restart]
+
+php bin/magento admin:user:create --admin-user=meral --admin-password=meral@123 --admin-email=meral.maradia_c@shoptimize.ai --admin-firstname=Meral --admin-lastname=Miranda
+
+
+## INSTALL MODULE FROM ALMUTLAQ PROJECT : Espl_CreateCustomer
+bin/magento customer:user:create --customer-firstname="Meral" --customer-lastname="Rodrix" --customer-email="hi.meral@gmail.com" --customer-password="meral@123" --website="1"
+
+Now you have your store set up. Set deploy mode to developer to start working.
+
+bin/magento deploy:mode:set developer
+
+
+
+/usr/share/phpmyadmin# nano config.sample.inc.php 
+$cfg['SendErrorReports'] = 'never';
+
+
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+How to make working a project in local
+
+get a proper project clone (eg dev-10.2.x.fixed)
+install with proper Elastic Server IP
+
+Replace the local database and place the staging one
+change url in -> core_config_data
+
+[dont refresh]
+
+put the theme (after fork) in app/design/frontend/Shoptimize
+
+[try now]
+
+if not work check the theme table and removed unwanted, make sure the parent id is proper for required theme, (set as core desktop and core mobile)
+
+flush cache
+
+try in developer mode
+
+if not working try in default mode
+
+
+
+
+
+
+
+
+
+
+
+
