@@ -5,3 +5,9 @@ sudo apt update
 sudo apt install python3-pip
 sudo pip3 install discord.python3-pip
 sudo pip3 install numpy
+
+django deployment
+
+python3 manage.py runserver 0.0.0.0:8000
+
+EC2 instance > security group > add  inbound rule > [All trafic | All | Anywhere]
