@@ -8,6 +8,6 @@ sudo pip3 install numpy
 
 django deployment
 
-python3 manage.py runserver 0.0.0.0:8000
+sudo python3 manage.py runserver 0.0.0.0:8000
 
 EC2 instance > security group > add  inbound rule > [All trafic | All | Anywhere]

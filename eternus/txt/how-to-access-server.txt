@@ -178,3 +178,8 @@ grep php /proc/net/unix
 https://stackoverflow.com/questions/44757189/where-is-php7-0-fpm-sock-located
 
 
+
+AWS 
+
+ssh -i meral-ubuntu-18-aws.pem ubuntu@18.218.159.130		(same dir from pem file)
+
