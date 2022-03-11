@@ -1,5 +1,121 @@
+Azure 
+
+52.188.147.38
+Miral.Maradai
+@Wint3r@
+
+
+https://zoom.us/w/95202791541?tk=WYimtj3m73p6ENi8-U8EpLLaArlG-GS-u0-lGFu3DDs.DQMAAAAWKodQdRZ6ZkNYN0FsRVN6eWd3blhTbGQ0d2pBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA&uuid=WN_z1K_ChjJTJeKHTJAkiq2qw
+
+bookmyshow : 8BC2GLTC6Z
+https://in.bookmyshow.com/giftcards/
+> Check Gift Card Balance
+$500, 22 June, 2022
+
+cc bill
+
+temple 2625
+other food 1258
+star bazar 6550
+
+PDF
+AIRTEL 7042185206
+HDFC MIRA4079
+RBL MIRA010881
+
+https://mcciacl.com/?page_id=65
+
+Set up CCM database API  16 - 17 -18
+Setup WebServer cache
+Get all state - 21
+Get all store (param: state) - 21
+Get price 22
+Add user 	23 - 24
+	database entry
+	check duplicate entry
+	insert stores into separate table
+	generate member id
+Sign In 25
+Show profile data 28
+Edit profile 28
+Change password  1
+Forgot password (to send email to user)  1
+Reset password  1
+Set encryption 2 - 4
+	password encryption
+	
+No. You cant. Here is my detailed answer on why.
+
+That would be so annoying to a user and no browser will let you do that (even if you think its a valid use case for your scenario). Thats why browsers don't give control over how the install prompt event is triggered. Install prompt can be caught and shown once in the right time when you think user will be convinced to install it. If the user defers to install, you need to wait for a long time to catch the same event again to show the prompt again. How long is something depends on the browser and there is no standard time defined by any browser vendor.
+
+Basically, if browser thinks user might like to add again based on the length and frequency of usage, then it will trigger the prompt event again. But that wont be in the same session/day for sure.
+
+9503000944
+MCCI - Amit
+
+FASCAB002
+889751797984
+
+bms
+8BC2GLTC6Z
+
+swapanil pandit
+pramod dongre
+
+
+
+Hello ,
+Wishing you a very happy birthday 
+
+ajay
+karan
+saurabh
+
+norepinephrine 
+
+-> serotonin
+-> testosteron
+
+oxytocin
+
+pheromons
+
+
+
+Please cover this Question in any of your QNA Session.  "So you both are basically dont stay at home ever and you continue wondering from years ? Exactly from how many years ? (homeless :-D , not practically but technically) 
+Hemant
+!@Paper89
+
+App > More (last) > My Airtel > Manage Account > ***_mh  >  My Plan 
+
 OPX007438135
 
 NYM8814030
 
 2952 2011 2212 5902 000
+
+
+
+Sat, Jun 5, 6:48 PM - 49240
+Aug 20 - 47205
+
+
+Hello there,
+My name is Miral Maradia and I am engaged in IT industry from last 10 years. Basically I am a developer and holding a Tech Lead position in my current company. during my development experience mostly my primary language was PHP along with MySQL , JQeury, CSS and other relevant stuff. I also worked with different well known frameworks like Joomla, WordPress, Magento. So that was about my past experience but from the last year I planned to switch my key language to Python. Python is a very similar to PHP so it was not a challenge for me to switch. So far I worked in few small scale projects of Python and grab a good experience in it. Now I want to focus mainly on Python and looking for a better opportunity. Kindly consider my resume if I am a proper fit for you.
+
+04
+06
+08
+11
+19
+27
+35
+46
+48
+57
+63
+69
+76
+80
+92
+95

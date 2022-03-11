@@ -1,3 +1,6 @@
+
+
+
 ################################################
                                               ##
 SOFTWARE                                      ##
@@ -186,6 +189,12 @@ sudo chown -R espladmin:root www
 
 
 sudo update-alternatives --config php
+
+
+how to call a store procedure
+declare @UpdatedAccount varchar(50)
+
+exec spUpdateMemberId @UserID = 20, @MemberID = 1000020, @UpdatedAccount = @UpdatedAccount output;
 
 ##############################################
 
@@ -898,6 +907,10 @@ then change the file first line
 
 then PUSH it again
 
+
+Git Credential Manager not working 
+
+https://support.microsoft.com/en-us/topic/how-to-enable-javascript-in-windows-88d27b37-6484-7fc0-17df-872f65168279
 
 #################################################
 ############ WAMP CONFIGURATION ##############
@@ -1702,8 +1715,8 @@ sudo du -h --max-depth=1	(show detail usage of directories )
 cat /dev/null > filename1	(set null in file)
 
 mv file1 file2	(rename)
-rm /s /f dirname1	(force clear the directory) 
-rmdir /Q/S (for window)
+rm -rf dirname1	( Linux : force clear the directory) 
+rmdir /Q/S  dirname1 ( Windows : force clear the directory) 
 
 
 ---
@@ -1732,6 +1745,8 @@ then
 :wq - write changes (save) and quit
 :x - similar to :wq, only write the file if changes were made, then quit
 
+
+change the permalinks > Setting > Permalinks 
 #########
 
 Windows Command
@@ -1795,13 +1810,30 @@ mysqldump --add-drop-table -u admin -p  dbname > dbname.sql
 
 Connect existing folder to existing repository 
 
+
+####
+
+generate ssh key (windows)
+
+> CD  "C:\Users\miral.maradia\.ssh
+> ssh-keygen
+[hit enter on file name- set default]
+[enter passcode]  meral#321
+> type id_rsa.pub | clip    (copied in clipboard, now you can paste in github portal)
+
+now you can clone using
+git clone git@github.com:hi-meral/ZeetFlask.git
+
+##### generate ssh key
+
+
 rm -rf .git
 git init
 git remote add origin git@bitbucket.org:team-shoptimize/module-almf-customization.git
 git add .
 git commit -m "Launching Module"
-git pull origin master --allow-unrelated-histories
-git push -u origin master -f
+git pull origin main --allow-unrelated-histories
+git push -u origin main -f
 
 Fork repository 
 
@@ -1811,11 +1843,15 @@ git remote set-url origin git@bitbucket.org:team-shoptimize/hyperpay-extension.g
 - git remote add meral git@bitbucket.org:team-shoptimize/module-almf-customization.git
 - git remote add meral git@bitbucket.org:meralm/theme-almutlaq-en-desktop.git
 
+
+[to check]
+git remote -v
+
 [to remove]
 git remote rm meral
 
-- git fetch shoptimize
-- git pull shoptimize master
+- git fetch shoptimize  (git fetch upstream)
+- git pull shoptimize main
 
 other git command
 
@@ -1842,6 +1878,7 @@ git checkout --track origin/<BRANCH-NAME>
 
 
 git restore --staged
+git restore filename.ext
 
 @revert back to previous commit -----
 
@@ -1857,6 +1894,15 @@ echo "path/today.txt" >>  .gitignore
 git rm --cache path/today.txt
 git commit -m "Untrack files in .gitignore"
 git push
+
+
+After adding file in .gitignore
+
+git rm -r  --cached today.txt
+
+
+################
+
 
 add branch name in your command line
 
@@ -1922,3 +1968,34 @@ grep -R "message" ./app --exclude="*.html"
 
 nano -ul /var/etc.php
 	- ctr + _  (go to line)
+
+	
+Python
+
+pip --no-cache-dir install [remove all cache
+
+ignore cache pip
+# Add --no-cache-dir before install
+pip --no-cache-dir install scipy
+
+# DOWNGRADE pip
+pip install --upgrade pip==20.2
+	
+How to install Rasa
+
+pip install rasa-x --extra-index-url https://pypi.rasa.com/simple
+pip install rasa[spacy]
+
+python -m spacy download en_core_web_md
+python -m spacy train en_core_web_md en
+
+rasa init --no-prompt
+
+
+Visual Studio code ( vs code ) set shortcuts
+
+Ctr + Shift + P
+
+
+Find the certificate manager
+certmgr.msc
