@@ -196,8 +196,9 @@ declare @UpdatedAccount varchar(50)
 
 exec spUpdateMemberId @UserID = 20, @MemberID = 1000020, @UpdatedAccount = @UpdatedAccount output;
 
+
 Github personal access token
-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
+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
 
 
 ##############################################
@@ -915,6 +916,20 @@ then PUSH it again
 Git Credential Manager not working 
 
 https://support.microsoft.com/en-us/topic/how-to-enable-javascript-in-windows-88d27b37-6484-7fc0-17df-872f65168279
+
+
+
+Personal Access Token 
+
+Create Personal Access Token on GitHub
+From your GitHub account, go to Settings => Developer Settings => Personal Access Token => Generate New Token (Give your password) => Fillup the form => click Generate token => Copy the generated Token, it will be something like ghp_sFhFsSHhTzMDreGRLjmks4Tzuzgthdvfsrta
+
+Now follow below method based on your machine:
+
+For Windows OS ⤴
+Go to Credential Manager from Control Panel => Windows Credentials => find git:https://github.com => Edit => On Password replace with with your GitHub Personal Access Token => You are Done
+
+If you don’t find git:https://github.com => Click on Add a generic credential => Internet address will be git:https://github.com and you need to type in your username and password will be your GitHub Personal Access Token => Click Ok and you are done
 
 #################################################
 ############ WAMP CONFIGURATION ##############
