@@ -196,7 +196,7 @@ declare @UpdatedAccount varchar(50)
 
 exec spUpdateMemberId @UserID = 20, @MemberID = 1000020, @UpdatedAccount = @UpdatedAccount output;
 
-
+Github personal access token
 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
 
 
