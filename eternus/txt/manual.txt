@@ -1591,7 +1591,9 @@ NGINX
 
 
 sudo netstat -tulpn | grep nginx  (or LISTEN)
-
+netstat -ano 
+(find PID , last)
+tskill PID  ( tskill 4620 )
 
 ######################### System message in windows 10 ############################
 
@@ -1747,6 +1749,19 @@ then
 
 
 change the permalinks > Setting > Permalinks 
+
+
+How to create new user directoy from the database
+
+INSERT INTO `databasename`.`wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES ('4', 'demo', MD5('demo'), 'Your Name', 'test@yourdomain.com', 'http://www.test.com/', '2011-06-07 00:00:00', '', '0', 'Your Name');
+ 
+ 
+INSERT INTO `databasename`.`wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (NULL, '4', 'wp_capabilities', 'a:1:{s:13:"administrator";s:1:"1";}');
+ 
+ 
+INSERT INTO `databasename`.`wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (NULL, '4', 'wp_user_level', '10');
+
+
 #########
 
 Windows Command
@@ -1999,3 +2014,18 @@ Ctr + Shift + P
 
 Find the certificate manager
 certmgr.msc
+
+export ilovedirtcheap.pfx file form certmgr.msc  (see youtube tech playlist and find video tutorial)
+
+then using windows open ssl hit following command to get 2 pem files, public and private (see youtube tech playlist and find video tutorial)
+
+openssl pkcs12 -in ilovedirtcheap.pfx -clcerts -nokeys -out dfcert.pem
+openssl pkcs12 -in ilovedirtcheap.pfx -nocerts -nodes -out dfkey.pem
+
+visual studio code / vs code shortcuts 
+
+CTR + K + 0  (collapse all sections )
+CTR + K + J  (expand all sections )
+SHIFT + ATL + F (format html code)
+
+
