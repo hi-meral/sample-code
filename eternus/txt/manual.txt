@@ -1,4 +1,4 @@
-
+taskkill /F /PID pid_number
 
 
 ################################################
@@ -2047,4 +2047,5 @@ CTR + K + 0  (collapse all sections )
 CTR + K + J  (expand all sections )
 SHIFT + ATL + F (format html code)
 
-
+local certificate manager
+certlm.msc

@@ -1,10 +1,30 @@
+[✰✮✰✮✰ ___CELESTIAL___ ✰✮✰✮✰]
+
+
+[--- AD_Astra ☆ ☆ ☆ ☆ ☆ -->
+
+Fame Adulation Disorder
+
+select df.user_id, df.first_name, df.last_name, df.email, df.phone, df.member_id, up.* from df_user df 
+left join user_ealert_pref up on df.user_id = up.user_id 
+--where df.user_id = 80
+ where df.email like '%tufyizilta@vusra.com%'
+
+ 
+
+ZTE
+Local Network > WLAN  > WLAN SSID Configuration
+
+
+⚝＊
 DHNLRNQ
 
 Neha Manoli
-
+ashvini dhone
+Gauri Kale
 
 Hello Shreyas,
-
+⚝
 Regarding PF Contribution:
 I want to opt out the PF contribution like last year as I don’t have PF account. 
 
