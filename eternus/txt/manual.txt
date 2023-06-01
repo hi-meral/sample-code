@@ -214,6 +214,36 @@ UPDATE
 SET 
     old_firstname = IF (new_firstname!='', new_firstname, old_firstname), new_firstname = '',
 
+
+
+
+##############################################
+
+use deal_finder;
+
+SET SESSION TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+
+set autocommit = 0;
+
+select autocommit;
+
+select @@tx_isolation;
+
+select * from balance;
+
+##insert into balance (id,customer_id,balance) values (1,1001,234)
+
+start transaction;
+
+update balance set balance = balance + 50 where customer_id = 1001;
+
+select * from balance;
+
+rollback;
+
+
+commit;
+
 ##############################################
 
 
@@ -701,6 +731,12 @@ function readObj(obj)
  }
  alert(errors);
 }
+
+
+stateObj = { "YT":"Yaman" }
+foo = "YT"
+console.log(stateObj[`${foo}`]);
+
 
 ##############################
 print only specific div
@@ -1611,9 +1647,10 @@ NGINX
 
 sudo netstat -tulpn | grep nginx  (or LISTEN)
 netstat -ano 
+netstat -ano | grep 3003
 (find PID , last)
 tskill PID  ( tskill 4620 )
-
+npx kill-port 8080
 ######################### System message in windows 10 ############################
 
 Windows10 > Computer Management (Local) > System Tool > Event Viewer > Windows Log > Application
@@ -1863,7 +1900,7 @@ git clone git@github.com:hi-meral/ZeetFlask.git
 
 rm -rf .git
 git init
-git remote add origin git@bitbucket.org:team-shoptimize/module-almf-customization.git
+git remote add origin https://CCMLLC@dev.azure.com/CCMLLC/PriceCheck/_git/DealFinderUtility
 git add .
 git commit -m "Launching Module"
 git pull origin main --allow-unrelated-histories
@@ -1935,6 +1972,27 @@ After adding file in .gitignore
 git rm -r  --cached today.txt
 
 
+
+revert to previous head, remove last pull
+
+git reset --keep HEAD@{1}
+
+
+
+move changes to new branch 
+
+git stash branch new-branch
+
+
+Remove last commit from remote git repository [duplicate]
+
+git reset HEAD^ # remove commit locally
+git push origin +HEAD # force-push the new HEAD commit
+
+-- to revert a specific file | find commit-id from github 
+git checkout f91ab9b1771d64e07d0eddb1c1b82f9f7df112e0 -- routes/loyalty/getLoyaltyRewardAssignment.js
+
+[GIT END]
 ################
 
 
@@ -2049,3 +2107,69 @@ SHIFT + ATL + F (format html code)
 
 local certificate manager
 certlm.msc
+
+
+Windows VPN Setup
+
+Step 1. Open Registry Editor as Admin
+
+Step 2. Navigate to Computer\HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\PolicyAgent
+
+Step 3. Create a new DWORD
+
+Step 4. Name the DWORD “AssumeUDPEncapsulationContextOnSendRule”
+
+Step 5. Set the DWORD to Hexadecimal and give it a value of 2
+
+Step 6. Close Registry Editor
+
+Step 7. Type VPN in the start menu search bar and click VPN Settings
+
+Step 8. Click Add a VPN Connection
+
+Step 9. For the VPN Provider, choose Windows Built-in
+
+Step 10. Give the connection a name (something like Azure VPN)
+
+Step 11. In the Server Name field, type 40.77.121.42
+
+Step 12. For VPN type, choose L2TP/IPsec with pre-shared key
+
+Step 13. The pre-shared key is Thursday4ITlunch
+
+Step 14. Click save at the bottom
+
+Step 15. On the right side of the VPN Settings screen, under Related settings click Change adapter options
+
+Step 16. Find the adapter for the VPN you just created, right click it, then click properties
+
+Step 17. In the Security tab, under data encryption choose Require encryption
+
+Step 18. Under Authentication, choose Use Extensible Authentication Protocol
+
+Step 19. Choose Microsoft Secured Password
+
+Step 20. In the Networking tab, uncheck Internet Protocol Version 6
+
+Step 21. Click OK
+
+Step 22. Restart the computer
+
+
+IF VPN stop working... 
+
+https://thegeekpage.com/fix-vpn-error-a-connection-to-the-remote-computer-could-not-be-established-in-windows-10/
+
+Win + X > Device Manager > Network Adapters > Uninstall all WAN Miniports > Restart
+
+WINDOWS SHORTCUT
+
+W + H >  voice type
+W + , > show desktop
+W + Alt + R > recording 
+W + T  > new tab in browser
+W + K > search in google
+W + . > emojis
+
+
+ pm2 start index.js --name "DealFinderUtility--master--3003"

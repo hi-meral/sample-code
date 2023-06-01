@@ -1,3 +1,96 @@
+user_id	email	first_name	last_name	address_1	address_2	city	state	country	zip	pswd_hash	cookie_agreement	tnc_agreement	member_id	last_login	token	active	phone	fromIDD	email_token	email_verified	created_date	home_store	updated_date	consent	consent_date	total_purchase
+1354755	babydollsland@gmail.com	Rebecca	Block	613 McIlhenny Street		New Iberia	Louisiana	US	70563	$2a$10$hNwuYiR.GcFKx2lT74cdPuMmAJ4kMZYCLsWMHJgI8kEi21nwKJkJu	1	1	2354755	2023-05-29 23:13:23.363	NULL	1	3375193135	NULL	eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJiYWJ5ZG9sbHNsYW5kQGdtYWlsLmNvbSIsImlhdCI6MTY4NTQwMjAwMSwiZXhwIjoxNjg1NDE2NDAxfQ.O1_6eZ_1P-0xP-4gW11pfM_T6GEg_xkCrWy6bMoQonI	NULL	2023-05-29 23:13:22.753	509	NULL	0	NULL	0
+
+SELECT * FROM df_user WHERE email = 'dnnymahoney@yahoo.com'
+
+select * from transaction_detail  where trasid = 864705
+
+
+    select td.transact_id, tr.id, td.STORE_ID , tm.MEMBER_ID  
+    from transdetail td
+    join transact tr on (tr.id = td.transact_id and tr.store_id = td.store_id)
+    LEFT join trxact2member tm on (tm.transact_id = td.transact_id and tm.store_id = td.store_id)
+    WHERE tr.id = 849783 and CAST (tr.createdate AS date) = '2023-05-20'
+    AND td.void != 'Y'
+    
+    
+    SELECT FIRST 10 * FROM trxact2member tm WHERE  1=1
+    --AND CAST (tm.createdate AS date) = '2023-05-20'
+    AND tm.transact_id = 849783 
+    --AND STORE_ID  = 503
+
+
+/** "assignCronSchedule": "0 0 8 * * 1", */
+
+supercardservice@rblbank.com
+
+ZOOm
+B82BF43DF2
+
+150125506$6.00!#&U:394010005
+
+select Pricetype,Price, Percentage,Pricing_ID, Dist_ID, Error, s2c_rec, stock_rec from sp_webgetprice_v2(24, 150125506, 1, 0)
+
+
+
+db migration
+pricecheck config and code
+backend config and code
+
+
+
+
+Hello, 
+
+Can you kindly approve/pass my regularization request !!
+
+Thanks,
+
+select * from scan_result
+where scan_history_id in ( select scan_history_id from scan_result group by scan_history_id  having count(*) > 1   )
+and id not in (select min(id) from scan_result group by scan_history_id  having count(*) > 1  )
+
+
+
+select top 25000 count(*) as cnt , max(scan_time), max(id), scan_history_id from scan_result group by scan_history_id  having count(*) > 1   order by cnt desc 
+
+select min(id), scan_history_id from scan_result group by scan_history_id  having count(*) > 1  
+select scan_history_id from scan_result group by scan_history_id  having count(*) > 1   
+
+
+- try catch on sp
+- return the query result
+
+
+
+
+2022-09-15
+423
+61002
+61392
+
+transaction_detail final
+
+I booked for the flat in Goldmine Kumar properties, Hadapsar, Pune on 12 June, 20.  I paid them Rs 63000/- Rs by Credit Card. They promised in case if I will cancel the flat I will get full refund within 45 days. Later I needed to cancel my booking and after a long wait I got the refund of Rs 61885/- only. When I asked why this is less, then he said rest of the amount was bank charges. This thing was never revealed to me at the time of booking and assured to get me 100% refund in any case. Now I am demaning the balance amout of Rs 1115/- and they are denying for it. 
+
+Kindly help me to get my refund of Rs 1115/-
+
+
+
+I did not get refund this product despite it was collected on 31 Aug
+
+StyleStone (3321BlkFlrlSuperDrsS) Women's Black Floral Dress with Attached Shrug
+https://tinyurl.com/2muaxuqo
+
+
+
+
+https://tinyurl.com/2kcsbmnq
+
+
+
+I tired this solution by other long method but the TC is same so it was passed and submitted. But when I check the hint solution for the same it has some differnt short and smooth logic. Need to understand that logic. 
+
 [✰✮✰✮✰ ___CELESTIAL___ ✰✮✰✮✰]
 
 
