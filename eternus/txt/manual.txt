@@ -299,6 +299,10 @@ $row_cookie_qry = mysql_fetch_assoc($cookie_qry);
 		<a href="http://www.menupix.com/<?php echo $resto_res['cookiedb_domain'];?>/restaurants<?php echo $resto_res['restaurants_menu'];?>" >back to the restaurant's page</a></div>
 
 
+
+check invalid email
+SELECT * FROM df_user WHERE email not LIKE '%[A-Za-z0-9._%+-]@%[A-Za-z]%.[A-Za-z{1,3}]%' 
+
 ######################
 
 net send dsk40 Hi....
@@ -1647,7 +1651,7 @@ NGINX
 
 sudo netstat -tulpn | grep nginx  (or LISTEN)
 netstat -ano 
-netstat -ano | grep 3003
+netstat -ano | grep 3003		(netstat -ao -p tcp)
 (find PID , last)
 tskill PID  ( tskill 4620 )
 npx kill-port 8080
@@ -1710,6 +1714,7 @@ File Name : C:\source\Fun Brands\POps\artisan
 argument : command:report-request
 
 #######  ajax load with loader and json
+
 $.ajax({
                 type: 'POST',
                 dataType: "json",
@@ -1745,9 +1750,6 @@ Win + R
 control /name Microsoft.Personalization /page pageWallpaper
 
 
-###### wordpress ######
-
-while install use DB HOST : 127.0.0.1:3308 (with port) 
 
 CSS Validator
 
@@ -1764,7 +1766,8 @@ unzip vendor.zip
 systemctl install httpd  -- > install apache
 apachectl restart 
 
----
+-----------------
+windows command
 
 mpstat -P ON	(check all cpu usage)
 
@@ -1774,10 +1777,10 @@ cat /dev/null > filename1	(set null in file)
 
 mv file1 file2	(rename)
 rm -rf dirname1	( Linux : force clear the directory) 
-rmdir /Q/S  dirname1 ( Windows : force clear the directory) 
+rmdir /S  "dirname1" ( Windows : force clear the directory) 
 
 
----
+-----------------
 
 Command line file edit
 cmd putty edit
@@ -1804,6 +1807,10 @@ then
 :x - similar to :wq, only write the file if changes were made, then quit
 
 
+-----------------
+
+[WORDPRESS]
+
 change the permalinks > Setting > Permalinks 
 
 
@@ -1818,7 +1825,9 @@ INSERT INTO `databasename`.`wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `me
 INSERT INTO `databasename`.`wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (NULL, '4', 'wp_user_level', '10');
 
 
-#########
+while install use DB HOST : 127.0.0.1:3308 (with port) 
+
+-----------------
 
 Windows Command
 
@@ -1857,11 +1866,9 @@ npm install --save bootstrap jquery
 ##########################					##########################
 
 
-=======
-##########################	[END] Angular			########################## 
-##########################					##########################
 
 >>>>>>> 69bd63627819b16104517f7ccd1bc1176a68abd8
+
 # hide phpmyadmin warnings
  nano /etc/phpmyadmin/config.inc.php 
 
@@ -1877,12 +1884,9 @@ cd /tmp  (bcoz 777 is set for tmp)
 mysqldump --add-drop-table -u admin -p  dbname > dbname.sql
 
 
-#########
 
-Connect existing folder to existing repository 
+-----------------
 
-
-####
 
 generate ssh key (windows)
 
@@ -1895,15 +1899,19 @@ generate ssh key (windows)
 now you can clone using
 git clone git@github.com:hi-meral/ZeetFlask.git
 
-##### generate ssh key
 
+-----------------
+
+[GIT]
+
+Connect existing folder to existing repository 
 
 rm -rf .git
 git init
-git remote add origin https://CCMLLC@dev.azure.com/CCMLLC/PriceCheck/_git/DealFinderUtility
+git remote add origin https://github.com/hi-meral/adse_backend.git
 git add .
 git commit -m "Launching Module"
-git pull origin main --allow-unrelated-histories
+git pull origin dev --allow-unrelated-histories
 git push -u origin main -f
 
 Fork repository 
@@ -1983,6 +1991,8 @@ move changes to new branch
 
 git stash branch new-branch
 
+remove last pull
+git reset --keep HEAD@{1}
 
 Remove last commit from remote git repository [duplicate]
 
@@ -1992,9 +2002,23 @@ git push origin +HEAD # force-push the new HEAD commit
 -- to revert a specific file | find commit-id from github 
 git checkout f91ab9b1771d64e07d0eddb1c1b82f9f7df112e0 -- routes/loyalty/getLoyaltyRewardAssignment.js
 
-[GIT END]
-################
 
+TAG
+
+git tag -a 2.0 -m "Loyalty Phase II"
+git push origin 2.0
+
+
+git tag  (show all tags)
+git show 1.0 (show info about tag 1.0)
+git push origin --tags  (push all tags)
+git tag -d 1.0 (delete tag)
+git push origin --delete 1.0  (delete from github)
+git checkout 1.0 (get specific tag copy to local)
+
+[GIT END]
+
+-----------------
 
 add branch name in your command line
 
@@ -2018,10 +2042,14 @@ put this in ~/.bashrc
 
 source ~/.bashrc
 
-### 
+
+-----------------
+
+FIND IN GMAIL
 
 has:nouserlabels !in:inbox -label:sent -label:drafts -label:[imap]/sent
 
+-----------------
 
 color in shell script
 
@@ -2039,14 +2067,9 @@ Purple       0;35     Light Purple  1;35
 Cyan         0;36     Light Cyan    1;36
 Light Gray   0;37     White         1;37
 
-Visual Studio Short cut
 
-ctr + k + c    (comment)
-ctr + k + u    (uncomment)
 
-ctr + k + 0 (zero)   Fold all
-ctr + k + j   UnFold all
-
+-----------------
 
 UBUNTU basic commands
 
@@ -2061,10 +2084,56 @@ grep -R "message" ./app --exclude="*.html"
 nano -ul /var/etc.php
 	- ctr + _  (go to line)
 
-	
-Python
 
-pip --no-cache-dir install [remove all cache
+## if there is a lock sign on the file icon
+sudo chown -R $USER:$USER /path/to/directory
+sudo chmod -R u+rw /path/to/directory
+
+
+if you want to color code like git bash , follow these commands 
+
+step 1 : edit bashrc file
+
+	sudo vi ~/.bashrc
+
+step 2 : add following code in it at last of the file
+
+	# Function to get the current Git branch name
+	parse_git_branch() {
+	  if [ -d .git ] || git rev-parse --git-dir > /dev/null 2>&1; then
+		echo "$(git branch 2>/dev/null | grep '*' | sed 's/* //')"
+	  fi
+	}
+
+	# Color codes
+	RED='\[\e[31m\]'
+	GREEN='\[\e[32m\]'
+	YELLOW='\[\e[33m\]'
+	BLUE='\[\e[34m\]'
+	PURPLE='\[\e[35m\]'
+	CYAN='\[\e[36m\]'
+	WHITE='\[\e[37m\]'
+	RESET='\[\e[0m\]'
+
+	# Update the PS1 variable to include the Git branch name with colors
+	PS1='${GREEN}\u@\h${WHITE}:${BLUE}\w${YELLOW}$(parse_git_branch)${RESET}\$ '
+
+	# Ensure the prompt updates on directory change and Git branch change
+	PROMPT_COMMAND='PS1="${GREEN}\u@\h${WHITE}:${BLUE}\w${YELLOW}$(parse_git_branch)${RESET}\$ "'
+
+step 3 : reload the configuration
+
+	source ~/.bashrc
+
+
+
+
+
+-----------------
+
+Python / Django
+
+pip --no-cache-dir install [remove all cache]
 
 ignore cache pip
 # Add --no-cache-dir before install
@@ -2084,12 +2153,76 @@ python -m spacy train en_core_web_md en
 rasa init --no-prompt
 
 
+venv / pipenv
+
+
+create a new env
+
+go to your project directory
+
+> python -m venv .venv --system-site-packages
+
+    ".venv" is a custom name, give any name)
+	To use the global dependencty while creation use --system-site-packages as postfix
+
+how to activate (work on cmd line only, no Git shell)
+
+> .venv\Scripts\activate.bat
+
+how to deactivate
+> deactivate
+
+do use the same directory as project direcoty use . at postfix
+
+django-admin startproject adse_backend .
+
+python manage.py createsuperuser
+
+Steps to setup entire project & user authentication (custom - via email)
+
+1 - activate the venv (as above)
+2 - create project -- > django-admin startproject adse_backend .
+3 - create app	-->  python manage.py startapp adseuser
+
+1711601368
+
+[System.Environment]::SetEnvironmentVariable('PYENV',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")
+[System.Environment]::SetEnvironmentVariable('PYENV_HOME',$env:USERPROFILE + "\.pyenv\pyenv-win\","User")
+
+
+[System.Environment]::SetEnvironmentVariable('path',$env:USERPROFILE + "\.pyenv\pyenv-win\bin;" + $env:USERPROFILE + "\.pyenv\pyenv-win\shims;" +  [System.Environment]::GetEnvironmentVariable('path',"User") ,"User
+
+Set-ExecutionPolicy unrestricted
+
+Unblock-File $HOME/.pyenv/pyenv-win/bin/pyenv.ps1
+
+
+run server in debug mode 
+
+	python manage.py runserver --noreload --insecure
+	
+
+
+-----------------
+
 Visual Studio code ( vs code ) set shortcuts
 
 Ctr + Shift + P
 
+CTR + K + 0  (collapse all sections )
+CTR + K + J  (expand all sections )
+SHIFT + ATL + F (format html code)
 
-Find the certificate manager
+ctr + k + c    (comment)
+ctr + k + u    (uncomment)
+
+-----------------
+
+
+SSL Certificate
+
+
+Open Local certificate manager
 certmgr.msc
 
 export ilovedirtcheap.pfx file form certmgr.msc  (see youtube tech playlist and find video tutorial)
@@ -2099,15 +2232,18 @@ then using windows open ssl hit following command to get 2 pem files, public and
 openssl pkcs12 -in ilovedirtcheap.pfx -clcerts -nokeys -out dfcert.pem
 openssl pkcs12 -in ilovedirtcheap.pfx -nocerts -nodes -out dfkey.pem
 
-visual studio code / vs code shortcuts 
 
-CTR + K + 0  (collapse all sections )
-CTR + K + J  (expand all sections )
-SHIFT + ATL + F (format html code)
 
-local certificate manager
-certlm.msc
+Check Certificate details (expiry)
 
+cd C:\Windows\System32\certutil.exe
+certutil -dump PathTOYourCertificate\Certificate.pfx
+
+
+
+---------------------
+
+VPN
 
 Windows VPN Setup
 
@@ -2171,5 +2307,161 @@ W + T  > new tab in browser
 W + K > search in google
 W + . > emojis
 
+-----------------
+
+PM2 (npm)
 
  pm2 start index.js --name "DealFinderUtility--master--3003"
+ pm2 list --sort "id"
+ 
+-----------------
+
+
+MS Excel
+
+Data > Data Validation > Allow List > Source (one,two,three)
+
+MS Word
+
+Shift + F3  --> Change Case
+
+
+-----------------  
+
+Elementor
+
+How to reactivate licence 
+
+Wp Admin > Elementor > Licence > Switch account 
+(keep the elementor login in the same browser to make it in single click)
+
+----------
+
+photoshop
+
+Step 1 : Layer > Smart Object > Convert to Smart Object 
+Step 2 : Edit > Free Transfort (Ctr + Atr + T)
+
+--------
+
+switch monitor
+
+Win + Shift + Right Arrow
+
+
+
+----------------------------------------------
+
+Docker
+
+
+how to push to docker hub 
+
+> create a project
+> [cmd] touch Dockerfile 
+
+			# Use the official WordPress image as the base image
+			FROM wordpress:latest
+
+			# Set the working directory inside the container
+			WORKDIR /var/www/html
+
+			# Copy the WordPress files from the host into the container
+			COPY . .
+
+			# Expose port 80 to allow external access
+			EXPOSE 80
+
+> [cmd] docker images 
+> [cmd] docker build -t custom-wordpress-local-image .
+> [cmd] docker tag custom-wordpress-local-image  himeral/custom-wordpress-docker-hub:v2.0
+> [cmd] docker login
+> [cmd] docker push himeral/custom-wordpress-docker-hub:v2.0
+
+Create ECR Repository and place image into it like following, 
+
+now configure you aws cli
+
+> [cmd] aws configure
+	fill in relevant data
+
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 058264365128.dkr.ecr.us-east-1.amazonaws.com
+
+docker tag himeral/custom-wordpress-docker-hub:v2.0 058264365128.dkr.ecr.us-east-1.amazonaws.com/custom-wordpress-docker-hub:v2.0
+docker push 058264365128.dkr.ecr.us-east-1.amazonaws.com/custom-wordpress-docker-hub:v2.0
+
+Flush all docker images 
+
+	#!/bin/bash
+
+	# Stop all running containers
+	sudo docker stop $(docker ps -aq)
+
+	# Remove all containers
+	sudo docker rm $(docker ps -aq)
+
+	# Remove all images
+	sudo docker rmi $(docker images -q)
+
+	# Remove all unused volumes
+	sudo docker volume prune -f
+
+	# Remove all unused networks
+	sudo docker network prune -f
+
+	# Remove all unused data (system prune)
+	sudo docker system prune -a -f
+
+	# Remove build cache
+	sudo docker builder prune -a -f
+
+
+>  Create cluster
+
+> Task Defination > Create Task Defination 
+
+	- give name 
+	- copy ECR url and paste
+	- give port name
+	- Task Role > ecsTaskExecutionRole
+	- Task Execution Role > ecsTaskExecutionRole
+	- Create
+	
+> Deploy > Create Service 
+
+	- select recently created cluster
+	- Create security group - All TCP , Anywhere
+
+Create
+
+
+
+
+Docker + AWS
+
+Create docker file
+
+			# Use the official WordPress image as base
+			FROM wordpress:latest
+
+			# Expose port 80
+			EXPOSE 80
+
+docker build -t my-wordpress .
+
+docker tag my-wordpress himeral/my-wordpress:v1.0
+
+
+
+
+aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 058264365128.dkr.ecr.us-east-1.amazonaws.com
+
+docker tag himeral/my-wordpress 058264365128.dkr.ecr.us-east-1.amazonaws.com/my-wordpress:v1.0
+
+
+docker push 058264365128.dkr.ecr.us-east-1.amazonaws.com/my-wordpress:v1.0
+
+-> run app in docker container
+	sudo docker-compose exec pidilite_web bash
+
+

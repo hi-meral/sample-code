@@ -1,3 +1,197 @@
+admin/muieVcZivQvNm4K
+rootroot
+
+
+Production
+
+domains
+
+https://dealfinder.ilovedirtcheap.com/
+https://dealfinder.ilovedirtcheapbuildingsupplies.com/
+https://dealfinder.ilovetreasurehunt.com/
+https://dealfinder.ilovetreasurehunt.ca/
+
+Frontend
+Server : 20.185.80.62
+port  :  Default (443)
+path :  C:\DealFinderNew\DealFinderFrontendV2
+execution server : IIS
+repository : DealFinderFrontendV2
+branch  : prod
+
+Backend
+Server : 20.127.100.77
+port  :  3002
+path :  C:\DealFinder\MultiDomainDealFinder
+execution server : PM2
+repository : DealFinderBackend
+branch  : multidomain
+
+
+UAT
+
+Domain
+
+https://pricecheck.ccmllc.com:7001
+https://pricecheck.ccmllc.com:7002
+https://pricecheck.ccmllc.com:7003
+https://pricecheck.ccmllc.com:7004
+
+
+
+Frontend
+Server : 10.50.1.33
+port  :  7001, 7002, 7003, 7004
+path :  C:\DealFinderNew\DealFinderFrontend
+execution server : IIS
+repository : DealFinderFrontendV2
+branch  : uat
+
+Backend
+Server : 10.50.1.33
+port  :  7000
+path :  C:\DealFinder\MultiDomainDealFinderUAT
+execution server : PM2
+repository : DealFinderBackend
+branch  : uat-multidomain
+
+
+Celesto.soloist
+
+Filmora
+
+Ashley,
+
+Member's transactions are synced and processed for loyalty.
+Now member is at following state,
+
+Purchase history : $393
+Rewards assigned : 3 ( 3 + 0 )
+
+Detail report as of 31 Dec, 23 is attached.
+
+Thanks,
+Miral
+
+
+Weekly Member Tier Count
+jayashree.nanotey@ccmllc.com
+
+JIOFI
+7984104377	-	23 Oct, 23
+
+lmthomas0009@gmail.com
+sushi@78613
+
+
+Ashley,
+
+Member's transactions are synced and processed for loyalty.
+At this moment member is not eligible for any reward as his/her total purchase is under $100.
+
+Thanks,
+Miral
+
+Ashley,
+
+As per the record, this member did the transactions very recently. Please ask him/her to wait for 7 days to get benefit against his/her purchase. After 7 days if any issue is there, we can consider.
+
+Thanks,
+Miral
+
+
+To simulate customer's account
+search for this comment in codebase - "TO VERIFY SPECIFIC USER'S DATA"
+there are 3 files - users.js, userPurchaseData.js, getReward.js, development.json
+
+*Note that 1 complimentary reward is already assigned to this member under the Promo campaign of October 2023.
+
+
+R U1 R1 U
+U R U1 R1
+
+Case 1 - R’ L R L’ U L’ U’ L	- 2 unsolved and just flip
+Case 2 - L U R U’ R’ L’			- 3 unsolved , flip two need to flip and rotate clock and behind need to roatate clock
+Case 3 - R’ U’ L’ U L R			- 3 unsolved , flip two need to flip and rotate anti-clock and behind need to roatate anti-clock
+Case 4 - R’ U’ R U’ R’ U’ R		- 3 unsolved , just clock roate	(no flip)
+Case 5 - R’ U R U R’ U R		- 3 unsolved, just anti-clock roate (no flip)
+
+DELETED USERS
+
+2379109	meganalexmccarthy@outlook.com
+2373121	m_k_mom@yahoo.ca
+2328072	shaknaz13@gmail.com
+2348563	izack23@gmail.com
+
+where member_id in (2379109,2373121,2328072,2348563);
+
+
+₹37800
+
+Testing Steps:
+
+•	Receive (from store) few different stores Barcodes 5-6 in each for closed and expired keys. 
+•	Scan these barcodes by actual mobile device.
+•	Prepare sheet for result of each scan.
+
+Testing Duraction: 2 Hours
+
+
+Member has already 2 rewards as per the puchase data.
+
+
+
+
+
+
+This issue was already addressed. Ticket was created accidentally.
+
+- Remove IDD
+- Total of 10 rows (1st screen)
+- Recheck slide 7
+- Rewards count
+- Purchase history, level, redeemed vouchers report
+
+
+
+
+
+Nurse on call
+8810343828
+
+We have processed the transactions and issued new rewards for the customer. Kindly see the attached reward report for more details.
+
+Akash Chavan
+7620481264
+
+
+How To Assemble A Rubik’s Cube! #shorts
+https://youtube.com/shorts/WH5dBSrj360?feature=share
+
+Refer from Other classes >  Academy Aug22 Beginner Python Refresher > Backend LLD and Development 1
+
+
+25 MAY	Backend LLD: OOP-1: Intro to LLD and OOP
+27 MAY	Backend LLD: OOP-2: Access Modifiers and Constructors
+30 MAY	Backend LLD: OOP-3: Inheritance and Polymorphism
+31 MAY	Backend LLD: OOP Backlog
+1 JUN	Backend LLD: OOP-4: Interfaces, Abstract Classes, Composition, Association
+3 JUN	Backend LLD: Concurrency-1: Introduction to Processes and Threads
+15 JUN	Backend LLD: Concurrency-2: Executors and Callables
+
+
+Then Continue from MODULE - 11  - Backend LLD and Development 1
+
+DAY 142, 20 JUN		Backend LLD: Concurrency-3: Intro to Synchronization
+DAY 143, 22 JUN		Backend LLD: Concurrency-4: Synchronization with Semaphores
+DAY 144, 24 JUN		Backend LLD: Java Advanced Concepts - 1 [Collections & Generics]
+
+1 feb 2019 - 31 dec 2022
+
+user_id, member_id, created_date, 
+
+uat0108icl
+
 user_id	email	first_name	last_name	address_1	address_2	city	state	country	zip	pswd_hash	cookie_agreement	tnc_agreement	member_id	last_login	token	active	phone	fromIDD	email_token	email_verified	created_date	home_store	updated_date	consent	consent_date	total_purchase
 1354755	babydollsland@gmail.com	Rebecca	Block	613 McIlhenny Street		New Iberia	Louisiana	US	70563	$2a$10$hNwuYiR.GcFKx2lT74cdPuMmAJ4kMZYCLsWMHJgI8kEi21nwKJkJu	1	1	2354755	2023-05-29 23:13:23.363	NULL	1	3375193135	NULL	eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyRW1haWwiOiJiYWJ5ZG9sbHNsYW5kQGdtYWlsLmNvbSIsImlhdCI6MTY4NTQwMjAwMSwiZXhwIjoxNjg1NDE2NDAxfQ.O1_6eZ_1P-0xP-4gW11pfM_T6GEg_xkCrWy6bMoQonI	NULL	2023-05-29 23:13:22.753	509	NULL	0	NULL	0
 
@@ -12,8 +206,7 @@ select * from transaction_detail  where trasid = 864705
     LEFT join trxact2member tm on (tm.transact_id = td.transact_id and tm.store_id = td.store_id)
     WHERE tr.id = 849783 and CAST (tr.createdate AS date) = '2023-05-20'
     AND td.void != 'Y'
-    
-    
+
     SELECT FIRST 10 * FROM trxact2member tm WHERE  1=1
     --AND CAST (tm.createdate AS date) = '2023-05-20'
     AND tm.transact_id = 849783 
