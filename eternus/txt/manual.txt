@@ -1837,6 +1837,14 @@ C:>   robocopy  \Meral\folder1   D:\Meral\folder2
 list out all folder with subfolder ?
 dir /s /b /o:gn
 
+terminal.bat
+
+@echo off
+for /f "delims=" %%i in ('dir /s /b /a-d') do (
+    echo %%i
+    timeout /t 1 > nul
+)
+
 
 ##########################			##########################
 ##########################	Angular	########################## 
@@ -2016,6 +2024,9 @@ git tag -d 1.0 (delete tag)
 git push origin --delete 1.0  (delete from github)
 git checkout 1.0 (get specific tag copy to local)
 
+
+other Git platforms : GitHub, GitLab, Bitbucket, Azure DevOps, AWS CodeCommit, Gitea, SourceForge
+
 [GIT END]
 
 -----------------
@@ -2050,10 +2061,11 @@ FIND IN GMAIL
 has:nouserlabels !in:inbox -label:sent -label:drafts -label:[imap]/sent
 
 -----------------
-
+cmd color
 color in shell script
 
 RED='\033[0;31m'
+YELLOW = '\033[1;33m'
 NC='\033[0m' # No Color
 printf "I ${RED}love${NC} Stack Overflow\n"
 
@@ -2126,9 +2138,17 @@ step 3 : reload the configuration
 	source ~/.bashrc
 
 
+to clear all file content 
 
+	this smiley command  -------->    :> file.log
 
-
+Other Linux based OS 
+	CentOS
+	RHEL (Red Hat Enterprise Linux)
+	Arch Linux
+	Manjaro
+	Mint
+	OpenSUSE
 -----------------
 
 Python / Django
@@ -2153,7 +2173,28 @@ python -m spacy train en_core_web_md en
 rasa init --no-prompt
 
 
-venv / pipenv
+
+############## set up a project in django ##############
+
+do use the same directory as project direcoty use . at postfix
+
+django-admin startproject adse_backend .
+
+cd adse_backend
+
+python manage.py migrate
+
+python manage.py createsuperuser
+
+Steps to setup entire project & user authentication (custom - via email)
+
+1 - create project ---> django-admin startproject adse_backend .
+2 - create app	--->  python manage.py startapp adseuser
+3 - activate the venv ---> (as below)
+4 - run server --->  python manage.py runserver
+
+
+############## venv / pipenv ##############
 
 
 create a new env
@@ -2172,17 +2213,38 @@ how to activate (work on cmd line only, no Git shell)
 how to deactivate
 > deactivate
 
-do use the same directory as project direcoty use . at postfix
 
-django-admin startproject adse_backend .
 
-python manage.py createsuperuser
+############## how to make it enable with vscode debugger ##############
 
-Steps to setup entire project & user authentication (custom - via email)
+pip install debugpy
 
-1 - activate the venv (as above)
-2 - create project -- > django-admin startproject adse_backend .
-3 - create app	-->  python manage.py startapp adseuser
+launch.json 
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python Debugger: Django",
+            "type": "debugpy",
+            "request": "launch",
+            "args": ["runserver"],
+            "django": true,
+            "justMyCode": true,
+            "autoStartBrowser": false,
+            "console": "integratedTerminal",
+            "program": "${workspaceFolder}\\manage.py"
+        }
+    ]
+}
+
+restart vscode (must)
+
+now from Run and Debug Menu play |>  Python Debugger: Django
+
+Done
+
+##########################
 
 1711601368
 
@@ -2201,6 +2263,10 @@ run server in debug mode
 
 	python manage.py runserver --noreload --insecure
 	
+
+Conflicting migrations detected; multiple leaf nodes in the migration graph
+
+python manage.py makemigrations <app_name> --merge  (for all apps , one by one )
 
 
 -----------------
@@ -2465,3 +2531,11 @@ docker push 058264365128.dkr.ecr.us-east-1.amazonaws.com/my-wordpress:v1.0
 	sudo docker-compose exec pidilite_web bash
 
 
+pip show azure-storage-blob
+
+###############################################
+
+	HOW TO CHANGE COMMAND LINE DEFAULT PATH	/	cmd default path
+	Win start -> CMD (Type here to search) -> Right Click -> Open file location -> Properties (Right click Command Prompt ) -> Shortcut -> Start In (change this)
+
+###############################################
