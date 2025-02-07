@@ -198,7 +198,7 @@ exec spUpdateMemberId @UserID = 20, @MemberID = 1000020, @UpdatedAccount = @Upda
 
 
 Github personal access token
-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
+
 
 
 ##############################################
