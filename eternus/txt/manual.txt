@@ -1908,6 +1908,33 @@ now you can clone using
 git clone git@github.com:hi-meral/ZeetFlask.git
 
 
+how to login using ssh
+
+chmod 700 mmaradia_key.pem
+ssh -i mmaradia_key.pem mmaradia@34.216.55.205
+
+how to copy file to and from ssh
+scp -i mmaradia_key.pem  C:/Meral/mqbridge.zip mmaradia@34.216.55.205:/home/mmaradia  (to copy file)
+scp -i mmaradia_key.pem mmaradia@34.216.55.205:/home/mmaradia/jmeter/newtest100.zip "C:/Meral/Documents/" (backslash)
+
+
+-----------------
+
+jMeter
+
+Download and extract the jMeter
+
+how to hit from command line -- 
+
+	./apache-jmeter-5.6.3/bin/jmeter -n -t TLSConnect10.jmx -l  results10.jtl
+
+	(export the jmx file from jMeter UI/Windows) 
+
+How to generate summary : 
+
+	./apache-jmeter-5.6.3/bin/jmeter -g ./results/result100-old.jtl -o results-html
+
+
 -----------------
 
 [GIT]
@@ -1919,7 +1946,7 @@ git init
 git remote add origin https://github.com/hi-meral/adse_backend.git
 git add .
 git commit -m "Launching Module"
-git pull origin dev --allow-unrelated-histories
+git pull origin master --allow-unrelated-histories
 git push -u origin main -f
 
 Fork repository 
@@ -1942,7 +1969,11 @@ git remote rm meral
 
 other git command
 
-git push meral theme-almutlaq-en-desktop-fork --force
+// revert to a specific commit / revert last commit
+git reset --hard <commit-id>
+git push origin <branch_name> --force
+
+
 
 // save temp
 git stash 
@@ -2026,6 +2057,13 @@ git checkout 1.0 (get specific tag copy to local)
 
 
 other Git platforms : GitHub, GitLab, Bitbucket, Azure DevOps, AWS CodeCommit, Gitea, SourceForge
+
+
+Git game
+
+https://learngitbranching.js.org/?locale=en_US
+Completed Level : Ramping Up [4]
+
 
 [GIT END]
 
@@ -2188,8 +2226,8 @@ python manage.py createsuperuser
 
 Steps to setup entire project & user authentication (custom - via email)
 
-1 - create project ---> django-admin startproject adse_backend .
-2 - create app	--->  python manage.py startapp adseuser
+1 - create project ---> django-admin startproject mqbridge .
+2 - create app	--->  python manage.py startapp mqbridgeapp
 3 - activate the venv ---> (as below)
 4 - run server --->  python manage.py runserver
 
@@ -2208,7 +2246,10 @@ go to your project directory
 
 how to activate (work on cmd line only, no Git shell)
 
-> .venv\Scripts\activate.bat
+> .venv\Scripts\activate.bat  (windows)
+
+	source .venv/bin/activate  (ubuntu)
+
 
 how to deactivate
 > deactivate
@@ -2225,15 +2266,88 @@ launch.json
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Python Debugger: Django",
+            "name": "Python Debugger: Current File",
             "type": "debugpy",
             "request": "launch",
-            "args": ["runserver"],
-            "django": true,
-            "justMyCode": true,
-            "autoStartBrowser": false,
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "name": "Python Debugger: Current File with Arguments",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${file}",
             "console": "integratedTerminal",
-            "program": "${workspaceFolder}\\manage.py"
+            "args": [
+                "${command:pickArgs}"
+            ]
+        },
+        {
+            "name": "POLICY.DOCUMENTS - SERVER",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/svc_mesh/usls/policy_documents_get.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--brokers", "amqps://svcfabric:netfyh-3pefcy@b-d8364043-679f-475c-a510-316ddbef7b48.mq.us-west-2.on.aws:5671/%2FDEV",
+                "--queue", "MIRAL_TEST_QUEUE",
+                "--log-level", "debug",
+                "--log-file", "debug.log",
+                "--log-mode", "basic",
+                "--db-dburl", "mysql://svcfabric:dNG2Vqy9u3QN@developer-db.c0errmjgfwvs.us-west-2.rds.amazonaws.com:3306/745932_production",
+                "--policy-container", "vol1",
+                "--folders", "lockton-pdfs/fortegra", "pdfs_insurance/fortegra"
+            ]
+        },
+        {
+            "name": "POLICY.DOCUMENTS - CLIENT",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/svc_mesh/clients/policy_documents_get_client.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "args": [
+                "--brokers", "amqps://svcfabric:netfyh-3pefcy@b-d8364043-679f-475c-a510-316ddbef7b48.mq.us-west-2.on.aws:5671/%2FDEV",
+                "--queue", "SVCMESH.POLICY.DOCUMENTS.REQUEST",
+                "--log-level", "debug",
+                "--log-file", "debug.log",
+                "--log-mode", "basic",
+                "--account-id", "8a8aa1c398c674f50198d2c4ebfc1b33"
+            ]
+        },
+        
+        {
+            "name": "Run Any Test Case (test_account_demo_update.py)",
+            "type": "python",
+            "request": "launch",
+            "module": "pytest",
+            "args": [
+                "-v",
+                "-s",
+                "--tb=no",
+                "${workspaceFolder}/tests/test_workflows/test_account_demo_update.py"
+            ],
+            "justMyCode": false
+        },
+        
+        {
+            "name": "HotlineNumberGet",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/src/svc_mesh/usls/hotline_number_get.py",
+            "console": "integratedTerminal",
+            "justMyCode": false,
+            "env": {
+                "PYTHONPATH": "${workspaceFolder}/src",
+                "CONSUL_HTTP_TOKEN": "1d5349ae-2bf7-55d6-4b73-94defb2ef1ed"
+            },
+            "args": [
+                "--consul-url",
+                "http://10.1.100.70:8500",
+                "--consul-key",
+                "dev/mesh/HotlineNumber/hotline_number"
+            ]
         }
     ]
 }
@@ -2380,6 +2494,8 @@ PM2 (npm)
  pm2 start index.js --name "DealFinderUtility--master--3003"
  pm2 list --sort "id"
  
+ (with param)
+ pm2 start ./src/svc_mesh/member_info_get/server.py --name member_info_get_server --interpreter python3 -- --brokers "amqp://svcfabric:Fabric.admin@52.12.199.48:5672/" --queue TLS.STATELESS.SERVER --dbaccount-dburl mysql://mmaradia:CRApmAgrACkt@tls-qa-db.c0errmjgfwvs.us-west-2.rds.amazonaws.com:3306/745932_production --log-level "debug" --log-file "../../../src/svc_mesh/member_info_get/debug.log"
 -----------------
 
 
@@ -2419,6 +2535,34 @@ Win + Shift + Right Arrow
 ----------------------------------------------
 
 Docker
+
+
+Basic (Dockerize app)
+
+Show images : docker images 
+Show containers : sudo docker ps -a  [ --filter "name=container-python-server" ] [--format "{{.ID}} {{.Names}} {{.Status}}"]
+
+Basic Dockerfile : 
+	FROM python:3.9-slim
+	WORKDIR /app
+	COPY server.py .	(the main file that you wanna run)
+	CMD ["python", "server.py"]
+
+Create docker image : 
+	docker build -t python-server .
+
+Run Docker container : 
+
+	docker run --name container-python-server python-server
+
+Restart the container (if Status Exited )
+
+	docker restart container-python-server
+
+Add file into running container
+
+	docker cp config.json <container_id>:/app/config.json
+	
 
 
 how to push to docker hub 
@@ -2461,13 +2605,13 @@ Flush all docker images
 	#!/bin/bash
 
 	# Stop all running containers
-	sudo docker stop $(docker ps -aq)
+	sudo docker stop $(sudo docker ps -aq)
 
 	# Remove all containers
-	sudo docker rm $(docker ps -aq)
+	sudo docker rm $(sudo docker ps -aq)
 
 	# Remove all images
-	sudo docker rmi $(docker images -q)
+	sudo docker rmi $(sudo docker images -q)
 
 	# Remove all unused volumes
 	sudo docker volume prune -f
@@ -2527,9 +2671,9 @@ docker tag himeral/my-wordpress 058264365128.dkr.ecr.us-east-1.amazonaws.com/my-
 
 docker push 058264365128.dkr.ecr.us-east-1.amazonaws.com/my-wordpress:v1.0
 
--> run app in docker container
-	sudo docker-compose exec pidilite_web bash
-
+-> run app in docker container  (any one from following)
+	A) sudo docker-compose exec pidilite_web bash
+	B) sudo docker exec -it 105110d5d246 /bin/bash
 
 pip show azure-storage-blob
 
@@ -2539,3 +2683,9 @@ pip show azure-storage-blob
 	Win start -> CMD (Type here to search) -> Right Click -> Open file location -> Properties (Right click Command Prompt ) -> Shortcut -> Start In (change this)
 
 ###############################################
+
+
+CHANGE WIFI NAME
+
+http://192.168.1.1/
+ZTE login > Local Network > WLAN > WLAN Basic > WLAN SSID Configuration
