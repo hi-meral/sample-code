@@ -2340,7 +2340,7 @@ launch.json
             "justMyCode": false,
             "env": {
                 "PYTHONPATH": "${workspaceFolder}/src",
-                "CONSUL_HTTP_TOKEN": "1d5349ae-2bf7-55d6-4b73-94defb2ef1ed"
+                "CONSUL_HTTP_TOKEN": "<36length>"
             },
             "args": [
                 "--consul-url",
