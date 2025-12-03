@@ -2290,12 +2290,12 @@ launch.json
             "console": "integratedTerminal",
             "justMyCode": false,
             "args": [
-                "--brokers", "amqps://svcfabric:netfyh-3pefcy@b-d8364043-679f-475c-a510-316ddbef7b48.mq.us-west-2.on.aws:5671/%2FDEV",
+                "--brokers", "amqps://<broker>",
                 "--queue", "MIRAL_TEST_QUEUE",
                 "--log-level", "debug",
                 "--log-file", "debug.log",
                 "--log-mode", "basic",
-                "--db-dburl", "mysql://svcfabric:dNG2Vqy9u3QN@developer-db.c0errmjgfwvs.us-west-2.rds.amazonaws.com:3306/745932_production",
+                "--db-dburl", "mysql://<mysql>",
                 "--policy-container", "vol1",
                 "--folders", "lockton-pdfs/fortegra", "pdfs_insurance/fortegra"
             ]
@@ -2308,12 +2308,12 @@ launch.json
             "console": "integratedTerminal",
             "justMyCode": false,
             "args": [
-                "--brokers", "amqps://svcfabric:netfyh-3pefcy@b-d8364043-679f-475c-a510-316ddbef7b48.mq.us-west-2.on.aws:5671/%2FDEV",
+                "--brokers", "amqps://<broker>",
                 "--queue", "SVCMESH.POLICY.DOCUMENTS.REQUEST",
                 "--log-level", "debug",
                 "--log-file", "debug.log",
                 "--log-mode", "basic",
-                "--account-id", "8a8aa1c398c674f50198d2c4ebfc1b33"
+                "--account-id", "123"
             ]
         },
         
